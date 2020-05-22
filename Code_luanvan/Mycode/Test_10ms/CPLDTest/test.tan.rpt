@@ -1,0 +1,1038 @@
+Classic Timing Analyzer report for test
+Sat Apr 20 10:28:06 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                    ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                                                                                                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.966 ns                         ; PULSE_WR                                                                                                                                    ; DDA:inst|test:inst15|acc[0] ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 19.051 ns                        ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9] ; Data[9]                     ; CLK        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 10.803 ns                        ; LSW1                                                                                                                                        ; PULSE1                      ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 8.215 ns                         ; Data[7]                                                                                                                                     ; DDA:inst|74373b:inst13|19   ; --         ; NADV     ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 82.18 MHz ( period = 12.168 ns ) ; DDA:inst|test:inst14|Ntemp[0]                                                                                                               ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                                                                                             ;                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM570T100C5       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NADV            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NWE             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                                                           ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                               ; To                          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 82.18 MHz ( period = 12.168 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 11.459 ns               ;
+; N/A                                     ; 82.22 MHz ( period = 12.162 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 11.453 ns               ;
+; N/A                                     ; 82.24 MHz ( period = 12.160 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 11.451 ns               ;
+; N/A                                     ; 82.68 MHz ( period = 12.095 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 11.386 ns               ;
+; N/A                                     ; 82.72 MHz ( period = 12.089 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 11.380 ns               ;
+; N/A                                     ; 82.73 MHz ( period = 12.087 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 11.378 ns               ;
+; N/A                                     ; 83.58 MHz ( period = 11.964 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 11.255 ns               ;
+; N/A                                     ; 85.08 MHz ( period = 11.754 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 11.045 ns               ;
+; N/A                                     ; 85.19 MHz ( period = 11.739 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 11.030 ns               ;
+; N/A                                     ; 86.06 MHz ( period = 11.620 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.911 ns               ;
+; N/A                                     ; 86.16 MHz ( period = 11.606 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.897 ns               ;
+; N/A                                     ; 86.17 MHz ( period = 11.605 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.896 ns               ;
+; N/A                                     ; 86.17 MHz ( period = 11.605 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.896 ns               ;
+; N/A                                     ; 86.20 MHz ( period = 11.601 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.892 ns               ;
+; N/A                                     ; 86.21 MHz ( period = 11.599 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.890 ns               ;
+; N/A                                     ; 86.23 MHz ( period = 11.597 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.888 ns               ;
+; N/A                                     ; 86.36 MHz ( period = 11.579 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.870 ns               ;
+; N/A                                     ; 86.92 MHz ( period = 11.505 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.796 ns               ;
+; N/A                                     ; 87.37 MHz ( period = 11.446 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.737 ns               ;
+; N/A                                     ; 87.45 MHz ( period = 11.435 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.726 ns               ;
+; N/A                                     ; 87.56 MHz ( period = 11.421 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.712 ns               ;
+; N/A                                     ; 87.70 MHz ( period = 11.402 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.693 ns               ;
+; N/A                                     ; 87.85 MHz ( period = 11.383 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.674 ns               ;
+; N/A                                     ; 87.87 MHz ( period = 11.381 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.672 ns               ;
+; N/A                                     ; 87.87 MHz ( period = 11.380 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.671 ns               ;
+; N/A                                     ; 88.08 MHz ( period = 11.353 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.644 ns               ;
+; N/A                                     ; 88.26 MHz ( period = 11.330 ns )                    ; DDA:inst|test:inst14|Ntemp[3]      ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.621 ns               ;
+; N/A                                     ; 88.31 MHz ( period = 11.324 ns )                    ; DDA:inst|test:inst14|Ntemp[3]      ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.615 ns               ;
+; N/A                                     ; 88.32 MHz ( period = 11.322 ns )                    ; DDA:inst|test:inst14|Ntemp[3]      ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.613 ns               ;
+; N/A                                     ; 88.38 MHz ( period = 11.315 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.606 ns               ;
+; N/A                                     ; 88.53 MHz ( period = 11.295 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.586 ns               ;
+; N/A                                     ; 88.75 MHz ( period = 11.268 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.559 ns               ;
+; N/A                                     ; 88.75 MHz ( period = 11.267 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.558 ns               ;
+; N/A                                     ; 88.77 MHz ( period = 11.265 ns )                    ; DDA:inst|test:inst16|acc[0]        ; DDA:inst|test:inst16|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.556 ns               ;
+; N/A                                     ; 88.94 MHz ( period = 11.244 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.535 ns               ;
+; N/A                                     ; 88.95 MHz ( period = 11.242 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.533 ns               ;
+; N/A                                     ; 89.00 MHz ( period = 11.236 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.527 ns               ;
+; N/A                                     ; 89.28 MHz ( period = 11.201 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.492 ns               ;
+; N/A                                     ; 89.40 MHz ( period = 11.186 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.477 ns               ;
+; N/A                                     ; 89.49 MHz ( period = 11.175 ns )                    ; DDA:inst|test:inst14|Ntemp[4]      ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.466 ns               ;
+; N/A                                     ; 89.50 MHz ( period = 11.173 ns )                    ; DDA:inst|test:inst|Ntemp[0]        ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 10.464 ns               ;
+; N/A                                     ; 89.55 MHz ( period = 11.167 ns )                    ; DDA:inst|test:inst|Ntemp[0]        ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 10.458 ns               ;
+; N/A                                     ; 89.57 MHz ( period = 11.164 ns )                    ; DDA:inst|test:inst|Ntemp[2]        ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 10.455 ns               ;
+; N/A                                     ; 89.58 MHz ( period = 11.163 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.454 ns               ;
+; N/A                                     ; 89.62 MHz ( period = 11.158 ns )                    ; DDA:inst|test:inst|Ntemp[2]        ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 10.449 ns               ;
+; N/A                                     ; 89.66 MHz ( period = 11.153 ns )                    ; DDA:inst|test:inst14|Ntemp[0]      ; DDA:inst|test:inst14|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.444 ns               ;
+; N/A                                     ; 89.66 MHz ( period = 11.153 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.444 ns               ;
+; N/A                                     ; 89.67 MHz ( period = 11.152 ns )                    ; DDA:inst|test:inst14|acc[2]        ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.443 ns               ;
+; N/A                                     ; 89.71 MHz ( period = 11.147 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.438 ns               ;
+; N/A                                     ; 89.72 MHz ( period = 11.146 ns )                    ; DDA:inst|test:inst14|acc[2]        ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.437 ns               ;
+; N/A                                     ; 89.72 MHz ( period = 11.146 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.437 ns               ;
+; N/A                                     ; 89.73 MHz ( period = 11.144 ns )                    ; DDA:inst|test:inst14|acc[2]        ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.435 ns               ;
+; N/A                                     ; 90.07 MHz ( period = 11.102 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[3] ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.393 ns               ;
+; N/A                                     ; 90.19 MHz ( period = 11.088 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.379 ns               ;
+; N/A                                     ; 90.20 MHz ( period = 11.087 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.378 ns               ;
+; N/A                                     ; 90.23 MHz ( period = 11.083 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.374 ns               ;
+; N/A                                     ; 90.42 MHz ( period = 11.059 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.350 ns               ;
+; N/A                                     ; 90.43 MHz ( period = 11.058 ns )                    ; DDA:inst|test:inst14|Ntemp[4]      ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.349 ns               ;
+; N/A                                     ; 90.44 MHz ( period = 11.057 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.348 ns               ;
+; N/A                                     ; 90.51 MHz ( period = 11.048 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.339 ns               ;
+; N/A                                     ; 90.56 MHz ( period = 11.043 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.334 ns               ;
+; N/A                                     ; 90.58 MHz ( period = 11.040 ns )                    ; DDA:inst|test:inst16|acc[5]        ; DDA:inst|test:inst16|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.331 ns               ;
+; N/A                                     ; 90.68 MHz ( period = 11.028 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[0] ; CLK        ; CLK      ; None                        ; None                      ; 10.319 ns               ;
+; N/A                                     ; 90.93 MHz ( period = 10.998 ns )                    ; DDA:inst|test:inst|Ntemp[1]        ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 10.289 ns               ;
+; N/A                                     ; 90.98 MHz ( period = 10.992 ns )                    ; DDA:inst|test:inst|Ntemp[1]        ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 10.283 ns               ;
+; N/A                                     ; 91.21 MHz ( period = 10.964 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[1] ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.255 ns               ;
+; N/A                                     ; 91.38 MHz ( period = 10.943 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.234 ns               ;
+; N/A                                     ; 91.47 MHz ( period = 10.933 ns )                    ; DDA:inst|test:inst16|acc[3]        ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.224 ns               ;
+; N/A                                     ; 91.55 MHz ( period = 10.923 ns )                    ; DDA:inst|test:inst|acc[0]          ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 10.214 ns               ;
+; N/A                                     ; 91.60 MHz ( period = 10.917 ns )                    ; DDA:inst|test:inst|acc[0]          ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 10.208 ns               ;
+; N/A                                     ; 91.67 MHz ( period = 10.909 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.200 ns               ;
+; N/A                                     ; 91.68 MHz ( period = 10.908 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.199 ns               ;
+; N/A                                     ; 91.71 MHz ( period = 10.904 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.195 ns               ;
+; N/A                                     ; 91.84 MHz ( period = 10.888 ns )                    ; DDA:inst|test:inst|Ntemp[3]        ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 10.179 ns               ;
+; N/A                                     ; 91.85 MHz ( period = 10.887 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.178 ns               ;
+; N/A                                     ; 91.88 MHz ( period = 10.884 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.175 ns               ;
+; N/A                                     ; 91.89 MHz ( period = 10.883 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.174 ns               ;
+; N/A                                     ; 91.89 MHz ( period = 10.882 ns )                    ; DDA:inst|test:inst|Ntemp[3]        ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 10.173 ns               ;
+; N/A                                     ; 91.95 MHz ( period = 10.876 ns )                    ; DDA:inst|test:inst14|Ntemp[2]      ; DDA:inst|test:inst14|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.167 ns               ;
+; N/A                                     ; 91.98 MHz ( period = 10.872 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.163 ns               ;
+; N/A                                     ; 92.09 MHz ( period = 10.859 ns )                    ; DDA:inst|test:inst|Ntemp[0]        ; DDA:inst|test:inst|acc[3]   ; CLK        ; CLK      ; None                        ; None                      ; 10.150 ns               ;
+; N/A                                     ; 92.10 MHz ( period = 10.858 ns )                    ; DDA:inst|test:inst|Ntemp[0]        ; DDA:inst|test:inst|acc[2]   ; CLK        ; CLK      ; None                        ; None                      ; 10.149 ns               ;
+; N/A                                     ; 92.17 MHz ( period = 10.850 ns )                    ; DDA:inst|test:inst|Ntemp[2]        ; DDA:inst|test:inst|acc[3]   ; CLK        ; CLK      ; None                        ; None                      ; 10.141 ns               ;
+; N/A                                     ; 92.17 MHz ( period = 10.849 ns )                    ; DDA:inst|test:inst|Ntemp[2]        ; DDA:inst|test:inst|acc[2]   ; CLK        ; CLK      ; None                        ; None                      ; 10.140 ns               ;
+; N/A                                     ; 92.28 MHz ( period = 10.837 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.128 ns               ;
+; N/A                                     ; 92.33 MHz ( period = 10.831 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[0] ; CLK        ; CLK      ; None                        ; None                      ; 10.122 ns               ;
+; N/A                                     ; 92.34 MHz ( period = 10.829 ns )                    ; DDA:inst|test:inst16|clk_cnt[4]    ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.120 ns               ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[4] ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.115 ns               ;
+; N/A                                     ; 92.40 MHz ( period = 10.823 ns )                    ; DDA:inst|test:inst14|acc[3]        ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.114 ns               ;
+; N/A                                     ; 92.45 MHz ( period = 10.817 ns )                    ; DDA:inst|test:inst14|acc[3]        ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.108 ns               ;
+; N/A                                     ; 92.46 MHz ( period = 10.815 ns )                    ; DDA:inst|test:inst14|acc[3]        ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.106 ns               ;
+; N/A                                     ; 92.52 MHz ( period = 10.809 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.100 ns               ;
+; N/A                                     ; 92.54 MHz ( period = 10.806 ns )                    ; DDA:inst|test:inst16|Ntemp[2]      ; DDA:inst|test:inst16|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.097 ns               ;
+; N/A                                     ; 92.56 MHz ( period = 10.804 ns )                    ; DDA:inst|test:inst16|acc[2]        ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.095 ns               ;
+; N/A                                     ; 92.64 MHz ( period = 10.795 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.086 ns               ;
+; N/A                                     ; 92.64 MHz ( period = 10.794 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.085 ns               ;
+; N/A                                     ; 92.68 MHz ( period = 10.790 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.081 ns               ;
+; N/A                                     ; 92.75 MHz ( period = 10.782 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.073 ns               ;
+; N/A                                     ; 92.75 MHz ( period = 10.782 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.073 ns               ;
+; N/A                                     ; 92.75 MHz ( period = 10.782 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.073 ns               ;
+; N/A                                     ; 92.76 MHz ( period = 10.780 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.071 ns               ;
+; N/A                                     ; 92.76 MHz ( period = 10.780 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.071 ns               ;
+; N/A                                     ; 92.76 MHz ( period = 10.780 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.071 ns               ;
+; N/A                                     ; 92.76 MHz ( period = 10.780 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.071 ns               ;
+; N/A                                     ; 93.01 MHz ( period = 10.752 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 10.043 ns               ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.041 ns               ;
+; N/A                                     ; 93.05 MHz ( period = 10.747 ns )                    ; DDA:inst|test:inst16|Ntemp[0]      ; DDA:inst|test:inst16|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.038 ns               ;
+; N/A                                     ; 93.07 MHz ( period = 10.745 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.036 ns               ;
+; N/A                                     ; 93.07 MHz ( period = 10.745 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.036 ns               ;
+; N/A                                     ; 93.13 MHz ( period = 10.738 ns )                    ; DDA:inst|test:inst16|acc[3]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.029 ns               ;
+; N/A                                     ; 93.16 MHz ( period = 10.734 ns )                    ; DDA:inst|test:inst16|acc[3]        ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.025 ns               ;
+; N/A                                     ; 93.21 MHz ( period = 10.728 ns )                    ; DDA:inst|test:inst14|acc[0]        ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 10.019 ns               ;
+; N/A                                     ; 93.21 MHz ( period = 10.728 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.019 ns               ;
+; N/A                                     ; 93.21 MHz ( period = 10.728 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 10.019 ns               ;
+; N/A                                     ; 93.21 MHz ( period = 10.728 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 10.019 ns               ;
+; N/A                                     ; 93.21 MHz ( period = 10.728 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 10.019 ns               ;
+; N/A                                     ; 93.21 MHz ( period = 10.728 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst15|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 10.019 ns               ;
+; N/A                                     ; 93.27 MHz ( period = 10.722 ns )                    ; DDA:inst|test:inst14|acc[0]        ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 10.013 ns               ;
+; N/A                                     ; 93.28 MHz ( period = 10.720 ns )                    ; DDA:inst|test:inst14|acc[0]        ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.011 ns               ;
+; N/A                                     ; 93.34 MHz ( period = 10.713 ns )                    ; DDA:inst|test:inst14|Ntemp[4]      ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 10.004 ns               ;
+; N/A                                     ; 93.41 MHz ( period = 10.705 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.996 ns                ;
+; N/A                                     ; 93.52 MHz ( period = 10.693 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst15|acc[0] ; CLK        ; CLK      ; None                        ; None                      ; 9.984 ns                ;
+; N/A                                     ; 93.55 MHz ( period = 10.689 ns )                    ; DDA:inst|test:inst16|acc[2]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.980 ns                ;
+; N/A                                     ; 93.60 MHz ( period = 10.684 ns )                    ; DDA:inst|test:inst|Ntemp[1]        ; DDA:inst|test:inst|acc[3]   ; CLK        ; CLK      ; None                        ; None                      ; 9.975 ns                ;
+; N/A                                     ; 93.61 MHz ( period = 10.683 ns )                    ; DDA:inst|test:inst|Ntemp[1]        ; DDA:inst|test:inst|acc[2]   ; CLK        ; CLK      ; None                        ; None                      ; 9.974 ns                ;
+; N/A                                     ; 93.62 MHz ( period = 10.681 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 9.972 ns                ;
+; N/A                                     ; 93.65 MHz ( period = 10.678 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst|acc[6]   ; CLK        ; CLK      ; None                        ; None                      ; 9.969 ns                ;
+; N/A                                     ; 93.65 MHz ( period = 10.678 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst|acc[4]   ; CLK        ; CLK      ; None                        ; None                      ; 9.969 ns                ;
+; N/A                                     ; 93.65 MHz ( period = 10.678 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst|acc[7]   ; CLK        ; CLK      ; None                        ; None                      ; 9.969 ns                ;
+; N/A                                     ; 93.66 MHz ( period = 10.677 ns )                    ; DDA:inst|test:inst16|clk_cnt[5]    ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.968 ns                ;
+; N/A                                     ; 93.69 MHz ( period = 10.673 ns )                    ; DDA:inst|test:inst|Ntemp[5]        ; DDA:inst|test:inst|pulse    ; CLK        ; CLK      ; None                        ; None                      ; 9.964 ns                ;
+; N/A                                     ; 93.74 MHz ( period = 10.668 ns )                    ; DDA:inst|test:inst16|clk_cnt[3]    ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.959 ns                ;
+; N/A                                     ; 93.88 MHz ( period = 10.652 ns )                    ; DDA:inst|test:inst16|acc[6]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.943 ns                ;
+; N/A                                     ; 93.92 MHz ( period = 10.647 ns )                    ; DDA:inst|test:inst|acc[1]          ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 9.938 ns                ;
+; N/A                                     ; 93.98 MHz ( period = 10.641 ns )                    ; DDA:inst|test:inst|acc[1]          ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 9.932 ns                ;
+; N/A                                     ; 93.98 MHz ( period = 10.640 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.931 ns                ;
+; N/A                                     ; 94.02 MHz ( period = 10.636 ns )                    ; DDA:inst|test:inst14|acc[2]        ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 9.927 ns                ;
+; N/A                                     ; 94.26 MHz ( period = 10.609 ns )                    ; DDA:inst|test:inst|acc[0]          ; DDA:inst|test:inst|acc[3]   ; CLK        ; CLK      ; None                        ; None                      ; 9.900 ns                ;
+; N/A                                     ; 94.27 MHz ( period = 10.608 ns )                    ; DDA:inst|test:inst|acc[0]          ; DDA:inst|test:inst|acc[2]   ; CLK        ; CLK      ; None                        ; None                      ; 9.899 ns                ;
+; N/A                                     ; 94.30 MHz ( period = 10.605 ns )                    ; DDA:inst|test:inst16|acc[2]        ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.896 ns                ;
+; N/A                                     ; 94.42 MHz ( period = 10.591 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.882 ns                ;
+; N/A                                     ; 94.44 MHz ( period = 10.589 ns )                    ; DDA:inst|test:inst14|acc[4]        ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.880 ns                ;
+; N/A                                     ; 94.47 MHz ( period = 10.585 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.876 ns                ;
+; N/A                                     ; 94.47 MHz ( period = 10.585 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 9.876 ns                ;
+; N/A                                     ; 94.47 MHz ( period = 10.585 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.876 ns                ;
+; N/A                                     ; 94.49 MHz ( period = 10.583 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 9.874 ns                ;
+; N/A                                     ; 94.49 MHz ( period = 10.583 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 9.874 ns                ;
+; N/A                                     ; 94.49 MHz ( period = 10.583 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 9.874 ns                ;
+; N/A                                     ; 94.49 MHz ( period = 10.583 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst14|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 9.874 ns                ;
+; N/A                                     ; 94.56 MHz ( period = 10.575 ns )                    ; DDA:inst|test:inst16|clk_cnt[1]    ; DDA:inst|test:inst14|acc[0] ; CLK        ; CLK      ; None                        ; None                      ; 9.866 ns                ;
+; N/A                                     ; 94.56 MHz ( period = 10.575 ns )                    ; DDA:inst|test:inst16|Ntemp[3]      ; DDA:inst|test:inst16|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 9.866 ns                ;
+; N/A                                     ; 94.57 MHz ( period = 10.574 ns )                    ; DDA:inst|test:inst|Ntemp[3]        ; DDA:inst|test:inst|acc[3]   ; CLK        ; CLK      ; None                        ; None                      ; 9.865 ns                ;
+; N/A                                     ; 94.58 MHz ( period = 10.573 ns )                    ; DDA:inst|test:inst|Ntemp[3]        ; DDA:inst|test:inst|acc[2]   ; CLK        ; CLK      ; None                        ; None                      ; 9.864 ns                ;
+; N/A                                     ; 94.60 MHz ( period = 10.571 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 9.862 ns                ;
+; N/A                                     ; 94.63 MHz ( period = 10.568 ns )                    ; DDA:inst|test:inst16|Ntemp[1]      ; DDA:inst|test:inst16|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 9.859 ns                ;
+; N/A                                     ; 94.73 MHz ( period = 10.556 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[3] ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.847 ns                ;
+; N/A                                     ; 94.80 MHz ( period = 10.548 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.839 ns                ;
+; N/A                                     ; 94.80 MHz ( period = 10.548 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.839 ns                ;
+; N/A                                     ; 94.96 MHz ( period = 10.531 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 9.822 ns                ;
+; N/A                                     ; 94.96 MHz ( period = 10.531 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 9.822 ns                ;
+; N/A                                     ; 94.96 MHz ( period = 10.531 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 9.822 ns                ;
+; N/A                                     ; 94.96 MHz ( period = 10.531 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 9.822 ns                ;
+; N/A                                     ; 94.96 MHz ( period = 10.531 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst15|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 9.822 ns                ;
+; N/A                                     ; 95.22 MHz ( period = 10.502 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.793 ns                ;
+; N/A                                     ; 95.27 MHz ( period = 10.497 ns )                    ; DDA:inst|test:inst|Ntemp[0]        ; DDA:inst|test:inst|pulse    ; CLK        ; CLK      ; None                        ; None                      ; 9.788 ns                ;
+; N/A                                     ; 95.29 MHz ( period = 10.494 ns )                    ; DDA:inst|test:inst14|acc[5]        ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.785 ns                ;
+; N/A                                     ; 95.31 MHz ( period = 10.492 ns )                    ; DDA:inst|test:inst14|Ntemp[5]      ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.783 ns                ;
+; N/A                                     ; 95.35 MHz ( period = 10.488 ns )                    ; DDA:inst|test:inst|Ntemp[2]        ; DDA:inst|test:inst|pulse    ; CLK        ; CLK      ; None                        ; None                      ; 9.779 ns                ;
+; N/A                                     ; 95.37 MHz ( period = 10.486 ns )                    ; DDA:inst|test:inst|acc[2]          ; DDA:inst|test:inst|acc[1]   ; CLK        ; CLK      ; None                        ; None                      ; 9.777 ns                ;
+; N/A                                     ; 95.41 MHz ( period = 10.481 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst|acc[6]   ; CLK        ; CLK      ; None                        ; None                      ; 9.772 ns                ;
+; N/A                                     ; 95.41 MHz ( period = 10.481 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst|acc[4]   ; CLK        ; CLK      ; None                        ; None                      ; 9.772 ns                ;
+; N/A                                     ; 95.41 MHz ( period = 10.481 ns )                    ; DDA:inst|test:inst16|clk_cnt[2]    ; DDA:inst|test:inst|acc[7]   ; CLK        ; CLK      ; None                        ; None                      ; 9.772 ns                ;
+; N/A                                     ; 95.42 MHz ( period = 10.480 ns )                    ; DDA:inst|test:inst|acc[2]          ; DDA:inst|test:inst|acc[5]   ; CLK        ; CLK      ; None                        ; None                      ; 9.771 ns                ;
+; N/A                                     ; 95.43 MHz ( period = 10.479 ns )                    ; DDA:inst|test:inst16|acc[2]        ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.770 ns                ;
+; N/A                                     ; 95.45 MHz ( period = 10.477 ns )                    ; DDA:inst|test:inst14|Ntemp[3]      ; DDA:inst|test:inst14|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.768 ns                ;
+; N/A                                     ; 95.47 MHz ( period = 10.474 ns )                    ; DDA:inst|test:inst16|clk_cnt[4]    ; DDA:inst|test:inst15|acc[0] ; CLK        ; CLK      ; None                        ; None                      ; 9.765 ns                ;
+; N/A                                     ; 95.49 MHz ( period = 10.472 ns )                    ; DDA:inst|test:inst14|acc[4]        ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.763 ns                ;
+; N/A                                     ; 95.55 MHz ( period = 10.466 ns )                    ; DDA:inst|test:inst|Ntemp[0]        ; DDA:inst|test:inst|acc[7]   ; CLK        ; CLK      ; None                        ; None                      ; 9.757 ns                ;
+; N/A                                     ; 95.58 MHz ( period = 10.462 ns )                    ; DDA:inst|test:inst16|acc[4]        ; DDA:inst|test:inst16|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.753 ns                ;
+; N/A                                     ; 95.63 MHz ( period = 10.457 ns )                    ; DDA:inst|test:inst|Ntemp[2]        ; DDA:inst|test:inst|acc[7]   ; CLK        ; CLK      ; None                        ; None                      ; 9.748 ns                ;
+; N/A                                     ; 95.63 MHz ( period = 10.457 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 9.748 ns                ;
+; N/A                                     ; 95.66 MHz ( period = 10.454 ns )                    ; DDA:inst|test:inst16|acc[1]        ; DDA:inst|test:inst16|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 9.745 ns                ;
+; N/A                                     ; 95.72 MHz ( period = 10.447 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.738 ns                ;
+; N/A                                     ; 95.72 MHz ( period = 10.447 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 9.738 ns                ;
+; N/A                                     ; 95.72 MHz ( period = 10.447 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.738 ns                ;
+; N/A                                     ; 95.74 MHz ( period = 10.445 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[4] ; CLK        ; CLK      ; None                        ; None                      ; 9.736 ns                ;
+; N/A                                     ; 95.74 MHz ( period = 10.445 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[3] ; CLK        ; CLK      ; None                        ; None                      ; 9.736 ns                ;
+; N/A                                     ; 95.74 MHz ( period = 10.445 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 9.736 ns                ;
+; N/A                                     ; 95.74 MHz ( period = 10.445 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst14|acc[1] ; CLK        ; CLK      ; None                        ; None                      ; 9.736 ns                ;
+; N/A                                     ; 95.89 MHz ( period = 10.429 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[3] ; DDA:inst|test:inst15|acc[0] ; CLK        ; CLK      ; None                        ; None                      ; 9.720 ns                ;
+; N/A                                     ; 95.92 MHz ( period = 10.425 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[2] ; DDA:inst|test:inst15|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.716 ns                ;
+; N/A                                     ; 95.99 MHz ( period = 10.418 ns )                    ; DDA:inst|test:inst16|clk20u_cnt[1] ; DDA:inst|test:inst16|pulse  ; CLK        ; CLK      ; None                        ; None                      ; 9.709 ns                ;
+; N/A                                     ; 96.06 MHz ( period = 10.410 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst15|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.701 ns                ;
+; N/A                                     ; 96.06 MHz ( period = 10.410 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst15|acc[7] ; CLK        ; CLK      ; None                        ; None                      ; 9.701 ns                ;
+; N/A                                     ; 96.13 MHz ( period = 10.403 ns )                    ; DDA:inst|test:inst14|acc[5]        ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.694 ns                ;
+; N/A                                     ; 96.14 MHz ( period = 10.401 ns )                    ; DDA:inst|test:inst14|Ntemp[5]      ; DDA:inst|test:inst14|acc[6] ; CLK        ; CLK      ; None                        ; None                      ; 9.692 ns                ;
+; N/A                                     ; 96.14 MHz ( period = 10.401 ns )                    ; DDA:inst|test:inst14|acc[5]        ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 9.692 ns                ;
+; N/A                                     ; 96.16 MHz ( period = 10.399 ns )                    ; DDA:inst|test:inst14|Ntemp[5]      ; DDA:inst|test:inst14|acc[5] ; CLK        ; CLK      ; None                        ; None                      ; 9.690 ns                ;
+; N/A                                     ; 96.18 MHz ( period = 10.397 ns )                    ; DDA:inst|test:inst14|acc[1]        ; DDA:inst|test:inst14|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 9.688 ns                ;
+; N/A                                     ; 96.22 MHz ( period = 10.393 ns )                    ; DDA:inst|test:inst16|clk_cnt[0]    ; DDA:inst|test:inst15|acc[2] ; CLK        ; CLK      ; None                        ; None                      ; 9.684 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                    ;                             ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                        ;
++-------+--------------+------------+----------+------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To                                                               ; To Clock ;
++-------+--------------+------------+----------+------------------------------------------------------------------+----------+
+; N/A   ; None         ; 7.966 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[0]                                      ; CLK      ;
+; N/A   ; None         ; 7.779 ns   ; PULSE_WR ; DDA:inst|test:inst16|dir                                         ; CLK      ;
+; N/A   ; None         ; 7.779 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[6]                                    ; CLK      ;
+; N/A   ; None         ; 7.779 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[4]                                    ; CLK      ;
+; N/A   ; None         ; 7.779 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[3]                                    ; CLK      ;
+; N/A   ; None         ; 7.779 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[1]                                    ; CLK      ;
+; N/A   ; None         ; 7.720 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[6]                                      ; CLK      ;
+; N/A   ; None         ; 7.720 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[5]                                      ; CLK      ;
+; N/A   ; None         ; 7.720 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[7]                                      ; CLK      ;
+; N/A   ; None         ; 7.718 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[4]                                      ; CLK      ;
+; N/A   ; None         ; 7.718 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[3]                                      ; CLK      ;
+; N/A   ; None         ; 7.718 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[2]                                      ; CLK      ;
+; N/A   ; None         ; 7.718 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[1]                                      ; CLK      ;
+; N/A   ; None         ; 7.683 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[6]                                      ; CLK      ;
+; N/A   ; None         ; 7.683 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[7]                                      ; CLK      ;
+; N/A   ; None         ; 7.666 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[5]                                      ; CLK      ;
+; N/A   ; None         ; 7.666 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[4]                                      ; CLK      ;
+; N/A   ; None         ; 7.666 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[3]                                      ; CLK      ;
+; N/A   ; None         ; 7.666 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[2]                                      ; CLK      ;
+; N/A   ; None         ; 7.666 ns   ; PULSE_WR ; DDA:inst|test:inst15|acc[1]                                      ; CLK      ;
+; N/A   ; None         ; 7.635 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[5]                                    ; CLK      ;
+; N/A   ; None         ; 7.635 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[0]                                    ; CLK      ;
+; N/A   ; None         ; 7.616 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[6]                                        ; CLK      ;
+; N/A   ; None         ; 7.616 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[4]                                        ; CLK      ;
+; N/A   ; None         ; 7.616 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[7]                                        ; CLK      ;
+; N/A   ; None         ; 7.513 ns   ; PULSE_WR ; DDA:inst|test:inst14|acc[0]                                      ; CLK      ;
+; N/A   ; None         ; 6.970 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[5]                                      ; CLK      ;
+; N/A   ; None         ; 6.970 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[4]                                      ; CLK      ;
+; N/A   ; None         ; 6.970 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[3]                                      ; CLK      ;
+; N/A   ; None         ; 6.970 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[2]                                      ; CLK      ;
+; N/A   ; None         ; 6.970 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[1]                                      ; CLK      ;
+; N/A   ; None         ; 6.966 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[6]                                      ; CLK      ;
+; N/A   ; None         ; 6.966 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[7]                                      ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[6]                                    ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[5]                                    ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[4]                                    ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[3]                                    ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[2]                                    ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[1]                                    ; CLK      ;
+; N/A   ; None         ; 6.519 ns   ; PULSE_WR ; DDA:inst|test:inst15|dir                                         ; CLK      ;
+; N/A   ; None         ; 6.104 ns   ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[0]                                    ; CLK      ;
+; N/A   ; None         ; 6.001 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[6]                                    ; CLK      ;
+; N/A   ; None         ; 6.001 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[5]                                    ; CLK      ;
+; N/A   ; None         ; 6.001 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[4]                                    ; CLK      ;
+; N/A   ; None         ; 6.001 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[3]                                    ; CLK      ;
+; N/A   ; None         ; 6.001 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[2]                                    ; CLK      ;
+; N/A   ; None         ; 6.001 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[0]                                    ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u                                      ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[5]                               ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[7]                               ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[6]                               ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[1]                               ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[2]                               ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[3]                               ; CLK      ;
+; N/A   ; None         ; 5.915 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[4]                               ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[6]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[5]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[4]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[3]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[2]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[1]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst|Ntemp[0]                                      ; CLK      ;
+; N/A   ; None         ; 5.708 ns   ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[2]                                    ; CLK      ;
+; N/A   ; None         ; 5.673 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[5]                                        ; CLK      ;
+; N/A   ; None         ; 5.673 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[3]                                        ; CLK      ;
+; N/A   ; None         ; 5.673 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[2]                                        ; CLK      ;
+; N/A   ; None         ; 5.673 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[1]                                        ; CLK      ;
+; N/A   ; None         ; 5.673 ns   ; PULSE_WR ; DDA:inst|test:inst|acc[0]                                        ; CLK      ;
+; N/A   ; None         ; 5.673 ns   ; PULSE_WR ; DDA:inst|test:inst16|acc[0]                                      ; CLK      ;
+; N/A   ; None         ; 5.471 ns   ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[1]                                    ; CLK      ;
+; N/A   ; None         ; 5.468 ns   ; PULSE_WR ; DDA:inst|test:inst15|pulse                                       ; CLK      ;
+; N/A   ; None         ; 5.311 ns   ; PULSE_WR ; DDA:inst|test:inst14|dir                                         ; CLK      ;
+; N/A   ; None         ; 5.311 ns   ; PULSE_WR ; DDA:inst|test:inst|dir                                           ; CLK      ;
+; N/A   ; None         ; 5.038 ns   ; PULSE_WR ; DDA:inst|test:inst16|pulse                                       ; CLK      ;
+; N/A   ; None         ; 3.877 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[4]                                  ; CLK      ;
+; N/A   ; None         ; 3.877 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[0]                                  ; CLK      ;
+; N/A   ; None         ; 3.877 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[1]                                  ; CLK      ;
+; N/A   ; None         ; 3.877 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[2]                                  ; CLK      ;
+; N/A   ; None         ; 3.877 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[3]                                  ; CLK      ;
+; N/A   ; None         ; 3.499 ns   ; PULSE_WR ; DDA:inst|test:inst14|pulse                                       ; CLK      ;
+; N/A   ; None         ; 3.499 ns   ; PULSE_WR ; DDA:inst|test:inst|pulse                                         ; CLK      ;
+; N/A   ; None         ; 3.487 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[10]                                 ; CLK      ;
+; N/A   ; None         ; 3.487 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[6]                                  ; CLK      ;
+; N/A   ; None         ; 3.487 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[5]                                  ; CLK      ;
+; N/A   ; None         ; 3.487 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[7]                                  ; CLK      ;
+; N/A   ; None         ; 3.487 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[8]                                  ; CLK      ;
+; N/A   ; None         ; 3.487 ns   ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[9]                                  ; CLK      ;
+; N/A   ; None         ; 3.290 ns   ; PULSE_WR ; DDA:inst|test:inst16|busy                                        ; CLK      ;
+; N/A   ; None         ; 2.928 ns   ; PULSE_WR ; DDA:inst|test:inst16|pre_WR                                      ; CLK      ;
+; N/A   ; None         ; 2.270 ns   ; Data[1]  ; 74373b:inst5|13                                                  ; NADV     ;
+; N/A   ; None         ; 2.037 ns   ; Data[0]  ; 74373b:inst5|12                                                  ; NADV     ;
+; N/A   ; None         ; 1.779 ns   ; Data[4]  ; 74373b:inst5|16                                                  ; NADV     ;
+; N/A   ; None         ; 1.720 ns   ; Data[5]  ; 74373b:inst5|17                                                  ; NADV     ;
+; N/A   ; None         ; 1.627 ns   ; Data[6]  ; 74373b:inst5|18                                                  ; NADV     ;
+; N/A   ; None         ; 1.417 ns   ; Data[2]  ; 74373b:inst5|14                                                  ; NADV     ;
+; N/A   ; None         ; 1.381 ns   ; Data[7]  ; 74373b:inst5|19                                                  ; NADV     ;
+; N/A   ; None         ; -0.300 ns  ; ENC4[1]  ; encoder_2:inst15|encoder_module:inst16|encoder_filter:inst|inst  ; CLK      ;
+; N/A   ; None         ; -0.748 ns  ; ENC4[0]  ; encoder_2:inst15|encoder_module:inst16|encoder_filter:inst|inst6 ; CLK      ;
+; N/A   ; None         ; -1.005 ns  ; Data[1]  ; DDA:inst|74373b:inst6|13                                         ; NWE      ;
+; N/A   ; None         ; -1.051 ns  ; ENC1[1]  ; encoder_2:inst15|encoder_module:inst13|encoder_filter:inst|inst  ; CLK      ;
+; N/A   ; None         ; -1.065 ns  ; Data[1]  ; DDA:inst|74373b:inst3|13                                         ; NWE      ;
+; N/A   ; None         ; -1.316 ns  ; ENC3[0]  ; encoder_2:inst15|encoder_module:inst15|encoder_filter:inst|inst6 ; CLK      ;
+; N/A   ; None         ; -1.320 ns  ; ENC1[0]  ; encoder_2:inst15|encoder_module:inst13|encoder_filter:inst|inst6 ; CLK      ;
+; N/A   ; None         ; -1.549 ns  ; ENC3[1]  ; encoder_2:inst15|encoder_module:inst15|encoder_filter:inst|inst  ; CLK      ;
+; N/A   ; None         ; -1.681 ns  ; Data[1]  ; DDA:inst|74373b:inst6|13                                         ; NADV     ;
+; N/A   ; None         ; -1.741 ns  ; Data[1]  ; DDA:inst|74373b:inst3|13                                         ; NADV     ;
+; N/A   ; None         ; -1.853 ns  ; Data[3]  ; DDA:inst|74373b:inst3|15                                         ; NWE      ;
+; N/A   ; None         ; -1.881 ns  ; Data[0]  ; DDA:inst|74373b:inst9|12                                         ; NWE      ;
+; N/A   ; None         ; -2.048 ns  ; Data[1]  ; DDA:inst|74373b:inst9|13                                         ; NWE      ;
+; N/A   ; None         ; -2.062 ns  ; Data[7]  ; DDA:inst|74373b:inst3|19                                         ; NWE      ;
+; N/A   ; None         ; -2.225 ns  ; Data[3]  ; DDA:inst|74373b:inst9|15                                         ; NWE      ;
+; N/A   ; None         ; -2.283 ns  ; Data[6]  ; DDA:inst|74373b:inst3|18                                         ; NWE      ;
+; N/A   ; None         ; -2.345 ns  ; Data[7]  ; DDA:inst|74373b:inst6|19                                         ; NWE      ;
+; N/A   ; None         ; -2.400 ns  ; Data[6]  ; DDA:inst|74373b:inst9|18                                         ; NWE      ;
+; N/A   ; None         ; -2.529 ns  ; Data[3]  ; DDA:inst|74373b:inst3|15                                         ; NADV     ;
+; N/A   ; None         ; -2.550 ns  ; Data[0]  ; DDA:inst|74373b:inst9|12                                         ; NADV     ;
+; N/A   ; None         ; -2.578 ns  ; Data[3]  ; DDA:inst|74373b:inst13|15                                        ; NWE      ;
+; N/A   ; None         ; -2.609 ns  ; Data[3]  ; DDA:inst|74373b:inst13|15                                        ; NADV     ;
+; N/A   ; None         ; -2.663 ns  ; ENC2[1]  ; encoder_2:inst15|encoder_module:inst14|encoder_filter:inst|inst  ; CLK      ;
+; N/A   ; None         ; -2.717 ns  ; Data[1]  ; DDA:inst|74373b:inst9|13                                         ; NADV     ;
+; N/A   ; None         ; -2.738 ns  ; Data[7]  ; DDA:inst|74373b:inst3|19                                         ; NADV     ;
+; N/A   ; None         ; -2.828 ns  ; Data[7]  ; DDA:inst|74373b:inst9|19                                         ; NWE      ;
+; N/A   ; None         ; -2.894 ns  ; Data[3]  ; DDA:inst|74373b:inst9|15                                         ; NADV     ;
+; N/A   ; None         ; -2.959 ns  ; Data[6]  ; DDA:inst|74373b:inst3|18                                         ; NADV     ;
+; N/A   ; None         ; -2.988 ns  ; Data[5]  ; DDA:inst|74373b:inst3|17                                         ; NWE      ;
+; N/A   ; None         ; -3.021 ns  ; Data[7]  ; DDA:inst|74373b:inst6|19                                         ; NADV     ;
+; N/A   ; None         ; -3.040 ns  ; Data[4]  ; DDA:inst|74373b:inst6|16                                         ; NWE      ;
+; N/A   ; None         ; -3.063 ns  ; Data[2]  ; DDA:inst|74373b:inst13|14                                        ; NWE      ;
+; N/A   ; None         ; -3.069 ns  ; Data[6]  ; DDA:inst|74373b:inst9|18                                         ; NADV     ;
+; N/A   ; None         ; -3.094 ns  ; Data[2]  ; DDA:inst|74373b:inst13|14                                        ; NADV     ;
+; N/A   ; None         ; -3.099 ns  ; Data[4]  ; DDA:inst|74373b:inst9|16                                         ; NWE      ;
+; N/A   ; None         ; -3.106 ns  ; ENC2[0]  ; encoder_2:inst15|encoder_module:inst14|encoder_filter:inst|inst6 ; CLK      ;
+; N/A   ; None         ; -3.124 ns  ; Data[2]  ; DDA:inst|74373b:inst3|14                                         ; NWE      ;
+; N/A   ; None         ; -3.129 ns  ; Data[0]  ; DDA:inst|74373b:inst6|12                                         ; NWE      ;
+; N/A   ; None         ; -3.170 ns  ; Data[4]  ; DDA:inst|74373b:inst3|16                                         ; NWE      ;
+; N/A   ; None         ; -3.202 ns  ; Data[2]  ; DDA:inst|74373b:inst9|14                                         ; NWE      ;
+; N/A   ; None         ; -3.285 ns  ; Data[3]  ; DDA:inst|74373b:inst6|15                                         ; NWE      ;
+; N/A   ; None         ; -3.386 ns  ; Data[0]  ; DDA:inst|74373b:inst13|12                                        ; NWE      ;
+; N/A   ; None         ; -3.394 ns  ; Data[1]  ; DDA:inst|74373b:inst13|13                                        ; NWE      ;
+; N/A   ; None         ; -3.417 ns  ; Data[0]  ; DDA:inst|74373b:inst13|12                                        ; NADV     ;
+; N/A   ; None         ; -3.425 ns  ; Data[1]  ; DDA:inst|74373b:inst13|13                                        ; NADV     ;
+; N/A   ; None         ; -3.455 ns  ; Data[5]  ; DDA:inst|74373b:inst9|17                                         ; NWE      ;
+; N/A   ; None         ; -3.485 ns  ; Data[2]  ; DDA:inst|74373b:inst6|14                                         ; NWE      ;
+; N/A   ; None         ; -3.497 ns  ; Data[7]  ; DDA:inst|74373b:inst9|19                                         ; NADV     ;
+; N/A   ; None         ; -3.543 ns  ; Data[6]  ; DDA:inst|74373b:inst6|18                                         ; NWE      ;
+; N/A   ; None         ; -3.562 ns  ; Data[5]  ; DDA:inst|74373b:inst6|17                                         ; NWE      ;
+; N/A   ; None         ; -3.620 ns  ; Data[5]  ; DDA:inst|74373b:inst13|17                                        ; NWE      ;
+; N/A   ; None         ; -3.651 ns  ; Data[5]  ; DDA:inst|74373b:inst13|17                                        ; NADV     ;
+; N/A   ; None         ; -3.664 ns  ; Data[5]  ; DDA:inst|74373b:inst3|17                                         ; NADV     ;
+; N/A   ; None         ; -3.716 ns  ; Data[4]  ; DDA:inst|74373b:inst6|16                                         ; NADV     ;
+; N/A   ; None         ; -3.765 ns  ; Data[6]  ; DDA:inst|74373b:inst13|18                                        ; NWE      ;
+; N/A   ; None         ; -3.768 ns  ; Data[4]  ; DDA:inst|74373b:inst9|16                                         ; NADV     ;
+; N/A   ; None         ; -3.774 ns  ; Data[0]  ; DDA:inst|74373b:inst3|12                                         ; NWE      ;
+; N/A   ; None         ; -3.796 ns  ; Data[6]  ; DDA:inst|74373b:inst13|18                                        ; NADV     ;
+; N/A   ; None         ; -3.800 ns  ; Data[2]  ; DDA:inst|74373b:inst3|14                                         ; NADV     ;
+; N/A   ; None         ; -3.805 ns  ; Data[0]  ; DDA:inst|74373b:inst6|12                                         ; NADV     ;
+; N/A   ; None         ; -3.846 ns  ; Data[4]  ; DDA:inst|74373b:inst3|16                                         ; NADV     ;
+; N/A   ; None         ; -3.871 ns  ; Data[2]  ; DDA:inst|74373b:inst9|14                                         ; NADV     ;
+; N/A   ; None         ; -3.961 ns  ; Data[3]  ; DDA:inst|74373b:inst6|15                                         ; NADV     ;
+; N/A   ; None         ; -3.999 ns  ; Data[4]  ; DDA:inst|74373b:inst13|16                                        ; NWE      ;
+; N/A   ; None         ; -4.030 ns  ; Data[4]  ; DDA:inst|74373b:inst13|16                                        ; NADV     ;
+; N/A   ; None         ; -4.124 ns  ; Data[5]  ; DDA:inst|74373b:inst9|17                                         ; NADV     ;
+; N/A   ; None         ; -4.161 ns  ; Data[2]  ; DDA:inst|74373b:inst6|14                                         ; NADV     ;
+; N/A   ; None         ; -4.219 ns  ; Data[6]  ; DDA:inst|74373b:inst6|18                                         ; NADV     ;
+; N/A   ; None         ; -4.238 ns  ; Data[5]  ; DDA:inst|74373b:inst6|17                                         ; NADV     ;
+; N/A   ; None         ; -4.450 ns  ; Data[0]  ; DDA:inst|74373b:inst3|12                                         ; NADV     ;
+; N/A   ; None         ; -4.541 ns  ; Data[7]  ; DDA:inst|74373b:inst13|19                                        ; NWE      ;
+; N/A   ; None         ; -4.572 ns  ; Data[7]  ; DDA:inst|74373b:inst13|19                                        ; NADV     ;
++-------+--------------+------------+----------+------------------------------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                                                      ;
++-------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                                                                         ; To       ; From Clock ;
++-------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+
+; N/A   ; None         ; 19.051 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; Data[9]  ; CLK        ;
+; N/A   ; None         ; 18.630 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; Data[14] ; CLK        ;
+; N/A   ; None         ; 18.353 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; Data[2]  ; CLK        ;
+; N/A   ; None         ; 18.317 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; Data[2]  ; CLK        ;
+; N/A   ; None         ; 18.308 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; Data[1]  ; CLK        ;
+; N/A   ; None         ; 18.288 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]  ; Data[0]  ; CLK        ;
+; N/A   ; None         ; 18.244 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; Data[15] ; CLK        ;
+; N/A   ; None         ; 18.225 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; Data[9]  ; CLK        ;
+; N/A   ; None         ; 18.084 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; Data[10] ; CLK        ;
+; N/A   ; None         ; 18.081 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; Data[5]  ; CLK        ;
+; N/A   ; None         ; 17.989 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; Data[3]  ; CLK        ;
+; N/A   ; None         ; 17.958 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; Data[3]  ; CLK        ;
+; N/A   ; None         ; 17.832 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; Data[6]  ; CLK        ;
+; N/A   ; None         ; 17.704 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; Data[12] ; CLK        ;
+; N/A   ; None         ; 17.640 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; Data[3]  ; CLK        ;
+; N/A   ; None         ; 17.612 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; Data[15] ; CLK        ;
+; N/A   ; None         ; 17.598 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; Data[7]  ; CLK        ;
+; N/A   ; None         ; 17.533 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; Data[11] ; CLK        ;
+; N/A   ; None         ; 17.476 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; Data[13] ; CLK        ;
+; N/A   ; None         ; 17.387 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; Data[1]  ; CLK        ;
+; N/A   ; None         ; 17.375 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; Data[13] ; CLK        ;
+; N/A   ; None         ; 17.299 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; Data[8]  ; CLK        ;
+; N/A   ; None         ; 17.281 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; Data[4]  ; CLK        ;
+; N/A   ; None         ; 17.264 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; Data[14] ; CLK        ;
+; N/A   ; None         ; 17.247 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; Data[1]  ; CLK        ;
+; N/A   ; None         ; 17.195 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; Data[2]  ; CLK        ;
+; N/A   ; None         ; 17.146 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; Data[11] ; CLK        ;
+; N/A   ; None         ; 17.066 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; Data[4]  ; CLK        ;
+; N/A   ; None         ; 17.023 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; Data[12] ; CLK        ;
+; N/A   ; None         ; 16.995 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]  ; Data[0]  ; CLK        ;
+; N/A   ; None         ; 16.984 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; Data[6]  ; CLK        ;
+; N/A   ; None         ; 16.971 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; Data[13] ; CLK        ;
+; N/A   ; None         ; 16.918 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; Data[8]  ; CLK        ;
+; N/A   ; None         ; 16.822 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; Data[8]  ; CLK        ;
+; N/A   ; None         ; 16.821 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; Data[7]  ; CLK        ;
+; N/A   ; None         ; 16.752 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; Data[8]  ; CLK        ;
+; N/A   ; None         ; 16.705 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]  ; Data[0]  ; CLK        ;
+; N/A   ; None         ; 16.697 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; Data[5]  ; CLK        ;
+; N/A   ; None         ; 16.694 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; Data[14] ; CLK        ;
+; N/A   ; None         ; 16.656 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; Data[13] ; CLK        ;
+; N/A   ; None         ; 16.619 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; Data[2]  ; CLK        ;
+; N/A   ; None         ; 16.579 ns  ; encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; Data[10] ; CLK        ;
+; N/A   ; None         ; 16.534 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; Data[11] ; CLK        ;
+; N/A   ; None         ; 16.482 ns  ; 74373b:inst5|12                                                                                                                              ; Data[1]  ; NADV       ;
+; N/A   ; None         ; 16.481 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; Data[15] ; CLK        ;
+; N/A   ; None         ; 16.410 ns  ; 74373b:inst5|12                                                                                                                              ; Data[14] ; NADV       ;
+; N/A   ; None         ; 16.394 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; Data[12] ; CLK        ;
+; N/A   ; None         ; 16.249 ns  ; encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; Data[11] ; CLK        ;
+; N/A   ; None         ; 16.219 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; Data[6]  ; CLK        ;
+; N/A   ; None         ; 16.203 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; Data[9]  ; CLK        ;
+; N/A   ; None         ; 16.049 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; Data[14] ; CLK        ;
+; N/A   ; None         ; 16.037 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; Data[7]  ; CLK        ;
+; N/A   ; None         ; 15.954 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; Data[10] ; CLK        ;
+; N/A   ; None         ; 15.742 ns  ; 74373b:inst5|12                                                                                                                              ; Data[6]  ; NADV       ;
+; N/A   ; None         ; 15.664 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; Data[12] ; CLK        ;
+; N/A   ; None         ; 15.647 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; Data[3]  ; CLK        ;
+; N/A   ; None         ; 15.601 ns  ; 74373b:inst5|12                                                                                                                              ; Data[7]  ; NADV       ;
+; N/A   ; None         ; 15.526 ns  ; 74373b:inst5|13                                                                                                                              ; Data[3]  ; NADV       ;
+; N/A   ; None         ; 15.352 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; Data[5]  ; CLK        ;
+; N/A   ; None         ; 15.333 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; Data[1]  ; CLK        ;
+; N/A   ; None         ; 15.255 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; Data[10] ; CLK        ;
+; N/A   ; None         ; 15.160 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; Data[9]  ; CLK        ;
+; N/A   ; None         ; 15.158 ns  ; 74373b:inst5|13                                                                                                                              ; Data[9]  ; NADV       ;
+; N/A   ; None         ; 15.103 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]  ; Data[0]  ; CLK        ;
+; N/A   ; None         ; 15.035 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; Data[7]  ; CLK        ;
+; N/A   ; None         ; 15.027 ns  ; encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; Data[4]  ; CLK        ;
+; N/A   ; None         ; 14.996 ns  ; 74373b:inst5|12                                                                                                                              ; Data[9]  ; NADV       ;
+; N/A   ; None         ; 14.961 ns  ; 74373b:inst5|13                                                                                                                              ; Data[15] ; NADV       ;
+; N/A   ; None         ; 14.889 ns  ; 74373b:inst5|13                                                                                                                              ; Data[12] ; NADV       ;
+; N/A   ; None         ; 14.866 ns  ; 74373b:inst5|12                                                                                                                              ; Data[0]  ; NADV       ;
+; N/A   ; None         ; 14.806 ns  ; 74373b:inst5|13                                                                                                                              ; Data[14] ; NADV       ;
+; N/A   ; None         ; 14.663 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; Data[6]  ; CLK        ;
+; N/A   ; None         ; 14.570 ns  ; 74373b:inst5|12                                                                                                                              ; Data[15] ; NADV       ;
+; N/A   ; None         ; 14.527 ns  ; 74373b:inst5|13                                                                                                                              ; Data[0]  ; NADV       ;
+; N/A   ; None         ; 14.462 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; Data[5]  ; CLK        ;
+; N/A   ; None         ; 14.343 ns  ; 74373b:inst5|13                                                                                                                              ; Data[5]  ; NADV       ;
+; N/A   ; None         ; 14.252 ns  ; 74373b:inst5|12                                                                                                                              ; Data[3]  ; NADV       ;
+; N/A   ; None         ; 14.185 ns  ; 74373b:inst5|12                                                                                                                              ; Data[10] ; NADV       ;
+; N/A   ; None         ; 14.183 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; Data[4]  ; CLK        ;
+; N/A   ; None         ; 14.181 ns  ; 74373b:inst5|13                                                                                                                              ; Data[4]  ; NADV       ;
+; N/A   ; None         ; 14.132 ns  ; 74373b:inst5|13                                                                                                                              ; Data[1]  ; NADV       ;
+; N/A   ; None         ; 14.050 ns  ; 74373b:inst5|12                                                                                                                              ; Data[13] ; NADV       ;
+; N/A   ; None         ; 13.626 ns  ; 74373b:inst5|12                                                                                                                              ; Data[8]  ; NADV       ;
+; N/A   ; None         ; 13.607 ns  ; encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; Data[15] ; CLK        ;
+; N/A   ; None         ; 13.566 ns  ; 74373b:inst5|12                                                                                                                              ; Data[11] ; NADV       ;
+; N/A   ; None         ; 13.462 ns  ; 74373b:inst5|12                                                                                                                              ; Data[12] ; NADV       ;
+; N/A   ; None         ; 13.397 ns  ; 74373b:inst5|13                                                                                                                              ; Data[6]  ; NADV       ;
+; N/A   ; None         ; 13.365 ns  ; 74373b:inst5|12                                                                                                                              ; Data[2]  ; NADV       ;
+; N/A   ; None         ; 13.295 ns  ; 74373b:inst5|13                                                                                                                              ; Data[10] ; NADV       ;
+; N/A   ; None         ; 13.252 ns  ; 74373b:inst5|13                                                                                                                              ; Data[8]  ; NADV       ;
+; N/A   ; None         ; 13.250 ns  ; 74373b:inst5|13                                                                                                                              ; Data[7]  ; NADV       ;
+; N/A   ; None         ; 13.190 ns  ; 74373b:inst5|13                                                                                                                              ; Data[2]  ; NADV       ;
+; N/A   ; None         ; 13.051 ns  ; 74373b:inst5|13                                                                                                                              ; Data[11] ; NADV       ;
+; N/A   ; None         ; 12.909 ns  ; 74373b:inst5|12                                                                                                                              ; Data[5]  ; NADV       ;
+; N/A   ; None         ; 12.773 ns  ; 74373b:inst5|13                                                                                                                              ; Data[13] ; NADV       ;
+; N/A   ; None         ; 12.753 ns  ; 74373b:inst5|12                                                                                                                              ; Data[4]  ; NADV       ;
+; N/A   ; None         ; 12.207 ns  ; DDA:inst|test:inst16|busy                                                                                                                    ; busy     ; CLK        ;
+; N/A   ; None         ; 11.654 ns  ; 74373b:inst5|18                                                                                                                              ; Data[3]  ; NADV       ;
+; N/A   ; None         ; 11.654 ns  ; 74373b:inst5|18                                                                                                                              ; Data[2]  ; NADV       ;
+; N/A   ; None         ; 11.654 ns  ; 74373b:inst5|18                                                                                                                              ; Data[1]  ; NADV       ;
+; N/A   ; None         ; 11.635 ns  ; 74373b:inst5|18                                                                                                                              ; Data[5]  ; NADV       ;
+; N/A   ; None         ; 11.635 ns  ; 74373b:inst5|18                                                                                                                              ; Data[4]  ; NADV       ;
+; N/A   ; None         ; 11.633 ns  ; 74373b:inst5|18                                                                                                                              ; Data[6]  ; NADV       ;
+; N/A   ; None         ; 11.633 ns  ; 74373b:inst5|18                                                                                                                              ; Data[7]  ; NADV       ;
+; N/A   ; None         ; 11.629 ns  ; 74373b:inst5|18                                                                                                                              ; Data[8]  ; NADV       ;
+; N/A   ; None         ; 11.629 ns  ; 74373b:inst5|18                                                                                                                              ; Data[9]  ; NADV       ;
+; N/A   ; None         ; 11.629 ns  ; 74373b:inst5|18                                                                                                                              ; Data[10] ; NADV       ;
+; N/A   ; None         ; 11.629 ns  ; 74373b:inst5|18                                                                                                                              ; Data[11] ; NADV       ;
+; N/A   ; None         ; 11.343 ns  ; 74373b:inst5|18                                                                                                                              ; Data[14] ; NADV       ;
+; N/A   ; None         ; 11.343 ns  ; 74373b:inst5|18                                                                                                                              ; Data[15] ; NADV       ;
+; N/A   ; None         ; 11.280 ns  ; 74373b:inst5|17                                                                                                                              ; Data[3]  ; NADV       ;
+; N/A   ; None         ; 11.280 ns  ; 74373b:inst5|17                                                                                                                              ; Data[2]  ; NADV       ;
+; N/A   ; None         ; 11.280 ns  ; 74373b:inst5|17                                                                                                                              ; Data[1]  ; NADV       ;
+; N/A   ; None         ; 11.261 ns  ; 74373b:inst5|17                                                                                                                              ; Data[5]  ; NADV       ;
+; N/A   ; None         ; 11.261 ns  ; 74373b:inst5|17                                                                                                                              ; Data[4]  ; NADV       ;
+; N/A   ; None         ; 11.259 ns  ; 74373b:inst5|17                                                                                                                              ; Data[6]  ; NADV       ;
+; N/A   ; None         ; 11.259 ns  ; 74373b:inst5|17                                                                                                                              ; Data[7]  ; NADV       ;
+; N/A   ; None         ; 11.255 ns  ; 74373b:inst5|17                                                                                                                              ; Data[8]  ; NADV       ;
+; N/A   ; None         ; 11.255 ns  ; 74373b:inst5|17                                                                                                                              ; Data[9]  ; NADV       ;
+; N/A   ; None         ; 11.255 ns  ; 74373b:inst5|17                                                                                                                              ; Data[10] ; NADV       ;
+; N/A   ; None         ; 11.255 ns  ; 74373b:inst5|17                                                                                                                              ; Data[11] ; NADV       ;
+; N/A   ; None         ; 10.969 ns  ; 74373b:inst5|17                                                                                                                              ; Data[14] ; NADV       ;
+; N/A   ; None         ; 10.969 ns  ; 74373b:inst5|17                                                                                                                              ; Data[15] ; NADV       ;
+; N/A   ; None         ; 10.949 ns  ; DDA:inst|test:inst14|dir                                                                                                                     ; DIR2     ; CLK        ;
+; N/A   ; None         ; 10.940 ns  ; 74373b:inst5|18                                                                                                                              ; Data[0]  ; NADV       ;
+; N/A   ; None         ; 10.891 ns  ; 74373b:inst5|18                                                                                                                              ; Data[12] ; NADV       ;
+; N/A   ; None         ; 10.891 ns  ; 74373b:inst5|18                                                                                                                              ; Data[13] ; NADV       ;
+; N/A   ; None         ; 10.738 ns  ; 74373b:inst5|16                                                                                                                              ; Data[3]  ; NADV       ;
+; N/A   ; None         ; 10.738 ns  ; 74373b:inst5|16                                                                                                                              ; Data[2]  ; NADV       ;
+; N/A   ; None         ; 10.738 ns  ; 74373b:inst5|16                                                                                                                              ; Data[1]  ; NADV       ;
+; N/A   ; None         ; 10.719 ns  ; 74373b:inst5|16                                                                                                                              ; Data[5]  ; NADV       ;
+; N/A   ; None         ; 10.719 ns  ; 74373b:inst5|16                                                                                                                              ; Data[4]  ; NADV       ;
+; N/A   ; None         ; 10.717 ns  ; 74373b:inst5|16                                                                                                                              ; Data[6]  ; NADV       ;
+; N/A   ; None         ; 10.717 ns  ; 74373b:inst5|16                                                                                                                              ; Data[7]  ; NADV       ;
+; N/A   ; None         ; 10.713 ns  ; 74373b:inst5|16                                                                                                                              ; Data[8]  ; NADV       ;
+; N/A   ; None         ; 10.713 ns  ; 74373b:inst5|16                                                                                                                              ; Data[9]  ; NADV       ;
+; N/A   ; None         ; 10.713 ns  ; 74373b:inst5|16                                                                                                                              ; Data[10] ; NADV       ;
+; N/A   ; None         ; 10.713 ns  ; 74373b:inst5|16                                                                                                                              ; Data[11] ; NADV       ;
+; N/A   ; None         ; 10.713 ns  ; DDA:inst|test:inst14|pulse                                                                                                                   ; PULSE2   ; CLK        ;
+; N/A   ; None         ; 10.597 ns  ; DDA:inst|test:inst|pulse                                                                                                                     ; PULSE1   ; CLK        ;
+; N/A   ; None         ; 10.566 ns  ; 74373b:inst5|17                                                                                                                              ; Data[0]  ; NADV       ;
+; N/A   ; None         ; 10.517 ns  ; 74373b:inst5|17                                                                                                                              ; Data[12] ; NADV       ;
+; N/A   ; None         ; 10.517 ns  ; 74373b:inst5|17                                                                                                                              ; Data[13] ; NADV       ;
+; N/A   ; None         ; 10.474 ns  ; DDA:inst|test:inst|dir                                                                                                                       ; DIR1     ; CLK        ;
+; N/A   ; None         ; 10.427 ns  ; 74373b:inst5|16                                                                                                                              ; Data[14] ; NADV       ;
+; N/A   ; None         ; 10.427 ns  ; 74373b:inst5|16                                                                                                                              ; Data[15] ; NADV       ;
+; N/A   ; None         ; 10.219 ns  ; 74373b:inst5|19                                                                                                                              ; Data[3]  ; NADV       ;
+; N/A   ; None         ; 10.219 ns  ; 74373b:inst5|19                                                                                                                              ; Data[2]  ; NADV       ;
+; N/A   ; None         ; 10.219 ns  ; 74373b:inst5|19                                                                                                                              ; Data[1]  ; NADV       ;
+; N/A   ; None         ; 10.200 ns  ; 74373b:inst5|19                                                                                                                              ; Data[5]  ; NADV       ;
+; N/A   ; None         ; 10.200 ns  ; 74373b:inst5|19                                                                                                                              ; Data[4]  ; NADV       ;
+; N/A   ; None         ; 10.198 ns  ; 74373b:inst5|19                                                                                                                              ; Data[6]  ; NADV       ;
+; N/A   ; None         ; 10.198 ns  ; 74373b:inst5|19                                                                                                                              ; Data[7]  ; NADV       ;
+; N/A   ; None         ; 10.194 ns  ; 74373b:inst5|19                                                                                                                              ; Data[8]  ; NADV       ;
+; N/A   ; None         ; 10.194 ns  ; 74373b:inst5|19                                                                                                                              ; Data[9]  ; NADV       ;
+; N/A   ; None         ; 10.194 ns  ; 74373b:inst5|19                                                                                                                              ; Data[10] ; NADV       ;
+; N/A   ; None         ; 10.194 ns  ; 74373b:inst5|19                                                                                                                              ; Data[11] ; NADV       ;
+; N/A   ; None         ; 10.189 ns  ; DDA:inst|test:inst14|dir                                                                                                                     ; PULSE2   ; CLK        ;
+; N/A   ; None         ; 10.085 ns  ; DDA:inst|test:inst|dir                                                                                                                       ; PULSE1   ; CLK        ;
+; N/A   ; None         ; 10.024 ns  ; 74373b:inst5|16                                                                                                                              ; Data[0]  ; NADV       ;
+; N/A   ; None         ; 9.975 ns   ; 74373b:inst5|16                                                                                                                              ; Data[12] ; NADV       ;
+; N/A   ; None         ; 9.975 ns   ; 74373b:inst5|16                                                                                                                              ; Data[13] ; NADV       ;
+; N/A   ; None         ; 9.908 ns   ; 74373b:inst5|19                                                                                                                              ; Data[14] ; NADV       ;
+; N/A   ; None         ; 9.908 ns   ; 74373b:inst5|19                                                                                                                              ; Data[15] ; NADV       ;
+; N/A   ; None         ; 9.850 ns   ; DDA:inst|test:inst16|pulse                                                                                                                   ; PULSE4   ; CLK        ;
+; N/A   ; None         ; 9.606 ns   ; DDA:inst|test:inst15|dir                                                                                                                     ; DIR3     ; CLK        ;
+; N/A   ; None         ; 9.505 ns   ; 74373b:inst5|19                                                                                                                              ; Data[0]  ; NADV       ;
+; N/A   ; None         ; 9.456 ns   ; 74373b:inst5|19                                                                                                                              ; Data[12] ; NADV       ;
+; N/A   ; None         ; 9.456 ns   ; 74373b:inst5|19                                                                                                                              ; Data[13] ; NADV       ;
+; N/A   ; None         ; 9.340 ns   ; DDA:inst|test:inst16|dir                                                                                                                     ; PULSE4   ; CLK        ;
+; N/A   ; None         ; 8.953 ns   ; DDA:inst|test:inst15|pulse                                                                                                                   ; PULSE3   ; CLK        ;
+; N/A   ; None         ; 8.947 ns   ; DDA:inst|test:inst16|dir                                                                                                                     ; DIR4     ; CLK        ;
++-------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+
+
+
++---------------------------------------------------------------+
+; tpd                                                           ;
++-------+-------------------+-----------------+------+----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To       ;
++-------+-------------------+-----------------+------+----------+
+; N/A   ; None              ; 10.803 ns       ; LSW1 ; PULSE1   ;
+; N/A   ; None              ; 10.531 ns       ; LSW2 ; PULSE2   ;
+; N/A   ; None              ; 10.466 ns       ; LSW5 ; HOME     ;
+; N/A   ; None              ; 9.946 ns        ; LSW2 ; HOME1    ;
+; N/A   ; None              ; 9.839 ns        ; LSW1 ; HOME1    ;
+; N/A   ; None              ; 9.805 ns        ; LSW2 ; HOME     ;
+; N/A   ; None              ; 9.711 ns        ; LSW1 ; HOME     ;
+; N/A   ; None              ; 9.657 ns        ; LSW4 ; PULSE4   ;
+; N/A   ; None              ; 7.750 ns        ; NOE  ; Data[3]  ;
+; N/A   ; None              ; 7.750 ns        ; NOE  ; Data[2]  ;
+; N/A   ; None              ; 7.750 ns        ; NOE  ; Data[1]  ;
+; N/A   ; None              ; 7.731 ns        ; NOE  ; Data[5]  ;
+; N/A   ; None              ; 7.731 ns        ; NOE  ; Data[4]  ;
+; N/A   ; None              ; 7.729 ns        ; NOE  ; Data[6]  ;
+; N/A   ; None              ; 7.729 ns        ; NOE  ; Data[7]  ;
+; N/A   ; None              ; 7.725 ns        ; NOE  ; Data[8]  ;
+; N/A   ; None              ; 7.725 ns        ; NOE  ; Data[9]  ;
+; N/A   ; None              ; 7.725 ns        ; NOE  ; Data[10] ;
+; N/A   ; None              ; 7.725 ns        ; NOE  ; Data[11] ;
+; N/A   ; None              ; 7.439 ns        ; NOE  ; Data[14] ;
+; N/A   ; None              ; 7.439 ns        ; NOE  ; Data[15] ;
+; N/A   ; None              ; 7.108 ns        ; LSW4 ; LIMIT_Z  ;
+; N/A   ; None              ; 7.036 ns        ; NOE  ; Data[0]  ;
+; N/A   ; None              ; 6.987 ns        ; NOE  ; Data[12] ;
+; N/A   ; None              ; 6.987 ns        ; NOE  ; Data[13] ;
++-------+-------------------+-----------------+------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                               ;
++---------------+-------------+-----------+----------+------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To                                                               ; To Clock ;
++---------------+-------------+-----------+----------+------------------------------------------------------------------+----------+
+; N/A           ; None        ; 8.215 ns  ; Data[7]  ; DDA:inst|74373b:inst13|19                                        ; NADV     ;
+; N/A           ; None        ; 7.467 ns  ; Data[0]  ; DDA:inst|74373b:inst3|12                                         ; NADV     ;
+; N/A           ; None        ; 7.288 ns  ; Data[4]  ; DDA:inst|74373b:inst13|16                                        ; NADV     ;
+; N/A           ; None        ; 7.058 ns  ; Data[1]  ; DDA:inst|74373b:inst13|13                                        ; NADV     ;
+; N/A           ; None        ; 7.054 ns  ; Data[6]  ; DDA:inst|74373b:inst13|18                                        ; NADV     ;
+; N/A           ; None        ; 6.967 ns  ; Data[5]  ; DDA:inst|74373b:inst6|17                                         ; NADV     ;
+; N/A           ; None        ; 6.948 ns  ; Data[6]  ; DDA:inst|74373b:inst6|18                                         ; NADV     ;
+; N/A           ; None        ; 6.927 ns  ; Data[2]  ; DDA:inst|74373b:inst9|14                                         ; NADV     ;
+; N/A           ; None        ; 6.900 ns  ; Data[5]  ; DDA:inst|74373b:inst13|17                                        ; NADV     ;
+; N/A           ; None        ; 6.833 ns  ; Data[5]  ; DDA:inst|74373b:inst9|17                                         ; NADV     ;
+; N/A           ; None        ; 6.829 ns  ; Data[0]  ; DDA:inst|74373b:inst9|12                                         ; NADV     ;
+; N/A           ; None        ; 6.758 ns  ; Data[7]  ; DDA:inst|74373b:inst13|19                                        ; NWE      ;
+; N/A           ; None        ; 6.673 ns  ; Data[5]  ; DDA:inst|74373b:inst3|17                                         ; NADV     ;
+; N/A           ; None        ; 6.665 ns  ; Data[0]  ; DDA:inst|74373b:inst13|12                                        ; NADV     ;
+; N/A           ; None        ; 6.660 ns  ; Data[4]  ; DDA:inst|74373b:inst3|16                                         ; NADV     ;
+; N/A           ; None        ; 6.534 ns  ; Data[2]  ; DDA:inst|74373b:inst6|14                                         ; NADV     ;
+; N/A           ; None        ; 6.529 ns  ; Data[0]  ; DDA:inst|74373b:inst6|12                                         ; NADV     ;
+; N/A           ; None        ; 6.487 ns  ; Data[4]  ; DDA:inst|74373b:inst9|16                                         ; NADV     ;
+; N/A           ; None        ; 6.451 ns  ; Data[2]  ; DDA:inst|74373b:inst3|14                                         ; NADV     ;
+; N/A           ; None        ; 6.333 ns  ; Data[3]  ; DDA:inst|74373b:inst6|15                                         ; NADV     ;
+; N/A           ; None        ; 6.304 ns  ; Data[6]  ; DDA:inst|74373b:inst3|18                                         ; NADV     ;
+; N/A           ; None        ; 6.272 ns  ; Data[4]  ; DDA:inst|74373b:inst6|16                                         ; NADV     ;
+; N/A           ; None        ; 6.241 ns  ; Data[3]  ; DDA:inst|74373b:inst13|15                                        ; NADV     ;
+; N/A           ; None        ; 6.142 ns  ; Data[3]  ; DDA:inst|74373b:inst9|15                                         ; NADV     ;
+; N/A           ; None        ; 6.097 ns  ; Data[1]  ; DDA:inst|74373b:inst3|13                                         ; NADV     ;
+; N/A           ; None        ; 6.005 ns  ; Data[2]  ; DDA:inst|74373b:inst13|14                                        ; NADV     ;
+; N/A           ; None        ; 5.831 ns  ; Data[4]  ; DDA:inst|74373b:inst13|16                                        ; NWE      ;
+; N/A           ; None        ; 5.803 ns  ; Data[7]  ; DDA:inst|74373b:inst9|19                                         ; NADV     ;
+; N/A           ; None        ; 5.798 ns  ; Data[0]  ; DDA:inst|74373b:inst3|12                                         ; NWE      ;
+; N/A           ; None        ; 5.787 ns  ; Data[6]  ; DDA:inst|74373b:inst9|18                                         ; NADV     ;
+; N/A           ; None        ; 5.601 ns  ; Data[1]  ; DDA:inst|74373b:inst13|13                                        ; NWE      ;
+; N/A           ; None        ; 5.597 ns  ; Data[6]  ; DDA:inst|74373b:inst13|18                                        ; NWE      ;
+; N/A           ; None        ; 5.577 ns  ; Data[5]  ; DDA:inst|74373b:inst6|17                                         ; NWE      ;
+; N/A           ; None        ; 5.558 ns  ; Data[6]  ; DDA:inst|74373b:inst6|18                                         ; NWE      ;
+; N/A           ; None        ; 5.443 ns  ; Data[5]  ; DDA:inst|74373b:inst13|17                                        ; NWE      ;
+; N/A           ; None        ; 5.436 ns  ; Data[1]  ; DDA:inst|74373b:inst9|13                                         ; NADV     ;
+; N/A           ; None        ; 5.381 ns  ; Data[2]  ; DDA:inst|74373b:inst9|14                                         ; NWE      ;
+; N/A           ; None        ; 5.287 ns  ; Data[5]  ; DDA:inst|74373b:inst9|17                                         ; NWE      ;
+; N/A           ; None        ; 5.283 ns  ; Data[0]  ; DDA:inst|74373b:inst9|12                                         ; NWE      ;
+; N/A           ; None        ; 5.215 ns  ; Data[7]  ; DDA:inst|74373b:inst3|19                                         ; NADV     ;
+; N/A           ; None        ; 5.208 ns  ; Data[0]  ; DDA:inst|74373b:inst13|12                                        ; NWE      ;
+; N/A           ; None        ; 5.173 ns  ; Data[7]  ; DDA:inst|74373b:inst6|19                                         ; NADV     ;
+; N/A           ; None        ; 5.170 ns  ; Data[3]  ; DDA:inst|74373b:inst3|15                                         ; NADV     ;
+; N/A           ; None        ; 5.144 ns  ; Data[2]  ; DDA:inst|74373b:inst6|14                                         ; NWE      ;
+; N/A           ; None        ; 5.139 ns  ; Data[0]  ; DDA:inst|74373b:inst6|12                                         ; NWE      ;
+; N/A           ; None        ; 5.004 ns  ; Data[5]  ; DDA:inst|74373b:inst3|17                                         ; NWE      ;
+; N/A           ; None        ; 4.991 ns  ; Data[4]  ; DDA:inst|74373b:inst3|16                                         ; NWE      ;
+; N/A           ; None        ; 4.991 ns  ; Data[1]  ; DDA:inst|74373b:inst6|13                                         ; NADV     ;
+; N/A           ; None        ; 4.943 ns  ; Data[3]  ; DDA:inst|74373b:inst6|15                                         ; NWE      ;
+; N/A           ; None        ; 4.941 ns  ; Data[4]  ; DDA:inst|74373b:inst9|16                                         ; NWE      ;
+; N/A           ; None        ; 4.882 ns  ; Data[4]  ; DDA:inst|74373b:inst6|16                                         ; NWE      ;
+; N/A           ; None        ; 4.784 ns  ; Data[3]  ; DDA:inst|74373b:inst13|15                                        ; NWE      ;
+; N/A           ; None        ; 4.782 ns  ; Data[2]  ; DDA:inst|74373b:inst3|14                                         ; NWE      ;
+; N/A           ; None        ; 4.635 ns  ; Data[6]  ; DDA:inst|74373b:inst3|18                                         ; NWE      ;
+; N/A           ; None        ; 4.596 ns  ; Data[3]  ; DDA:inst|74373b:inst9|15                                         ; NWE      ;
+; N/A           ; None        ; 4.548 ns  ; Data[2]  ; DDA:inst|74373b:inst13|14                                        ; NWE      ;
+; N/A           ; None        ; 4.428 ns  ; Data[1]  ; DDA:inst|74373b:inst3|13                                         ; NWE      ;
+; N/A           ; None        ; 4.257 ns  ; Data[7]  ; DDA:inst|74373b:inst9|19                                         ; NWE      ;
+; N/A           ; None        ; 4.241 ns  ; Data[6]  ; DDA:inst|74373b:inst9|18                                         ; NWE      ;
+; N/A           ; None        ; 3.890 ns  ; Data[1]  ; DDA:inst|74373b:inst9|13                                         ; NWE      ;
+; N/A           ; None        ; 3.783 ns  ; Data[7]  ; DDA:inst|74373b:inst6|19                                         ; NWE      ;
+; N/A           ; None        ; 3.660 ns  ; ENC2[0]  ; encoder_2:inst15|encoder_module:inst14|encoder_filter:inst|inst6 ; CLK      ;
+; N/A           ; None        ; 3.601 ns  ; Data[1]  ; DDA:inst|74373b:inst6|13                                         ; NWE      ;
+; N/A           ; None        ; 3.546 ns  ; Data[7]  ; DDA:inst|74373b:inst3|19                                         ; NWE      ;
+; N/A           ; None        ; 3.501 ns  ; Data[3]  ; DDA:inst|74373b:inst3|15                                         ; NWE      ;
+; N/A           ; None        ; 3.217 ns  ; ENC2[1]  ; encoder_2:inst15|encoder_module:inst14|encoder_filter:inst|inst  ; CLK      ;
+; N/A           ; None        ; 2.103 ns  ; ENC3[1]  ; encoder_2:inst15|encoder_module:inst15|encoder_filter:inst|inst  ; CLK      ;
+; N/A           ; None        ; 1.874 ns  ; ENC1[0]  ; encoder_2:inst15|encoder_module:inst13|encoder_filter:inst|inst6 ; CLK      ;
+; N/A           ; None        ; 1.870 ns  ; ENC3[0]  ; encoder_2:inst15|encoder_module:inst15|encoder_filter:inst|inst6 ; CLK      ;
+; N/A           ; None        ; 1.605 ns  ; ENC1[1]  ; encoder_2:inst15|encoder_module:inst13|encoder_filter:inst|inst  ; CLK      ;
+; N/A           ; None        ; 1.302 ns  ; ENC4[0]  ; encoder_2:inst15|encoder_module:inst16|encoder_filter:inst|inst6 ; CLK      ;
+; N/A           ; None        ; 0.854 ns  ; ENC4[1]  ; encoder_2:inst15|encoder_module:inst16|encoder_filter:inst|inst  ; CLK      ;
+; N/A           ; None        ; 0.293 ns  ; Data[7]  ; 74373b:inst5|19                                                  ; NADV     ;
+; N/A           ; None        ; 0.197 ns  ; Data[6]  ; 74373b:inst5|18                                                  ; NADV     ;
+; N/A           ; None        ; 0.124 ns  ; Data[4]  ; 74373b:inst5|16                                                  ; NADV     ;
+; N/A           ; None        ; 0.110 ns  ; Data[5]  ; 74373b:inst5|17                                                  ; NADV     ;
+; N/A           ; None        ; 0.075 ns  ; Data[2]  ; 74373b:inst5|14                                                  ; NADV     ;
+; N/A           ; None        ; -0.158 ns ; Data[0]  ; 74373b:inst5|12                                                  ; NADV     ;
+; N/A           ; None        ; -0.317 ns ; Data[1]  ; 74373b:inst5|13                                                  ; NADV     ;
+; N/A           ; None        ; -2.374 ns ; PULSE_WR ; DDA:inst|test:inst16|pre_WR                                      ; CLK      ;
+; N/A           ; None        ; -2.476 ns ; PULSE_WR ; DDA:inst|test:inst|acc[1]                                        ; CLK      ;
+; N/A           ; None        ; -2.732 ns ; PULSE_WR ; DDA:inst|test:inst|acc[0]                                        ; CLK      ;
+; N/A           ; None        ; -2.736 ns ; PULSE_WR ; DDA:inst|test:inst16|busy                                        ; CLK      ;
+; N/A           ; None        ; -2.738 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[0]                                      ; CLK      ;
+; N/A           ; None        ; -2.909 ns ; PULSE_WR ; DDA:inst|test:inst|pulse                                         ; CLK      ;
+; N/A           ; None        ; -2.913 ns ; PULSE_WR ; DDA:inst|test:inst14|pulse                                       ; CLK      ;
+; N/A           ; None        ; -2.933 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[10]                                 ; CLK      ;
+; N/A           ; None        ; -2.933 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[6]                                  ; CLK      ;
+; N/A           ; None        ; -2.933 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[5]                                  ; CLK      ;
+; N/A           ; None        ; -2.933 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[7]                                  ; CLK      ;
+; N/A           ; None        ; -2.933 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[8]                                  ; CLK      ;
+; N/A           ; None        ; -2.933 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[9]                                  ; CLK      ;
+; N/A           ; None        ; -2.942 ns ; PULSE_WR ; DDA:inst|test:inst|acc[5]                                        ; CLK      ;
+; N/A           ; None        ; -2.944 ns ; PULSE_WR ; DDA:inst|test:inst|acc[3]                                        ; CLK      ;
+; N/A           ; None        ; -2.944 ns ; PULSE_WR ; DDA:inst|test:inst|acc[2]                                        ; CLK      ;
+; N/A           ; None        ; -3.323 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[4]                                  ; CLK      ;
+; N/A           ; None        ; -3.323 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[0]                                  ; CLK      ;
+; N/A           ; None        ; -3.323 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[1]                                  ; CLK      ;
+; N/A           ; None        ; -3.323 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[2]                                  ; CLK      ;
+; N/A           ; None        ; -3.323 ns ; PULSE_WR ; DDA:inst|test:inst16|clk_cnt[3]                                  ; CLK      ;
+; N/A           ; None        ; -3.648 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[7]                                      ; CLK      ;
+; N/A           ; None        ; -3.702 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[2]                                      ; CLK      ;
+; N/A           ; None        ; -3.703 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[3]                                      ; CLK      ;
+; N/A           ; None        ; -3.878 ns ; PULSE_WR ; DDA:inst|test:inst|acc[7]                                        ; CLK      ;
+; N/A           ; None        ; -4.087 ns ; PULSE_WR ; DDA:inst|test:inst|acc[4]                                        ; CLK      ;
+; N/A           ; None        ; -4.093 ns ; PULSE_WR ; DDA:inst|test:inst|acc[6]                                        ; CLK      ;
+; N/A           ; None        ; -4.112 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[6]                                      ; CLK      ;
+; N/A           ; None        ; -4.165 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[4]                                      ; CLK      ;
+; N/A           ; None        ; -4.202 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[7]                                      ; CLK      ;
+; N/A           ; None        ; -4.203 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[6]                                      ; CLK      ;
+; N/A           ; None        ; -4.221 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[1]                                      ; CLK      ;
+; N/A           ; None        ; -4.228 ns ; PULSE_WR ; DDA:inst|test:inst16|acc[5]                                      ; CLK      ;
+; N/A           ; None        ; -4.235 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[1]                                      ; CLK      ;
+; N/A           ; None        ; -4.368 ns ; PULSE_WR ; DDA:inst|test:inst16|pulse                                       ; CLK      ;
+; N/A           ; None        ; -4.479 ns ; PULSE_WR ; DDA:inst|test:inst15|pulse                                       ; CLK      ;
+; N/A           ; None        ; -4.706 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[3]                                      ; CLK      ;
+; N/A           ; None        ; -4.707 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[4]                                      ; CLK      ;
+; N/A           ; None        ; -4.712 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[2]                                      ; CLK      ;
+; N/A           ; None        ; -4.757 ns ; PULSE_WR ; DDA:inst|test:inst14|dir                                         ; CLK      ;
+; N/A           ; None        ; -4.757 ns ; PULSE_WR ; DDA:inst|test:inst|dir                                           ; CLK      ;
+; N/A           ; None        ; -4.825 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[5]                                      ; CLK      ;
+; N/A           ; None        ; -4.828 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[6]                                      ; CLK      ;
+; N/A           ; None        ; -4.831 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[7]                                      ; CLK      ;
+; N/A           ; None        ; -4.917 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[1]                                    ; CLK      ;
+; N/A           ; None        ; -4.947 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[0]                                      ; CLK      ;
+; N/A           ; None        ; -4.961 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[1]                                      ; CLK      ;
+; N/A           ; None        ; -4.962 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[3]                                      ; CLK      ;
+; N/A           ; None        ; -4.966 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[5]                                      ; CLK      ;
+; N/A           ; None        ; -4.968 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[2]                                      ; CLK      ;
+; N/A           ; None        ; -4.969 ns ; PULSE_WR ; DDA:inst|test:inst15|acc[4]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[6]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[5]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[4]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[3]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[2]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[1]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst|Ntemp[0]                                      ; CLK      ;
+; N/A           ; None        ; -5.154 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[2]                                    ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u                                      ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[5]                               ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[7]                               ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[6]                               ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[1]                               ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[2]                               ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[3]                               ; CLK      ;
+; N/A           ; None        ; -5.361 ns ; PULSE_WR ; DDA:inst|test:inst16|clk20u_cnt[4]                               ; CLK      ;
+; N/A           ; None        ; -5.447 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[6]                                    ; CLK      ;
+; N/A           ; None        ; -5.447 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[5]                                    ; CLK      ;
+; N/A           ; None        ; -5.447 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[4]                                    ; CLK      ;
+; N/A           ; None        ; -5.447 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[3]                                    ; CLK      ;
+; N/A           ; None        ; -5.447 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[2]                                    ; CLK      ;
+; N/A           ; None        ; -5.447 ns ; PULSE_WR ; DDA:inst|test:inst14|Ntemp[0]                                    ; CLK      ;
+; N/A           ; None        ; -5.502 ns ; PULSE_WR ; DDA:inst|test:inst14|acc[0]                                      ; CLK      ;
+; N/A           ; None        ; -5.550 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[0]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[6]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[5]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[4]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[3]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[2]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|Ntemp[1]                                    ; CLK      ;
+; N/A           ; None        ; -5.965 ns ; PULSE_WR ; DDA:inst|test:inst15|dir                                         ; CLK      ;
+; N/A           ; None        ; -7.081 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[5]                                    ; CLK      ;
+; N/A           ; None        ; -7.081 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[0]                                    ; CLK      ;
+; N/A           ; None        ; -7.225 ns ; PULSE_WR ; DDA:inst|test:inst16|dir                                         ; CLK      ;
+; N/A           ; None        ; -7.225 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[6]                                    ; CLK      ;
+; N/A           ; None        ; -7.225 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[4]                                    ; CLK      ;
+; N/A           ; None        ; -7.225 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[3]                                    ; CLK      ;
+; N/A           ; None        ; -7.225 ns ; PULSE_WR ; DDA:inst|test:inst16|Ntemp[1]                                    ; CLK      ;
++---------------+-------------+-----------+----------+------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Apr 20 10:28:06 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off test -c test
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "DDA:inst|74373b:inst6|19" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|19" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|19" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|18" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|17" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|16" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|15" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|14" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|13" is a latch
+    Warning: Node "DDA:inst|74373b:inst6|12" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|18" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|17" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|16" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|15" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|14" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|13" is a latch
+    Warning: Node "DDA:inst|74373b:inst3|12" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|18" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|17" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|16" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|15" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|14" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|13" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|12" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|18" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|17" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|16" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|15" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|14" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|13" is a latch
+    Warning: Node "DDA:inst|74373b:inst13|12" is a latch
+    Warning: Node "74373b:inst5|19" is a latch
+    Warning: Node "74373b:inst5|17" is a latch
+    Warning: Node "74373b:inst5|18" is a latch
+    Warning: Node "74373b:inst5|14" is a latch
+    Warning: Node "74373b:inst5|16" is a latch
+    Warning: Node "74373b:inst5|13" is a latch
+    Warning: Node "74373b:inst5|12" is a latch
+    Warning: Node "DDA:inst|74373b:inst9|19" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+    Info: Assuming node "NADV" is a latch enable. Will not compute fmax for this pin.
+    Info: Assuming node "NWE" is a latch enable. Will not compute fmax for this pin.
+Warning: Found 17 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "74373b:inst5|12" as buffer
+    Info: Detected ripple clock "74373b:inst5|13" as buffer
+    Info: Detected ripple clock "74373b:inst5|16" as buffer
+    Info: Detected ripple clock "74373b:inst5|14" as buffer
+    Info: Detected ripple clock "74373b:inst5|18" as buffer
+    Info: Detected ripple clock "74373b:inst5|17" as buffer
+    Info: Detected ripple clock "74373b:inst5|19" as buffer
+    Info: Detected ripple clock "encoder_2:inst15|encoder_module:inst16|lpm_counter5:inst9|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[0]" as buffer
+    Info: Detected ripple clock "encoder_2:inst15|encoder_module:inst13|lpm_counter5:inst9|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[0]" as buffer
+    Info: Detected ripple clock "encoder_2:inst15|encoder_module:inst15|lpm_counter5:inst9|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[0]" as buffer
+    Info: Detected ripple clock "encoder_2:inst15|encoder_module:inst14|lpm_counter5:inst9|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[0]" as buffer
+    Info: Detected gated clock "DDA:inst|74138:inst2|18" as buffer
+    Info: Detected gated clock "DDA:inst|74138:inst2|17" as buffer
+    Info: Detected gated clock "DDA:inst|74138:inst2|15" as buffer
+    Info: Detected gated clock "DDA:inst|74138:inst2|16" as buffer
+    Info: Detected gated clock "DDA:inst|74138:inst2|18~1" as buffer
+    Info: Detected gated clock "DDA:inst|74138:inst2|18~0" as buffer
+Info: Clock "CLK" has Internal fmax of 82.18 MHz between source register "DDA:inst|test:inst14|Ntemp[0]" and destination register "DDA:inst|test:inst14|acc[7]" (period= 12.168 ns)
+    Info: + Longest register to register delay is 11.459 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X10_Y6_N7; Fanout = 3; REG Node = 'DDA:inst|test:inst14|Ntemp[0]'
+        Info: 2: + IC(2.561 ns) + CELL(0.747 ns) = 3.308 ns; Loc. = LC_X8_Y5_N0; Fanout = 2; COMB Node = 'DDA:inst|test:inst14|Add2~37'
+        Info: 3: + IC(0.000 ns) + CELL(0.123 ns) = 3.431 ns; Loc. = LC_X8_Y5_N1; Fanout = 2; COMB Node = 'DDA:inst|test:inst14|Add2~22'
+        Info: 4: + IC(0.000 ns) + CELL(0.815 ns) = 4.246 ns; Loc. = LC_X8_Y5_N2; Fanout = 5; COMB Node = 'DDA:inst|test:inst14|Add2~25'
+        Info: 5: + IC(1.815 ns) + CELL(0.914 ns) = 6.975 ns; Loc. = LC_X4_Y5_N5; Fanout = 2; COMB Node = 'DDA:inst|test:inst14|LessThan2~1'
+        Info: 6: + IC(0.725 ns) + CELL(0.914 ns) = 8.614 ns; Loc. = LC_X4_Y5_N6; Fanout = 7; COMB Node = 'DDA:inst|test:inst14|LessThan2~2'
+        Info: 7: + IC(1.784 ns) + CELL(1.061 ns) = 11.459 ns; Loc. = LC_X2_Y5_N0; Fanout = 1; REG Node = 'DDA:inst|test:inst14|acc[7]'
+        Info: Total cell delay = 4.574 ns ( 39.92 % )
+        Info: Total interconnect delay = 6.885 ns ( 60.08 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 3.681 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 93; CLK Node = 'CLK'
+            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X2_Y5_N0; Fanout = 1; REG Node = 'DDA:inst|test:inst14|acc[7]'
+            Info: Total cell delay = 2.081 ns ( 56.53 % )
+            Info: Total interconnect delay = 1.600 ns ( 43.47 % )
+        Info: - Longest clock path from clock "CLK" to source register is 3.681 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 93; CLK Node = 'CLK'
+            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X10_Y6_N7; Fanout = 3; REG Node = 'DDA:inst|test:inst14|Ntemp[0]'
+            Info: Total cell delay = 2.081 ns ( 56.53 % )
+            Info: Total interconnect delay = 1.600 ns ( 43.47 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: tsu for register "DDA:inst|test:inst15|acc[0]" (data pin = "PULSE_WR", clock pin = "CLK") is 7.966 ns
+    Info: + Longest pin to register delay is 11.314 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_75; Fanout = 6; PIN Node = 'PULSE_WR'
+        Info: 2: + IC(3.155 ns) + CELL(0.740 ns) = 5.027 ns; Loc. = LC_X5_Y7_N0; Fanout = 46; COMB Node = 'DDA:inst|test:inst14|Equal0~0'
+        Info: 3: + IC(1.888 ns) + CELL(0.200 ns) = 7.115 ns; Loc. = LC_X5_Y7_N5; Fanout = 32; COMB Node = 'DDA:inst|test:inst|acc~0'
+        Info: 4: + IC(2.956 ns) + CELL(1.243 ns) = 11.314 ns; Loc. = LC_X11_Y4_N9; Fanout = 3; REG Node = 'DDA:inst|test:inst15|acc[0]'
+        Info: Total cell delay = 3.315 ns ( 29.30 % )
+        Info: Total interconnect delay = 7.999 ns ( 70.70 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 3.681 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 93; CLK Node = 'CLK'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X11_Y4_N9; Fanout = 3; REG Node = 'DDA:inst|test:inst15|acc[0]'
+        Info: Total cell delay = 2.081 ns ( 56.53 % )
+        Info: Total interconnect delay = 1.600 ns ( 43.47 % )
+Info: tco from clock "CLK" to destination pin "Data[9]" through register "encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]" is 19.051 ns
+    Info: + Longest clock path from clock "CLK" to source register is 9.355 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 93; CLK Node = 'CLK'
+        Info: 2: + IC(1.600 ns) + CELL(1.294 ns) = 4.057 ns; Loc. = LC_X12_Y7_N1; Fanout = 27; REG Node = 'encoder_2:inst15|encoder_module:inst14|lpm_counter5:inst9|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[0]'
+        Info: 3: + IC(4.380 ns) + CELL(0.918 ns) = 9.355 ns; Loc. = LC_X2_Y4_N1; Fanout = 4; REG Node = 'encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]'
+        Info: Total cell delay = 3.375 ns ( 36.08 % )
+        Info: Total interconnect delay = 5.980 ns ( 63.92 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 9.320 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X2_Y4_N1; Fanout = 4; REG Node = 'encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]'
+        Info: 2: + IC(3.102 ns) + CELL(0.914 ns) = 4.016 ns; Loc. = LC_X7_Y5_N9; Fanout = 1; COMB Node = 'encoder_2:inst15|lpm_mux0:inst|lpm_mux:lpm_mux_component|mux_7bc:auto_generated|result_node[9]~13'
+        Info: 3: + IC(2.982 ns) + CELL(2.322 ns) = 9.320 ns; Loc. = PIN_85; Fanout = 0; PIN Node = 'Data[9]'
+        Info: Total cell delay = 3.236 ns ( 34.72 % )
+        Info: Total interconnect delay = 6.084 ns ( 65.28 % )
+Info: Longest tpd from source pin "LSW1" to destination pin "PULSE1" is 10.803 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_2; Fanout = 3; PIN Node = 'LSW1'
+    Info: 2: + IC(3.324 ns) + CELL(0.914 ns) = 5.370 ns; Loc. = LC_X9_Y7_N4; Fanout = 1; COMB Node = 'inst10~0'
+    Info: 3: + IC(3.111 ns) + CELL(2.322 ns) = 10.803 ns; Loc. = PIN_17; Fanout = 0; PIN Node = 'PULSE1'
+    Info: Total cell delay = 4.368 ns ( 40.43 % )
+    Info: Total interconnect delay = 6.435 ns ( 59.57 % )
+Info: th for register "DDA:inst|74373b:inst13|19" (data pin = "Data[7]", clock pin = "NADV") is 8.215 ns
+    Info: + Longest clock path from clock "NADV" to destination register is 12.309 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_57; Fanout = 7; CLK Node = 'NADV'
+        Info: 2: + IC(3.259 ns) + CELL(0.200 ns) = 4.591 ns; Loc. = LC_X10_Y7_N0; Fanout = 1; REG Node = '74373b:inst5|14'
+        Info: 3: + IC(0.793 ns) + CELL(0.511 ns) = 5.895 ns; Loc. = LC_X10_Y7_N7; Fanout = 4; COMB Node = 'DDA:inst|74138:inst2|18~1'
+        Info: 4: + IC(2.557 ns) + CELL(0.914 ns) = 9.366 ns; Loc. = LC_X5_Y5_N1; Fanout = 8; COMB Node = 'DDA:inst|74138:inst2|18'
+        Info: 5: + IC(2.029 ns) + CELL(0.914 ns) = 12.309 ns; Loc. = LC_X5_Y5_N6; Fanout = 1; REG Node = 'DDA:inst|74373b:inst13|19'
+        Info: Total cell delay = 3.671 ns ( 29.82 % )
+        Info: Total interconnect delay = 8.638 ns ( 70.18 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: - Shortest pin to register delay is 4.094 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_87; Fanout = 1; PIN Node = 'Data[7]'
+        Info: 2: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = IOC_X7_Y8_N0; Fanout = 5; COMB Node = 'D[7]'
+        Info: 3: + IC(2.762 ns) + CELL(0.200 ns) = 4.094 ns; Loc. = LC_X5_Y5_N6; Fanout = 1; REG Node = 'DDA:inst|74373b:inst13|19'
+        Info: Total cell delay = 1.332 ns ( 32.54 % )
+        Info: Total interconnect delay = 2.762 ns ( 67.46 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 190 megabytes
+    Info: Processing ended: Sat Apr 20 10:28:07 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

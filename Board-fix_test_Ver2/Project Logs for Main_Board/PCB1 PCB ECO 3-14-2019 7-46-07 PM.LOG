@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=P02 Pin=RN1-3
+Removed Pin From Net: NetName=P04 Pin=RN1-5
+Removed Pin From Net: NetName=P06 Pin=RN1-7
+Removed Pin From Net: NetName=P08 Pin=RN1-9
+Removed Pin From Net: NetName=P02 Pin=U1-15
+Removed Pin From Net: NetName=P04 Pin=U1-16
+Removed Pin From Net: NetName=P06 Pin=U1-17
+Removed Pin From Net: NetName=P08 Pin=U1-18
+Removed Pin From Net: NetName=DIR_0 Pin=U1-27
+Removed Pin From Net: NetName=DIR_1 Pin=U1-28
+Removed Pin From Net: NetName=DIR_2 Pin=U1-29
+Removed Pin From Net: NetName=DIR_3 Pin=U1-30
+Removed Pin From Net: NetName=ENC_A1 Pin=U1-59
+Removed Pin From Net: NetName=ENC_A0 Pin=U1-60
+Removed Pin From Net: NetName=ENC_A3 Pin=U1-61
+Removed Pin From Net: NetName=ENC_A2 Pin=U1-62
+Removed Pin From Net: NetName=ENC_B2 Pin=U1-71
+Removed Pin From Net: NetName=ENC_B3 Pin=U1-72
+Removed Pin From Net: NetName=ENC_B0 Pin=U1-73
+Removed Pin From Net: NetName=ENC_B1 Pin=U1-74
+Removed Pin From Net: NetName=P08 Pin=U4-14
+Removed Pin From Net: NetName=P06 Pin=U4-16
+Removed Pin From Net: NetName=P04 Pin=U4-18
+Removed Pin From Net: NetName=P02 Pin=U4-20
+Added Pin To Net: NetName=P04 Pin=RN1-3
+Added Pin To Net: NetName=P02 Pin=RN1-5
+Added Pin To Net: NetName=P08 Pin=RN1-7
+Added Pin To Net: NetName=P06 Pin=RN1-9
+Added Pin To Net: NetName=ENC_B0 Pin=U1-15
+Added Pin To Net: NetName=ENC_B1 Pin=U1-16
+Added Pin To Net: NetName=ENC_B2 Pin=U1-17
+Added Pin To Net: NetName=ENC_B3 Pin=U1-18
+Added Pin To Net: NetName=ENC_A3 Pin=U1-27
+Added Pin To Net: NetName=ENC_A2 Pin=U1-28
+Added Pin To Net: NetName=ENC_A1 Pin=U1-29
+Added Pin To Net: NetName=ENC_A0 Pin=U1-30
+Added Pin To Net: NetName=DIR_2 Pin=U1-59
+Added Pin To Net: NetName=DIR_3 Pin=U1-60
+Added Pin To Net: NetName=DIR_0 Pin=U1-61
+Added Pin To Net: NetName=DIR_1 Pin=U1-62
+Added Pin To Net: NetName=P08 Pin=U1-71
+Added Pin To Net: NetName=P06 Pin=U1-72
+Added Pin To Net: NetName=P04 Pin=U1-73
+Added Pin To Net: NetName=P02 Pin=U1-74
+Added Pin To Net: NetName=P06 Pin=U4-14
+Added Pin To Net: NetName=P08 Pin=U4-16
+Added Pin To Net: NetName=P02 Pin=U4-18
+Added Pin To Net: NetName=P04 Pin=U4-20
+Change Net Name : Old Net Name=P02 New Net Name=P55
+Change Net Name : Old Net Name=P04 New Net Name=P53
+Change Net Name : Old Net Name=P06 New Net Name=P51
+Change Net Name : Old Net Name=P08 New Net Name=P49

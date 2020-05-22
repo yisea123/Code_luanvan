@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=5V Pin=H3-1
+Removed Pin From Net: NetName=PB10 Pin=H3-2
+Removed Pin From Net: NetName=PB11 Pin=H3-3
+Removed Pin From Net: NetName=GND Pin=H3-4
+Change Component DesignItemId : Designator=H3 Old DesignItemId=Header white 4 New DesignItemId=Header white 3
+Change Component Footprint: Designator=H3 Old Footprint=Header White 4 New Footprint=Header White 3
+Added Pin To Net: NetName=PB10 Pin=H3-1
+Added Pin To Net: NetName=PB11 Pin=H3-2
+Added Pin To Net: NetName=GND Pin=H3-3

@@ -1,0 +1,15 @@
+Change Component Comment : Designator=H8 Old Comment=PWM New Comment=IN 5
+Change Component Designator: OldDesignator=H2 NewDesignator=H1
+Change Component Designator: OldDesignator=H3 NewDesignator=H2
+Change Component Designator: OldDesignator=H4 NewDesignator=H3
+Change Component Designator: OldDesignator=H5 NewDesignator=H4
+Change Component Designator: OldDesignator=H6 NewDesignator=H5
+Change Component Designator: OldDesignator=H7 NewDesignator=H6
+Change Component Designator: OldDesignator=H10 NewDesignator=H9
+Change Component Designator: OldDesignator=H11 NewDesignator=H10
+Change Component Designator: OldDesignator=H12 NewDesignator=H11
+Change Component Designator: OldDesignator=H13 NewDesignator=H12
+Added Component: Designator=H7(Header White 3)
+Added Pin To Net: NetName=GND Pin=H7-1
+Added Pin To Net: NetName=5V Pin=H7-2
+Added Pin To Net: NetName=PA2 Pin=H7-3

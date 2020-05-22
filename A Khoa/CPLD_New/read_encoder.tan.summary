@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.590 ns
+From           : PULSE_WR1
+To             : dda_module:inst1|dda:inst34|dir
+From Clock     : --
+To Clock       : CLK_20M
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.764 ns
+From           : enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]
+To             : DATA[10]
+From Clock     : CLK_20M
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.641 ns
+From           : NE1
+To             : DATA[13]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.059 ns
+From           : DATA[6]
+To             : dda_module:inst1|74373b:inst18|18
+From Clock     : --
+To Clock       : NADV
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK_20M'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 60.32 MHz ( period = 16.578 ns )
+From           : enc_module:inst|encoder_filter:inst8|inst3
+To             : enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]
+From Clock     : CLK_20M
+To Clock       : CLK_20M
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

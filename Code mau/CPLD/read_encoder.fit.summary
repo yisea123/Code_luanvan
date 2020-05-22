@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sun Jan 13 22:08:52 2019
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : read_encoder
+Top-level Entity Name : read_encoder
+Family : MAX II
+Device : EPM570T100C5
+Timing Models : Final
+Total logic elements : 359 / 570 ( 63 % )
+Total pins : 44 / 76 ( 58 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=3V3 Pin=C14-2
+Removed Pin From Net: NetName=3V3 Pin=IC2-8
+Removed Pin From Net: NetName=3V3 Pin=R15-1
+Removed Pin From Net: NetName=3V3 Pin=R18-2
+Removed Pin From Net: NetName=3V3 Pin=R19-1
+Removed Pin From Net: NetName=3V3 Pin=U1-44
+Change Net Name : Old Net Name=3V3 New Net Name=VREF
+Added Pin To Net: NetName=3V3_BOARD Pin=C14-2
+Added Pin To Net: NetName=3V3_BOARD Pin=IC2-8
+Added Pin To Net: NetName=3V3_BOARD Pin=R15-1
+Added Pin To Net: NetName=3V3_BOARD Pin=R18-2
+Added Pin To Net: NetName=3V3_BOARD Pin=R19-1
+Added Pin To Net: NetName=3V3_BOARD Pin=U1-44
+Added Net: Name=3V3_BOARD

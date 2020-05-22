@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=H_ENC_A2 Pin=R10-1
+Added Member To Class: ClassName=Main_Board Member=Component R2 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R8 330
+Added Member To Class: ClassName=Main_Board Member=Component R14 4.7k

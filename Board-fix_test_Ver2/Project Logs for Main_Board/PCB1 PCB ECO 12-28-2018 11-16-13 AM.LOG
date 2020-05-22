@@ -1,0 +1,31 @@
+Change Component Comment : Designator=R6 Old Comment=1k New Comment=4.7k
+Change Component Comment : Designator=R1 Old Comment=4.7k New Comment=1k
+Change Component Comment : Designator=R4 Old Comment=4.7k New Comment=1k
+Change Component Comment : Designator=R13 Old Comment=4.7k New Comment=1k
+Change Component Comment : Designator=R7 Old Comment=4.7k New Comment=470
+Change Component Designator: OldDesignator=R3 NewDesignator=R2
+Change Component Designator: OldDesignator=R4 NewDesignator=R5
+Change Component Designator: OldDesignator=R5 NewDesignator=R4
+Change Component Designator: OldDesignator=R9 NewDesignator=R8
+Change Component Designator: OldDesignator=R10 NewDesignator=R9
+Change Component Designator: OldDesignator=R11 NewDesignator=R10
+Change Component Designator: OldDesignator=R12 NewDesignator=R11
+Change Component Designator: OldDesignator=R15 NewDesignator=R14
+Change Component Designator: OldDesignator=R16 NewDesignator=R15
+Change Component Designator: OldDesignator=R17 NewDesignator=R16
+Change Component Designator: OldDesignator=R18 NewDesignator=R17
+Change Component Designator: OldDesignator=R19 NewDesignator=R18
+Change Component Designator: OldDesignator=R20 NewDesignator=R19
+Change Component Designator: OldDesignator=R21 NewDesignator=R20
+Change Component Designator: OldDesignator=R22 NewDesignator=R21
+Added Component: Designator=R3(RES-SM-0805)
+Added Component: Designator=R12(RES-SM-0805)
+Added Pin To Net: NetName=H_ENC_B0 Pin=R3-1
+Added Pin To Net: NetName=GND Pin=R3-2
+Added Pin To Net: NetName=H_ENC_B1 Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=H_ENC_A3 Pin=R12-1
+Added Pin To Net: NetName=GND Pin=R12-2
+Added Member To Class: ClassName=Main_Board Member=Component R3 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R6 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R12 4.7k

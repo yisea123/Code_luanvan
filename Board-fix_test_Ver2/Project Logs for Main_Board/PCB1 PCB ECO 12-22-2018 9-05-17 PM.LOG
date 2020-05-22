@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=H_IN-_0 Pin=D2-1
+Removed Pin From Net: NetName=NetD2_2 Pin=D2-2
+Removed Pin From Net: NetName=H_IN-_1 Pin=D5-1
+Removed Pin From Net: NetName=NetD5_2 Pin=D5-2
+Removed Pin From Net: NetName=H_IN-_2 Pin=D10-1
+Removed Pin From Net: NetName=NetD10_2 Pin=D10-2
+Removed Pin From Net: NetName=H_IN-_4 Pin=D14-1
+Removed Pin From Net: NetName=NetD14_2 Pin=D14-2
+Removed Pin From Net: NetName=H_IN-_5 Pin=D16-1
+Removed Pin From Net: NetName=NetD16_2 Pin=D16-2
+Removed Pin From Net: NetName=H_IN-_6 Pin=D18-1
+Removed Pin From Net: NetName=NetD18_2 Pin=D18-2
+Removed Pin From Net: NetName=H_IN-_7 Pin=D20-1
+Removed Pin From Net: NetName=NetD20_2 Pin=D20-2
+Change Component Comment : Designator=R1 Old Comment=10k New Comment=1k
+Change Component Comment : Designator=R9 Old Comment=10k New Comment=1k
+Change Component Comment : Designator=R23 Old Comment=10k New Comment=1k
+Change Component Comment : Designator=R27 Old Comment=10k New Comment=1k
+Change Component Comment : Designator=R33 Old Comment=10k New Comment=1k
+Change Component Comment : Designator=R41 Old Comment=10k New Comment=1k
+Change Component Comment : Designator=R47 Old Comment=10k New Comment=1k
+Added Pin To Net: NetName=NetD2_2 Pin=D2-1
+Added Pin To Net: NetName=H_IN-_0 Pin=D2-2
+Added Pin To Net: NetName=NetD5_2 Pin=D5-1
+Added Pin To Net: NetName=H_IN-_1 Pin=D5-2
+Added Pin To Net: NetName=NetD10_2 Pin=D10-1
+Added Pin To Net: NetName=H_IN-_2 Pin=D10-2
+Added Pin To Net: NetName=NetD14_2 Pin=D14-1
+Added Pin To Net: NetName=H_IN-_4 Pin=D14-2
+Added Pin To Net: NetName=NetD16_2 Pin=D16-1
+Added Pin To Net: NetName=H_IN-_5 Pin=D16-2
+Added Pin To Net: NetName=NetD18_2 Pin=D18-1
+Added Pin To Net: NetName=H_IN-_6 Pin=D18-2
+Added Pin To Net: NetName=NetD20_2 Pin=D20-1
+Added Pin To Net: NetName=H_IN-_7 Pin=D20-2
+Change Net Name : Old Net Name=NetD2_2 New Net Name=NetD2_1
+Change Net Name : Old Net Name=NetD5_2 New Net Name=NetD5_1
+Change Net Name : Old Net Name=NetD10_2 New Net Name=NetD10_1
+Change Net Name : Old Net Name=NetD14_2 New Net Name=NetD14_1
+Change Net Name : Old Net Name=NetD16_2 New Net Name=NetD16_1
+Change Net Name : Old Net Name=NetD18_2 New Net Name=NetD18_1
+Change Net Name : Old Net Name=NetD20_2 New Net Name=NetD20_1

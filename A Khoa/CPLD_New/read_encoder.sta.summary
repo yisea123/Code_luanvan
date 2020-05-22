@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLK_20M'
+Slack : -11.913
+TNS   : -582.724
+
+Type  : Setup 'PULSE_WR1'
+Slack : -10.027
+TNS   : -120.013
+
+Type  : Setup 'PULSE_WR2'
+Slack : -10.003
+TNS   : -122.468
+
+Type  : Setup 'enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]'
+Slack : -6.082
+TNS   : -198.245
+
+Type  : Setup 'NADV'
+Slack : -1.004
+TNS   : -5.020
+
+Type  : Hold 'CLK_20M'
+Slack : -2.007
+TNS   : -2.007
+
+Type  : Hold 'NADV'
+Slack : 0.950
+TNS   : 0.000
+
+Type  : Hold 'enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]'
+Slack : 1.399
+TNS   : 0.000
+
+Type  : Hold 'PULSE_WR1'
+Slack : 7.453
+TNS   : 0.000
+
+Type  : Hold 'PULSE_WR2'
+Slack : 7.853
+TNS   : 0.000
+
+Type  : Recovery 'CLK_20M'
+Slack : -3.274
+TNS   : -181.275
+
+Type  : Removal 'CLK_20M'
+Slack : 1.381
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK_20M'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'NADV'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'NE1'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'PULSE_WR1'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'PULSE_WR2'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

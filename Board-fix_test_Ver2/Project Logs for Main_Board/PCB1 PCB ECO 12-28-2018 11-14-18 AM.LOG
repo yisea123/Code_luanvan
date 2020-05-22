@@ -1,0 +1,30 @@
+Removed Pin From Net: NetName=NetD1_1 Pin=R1-1
+Removed Pin From Net: NetName=O_IN_0 Pin=R1-2
+Removed Pin From Net: NetName=NetD2_1 Pin=R4-1
+Removed Pin From Net: NetName=O_IN_1 Pin=R4-2
+Removed Pin From Net: NetName=5V Pin=R7-1
+Removed Pin From Net: NetName=NetD3_1 Pin=R7-2
+Removed Pin From Net: NetName=NetD6_1 Pin=R13-1
+Removed Pin From Net: NetName=O_IN_3 Pin=R13-2
+Added Component: Designator=R2(RES-SM-0805)
+Added Component: Designator=R6(RES-SM-0805)
+Added Component: Designator=R8(RES-SM-0805)
+Added Component: Designator=R14(RES-SM-0805)
+Added Pin To Net: NetName=NetD1_1 Pin=R1-1
+Added Pin To Net: NetName=O_IN_0 Pin=R1-2
+Added Pin To Net: NetName=H_ENC_B0 Pin=R4-1
+Added Pin To Net: NetName=GND Pin=R4-2
+Added Pin To Net: NetName=NetD2_1 Pin=R4-1
+Added Pin To Net: NetName=O_IN_1 Pin=R4-2
+Added Pin To Net: NetName=H_ENC_B1 Pin=R7-1
+Added Pin To Net: NetName=GND Pin=R7-2
+Added Pin To Net: NetName=5V Pin=R7-1
+Added Pin To Net: NetName=NetD3_1 Pin=R7-2
+Added Pin To Net: NetName=H_ENC_A3 Pin=R13-1
+Added Pin To Net: NetName=GND Pin=R13-2
+Added Pin To Net: NetName=NetD6_1 Pin=R13-1
+Added Pin To Net: NetName=O_IN_3 Pin=R13-2
+Added Member To Class: ClassName=Main_Board Member=Component R2 1k
+Added Member To Class: ClassName=Main_Board Member=Component R6 1k
+Added Member To Class: ClassName=Main_Board Member=Component R8 470
+Added Member To Class: ClassName=Main_Board Member=Component R14 1k

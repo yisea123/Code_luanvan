@@ -1,0 +1,154 @@
+module dda(N1, N2, N3, N4, WR, clk, pulse1, dir1, pulse2, dir2, pulse3, dir3, pulse4, dir4, busy,half);
+
+input [9:0] N1;
+input [9:0] N2;
+input [9:0] N3;
+input [9:0] N4;
+
+input WR;
+input clk;
+
+output reg pulse1 = 0;
+output reg dir1   = 0;
+output reg pulse2 = 0;
+output reg dir2   = 0;
+output reg pulse3 = 0;
+output reg dir3   = 0;
+output reg pulse4 = 0;
+output reg dir4   = 0;
+output reg half = 0;
+output reg busy = 0;
+
+
+//parameter Nmax  = 125;	// chu ky dieu khien 0.5ms, xung 4us -> Nmax = 125 
+//parameter Nmax1 = 124;	// tre 1 chu ky -> so xung max xuat ra 124
+//parameter Nmax2 = 250;
+
+parameter Nmax  = 50;	// chu ky dieu khien 1ms, xung 20us -> Nmax = 50 
+parameter Nmax1 = 49;	// tre 1 chu ky -> so xung max xuat ra 124
+parameter Nmax2 = 100;
+
+reg [7:0] Ntemp1 = 0;
+reg [7:0] Ntemp2 = 0;
+reg [7:0] Ntemp3 = 0;
+reg [7:0] Ntemp4 = 0;
+
+
+reg [8:0] acc1 = Nmax1;
+reg [8:0] acc2 = Nmax1;
+reg [8:0] acc3 = Nmax1;
+reg [8:0] acc4 = Nmax1;
+
+
+reg [7:0] clk_cnt = 0;
+reg [8:0] clk5u_cnt = 0;
+reg clk5u = 0;
+
+
+reg dirtemp1 = 0;
+reg dirtemp2 = 0;
+reg dirtemp3 = 0;
+reg dirtemp4 = 0;
+
+
+
+always @(posedge clk or posedge WR)  begin
+  	if (WR) begin				// neu co xung WR nap gia tri moi
+		Ntemp1   = N1[7:0];
+		dirtemp1 = N1[9];
+		Ntemp2   = N2[7:0];
+		dirtemp2 = N2[9];
+		Ntemp3   = N3[7:0];
+		dirtemp3 = N3[9];
+		Ntemp4   = N4[7:0];
+		dirtemp4 = N4[9];
+		
+		busy = 1;
+		clk_cnt = 0;
+		clk5u_cnt = 0;
+		clk5u = 0;		
+		
+		acc1 = Nmax1;
+		acc2 = Nmax1;
+		acc3 = Nmax1;
+		acc4 = Nmax1;
+		
+		pulse1 = 0;
+		pulse2 = 0;
+		pulse3 = 0;
+		pulse4 = 0;
+	end
+	
+	else begin
+		if (clk_cnt < 199)//update every 50ns*200=10us=1/2 chu ki xung
+			clk_cnt = clk_cnt + 1;
+		else begin 
+			dir1 = dirtemp1;
+			dir2 = dirtemp2;
+			dir3 = dirtemp3;
+			dir4 = dirtemp4;
+			
+			clk_cnt = 0;
+			if (clk5u_cnt < (Nmax2-2)/4) 
+				begin
+				half = 1;
+				end
+			else if (clk5u_cnt < (Nmax2-2)) 
+				begin
+				clk5u_cnt = clk5u_cnt + 1;
+				clk5u = !clk5u;
+				
+				if (clk5u) begin
+					acc1 = acc1 + Ntemp1;
+					acc2 = acc2 + Ntemp2;
+					acc3 = acc3 + Ntemp3;
+					acc4 = acc4 + Ntemp4;
+					
+					if (acc1 >= Nmax) begin
+						acc1 = acc1 - Nmax;
+						pulse1 = 1;
+					end		
+					else begin 
+						pulse1 = 0;
+					end	
+					
+					if (acc2 >= Nmax) begin
+						acc2 = acc2 - Nmax;
+						pulse2 = 1;
+					end		
+					else begin 
+						pulse2 = 0;
+					end
+					
+					if (acc3 >= Nmax) begin
+						acc3 = acc3 - Nmax;
+						pulse3 = 1;
+					end		
+					else begin 
+						pulse3 = 0;
+					end
+					
+					if (acc4 >= Nmax) begin
+						acc4 = acc4 - Nmax;
+						pulse4 = 1;
+					end		
+					else begin 
+						pulse4 = 0;
+					end
+					
+				end
+				else begin
+					pulse1 = 0;
+					pulse2 = 0;
+					pulse3 = 0;
+					pulse4 = 0;
+				end	
+			end
+			else 
+				busy = 0;
+				half = 0;	
+		end
+	end
+end				
+
+endmodule

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst13|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_t2h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst16|lpm_counter5:inst9|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_g7h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|lpm_mux0:inst|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_7bc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst13|lpm_counter5:inst9|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_g7h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst14|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_t2h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst15|lpm_counter5:inst9|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_g7h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst16|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_t2h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst14|lpm_counter5:inst9|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_g7h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|xuat_xung|encoder_2:inst15|encoder_module:inst15|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_t2h.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

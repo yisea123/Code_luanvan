@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=ENC_B2 Pin=U1-59
+Removed Pin From Net: NetName=ENC_B3 Pin=U1-60
+Removed Pin From Net: NetName=ENC_B1 Pin=U1-61
+Removed Pin From Net: NetName=ENC_B0 Pin=U1-62
+Removed Pin From Net: NetName=ENC_A0 Pin=U1-71
+Removed Pin From Net: NetName=ENC_A1 Pin=U1-72
+Removed Pin From Net: NetName=ENC_A3 Pin=U1-73
+Removed Pin From Net: NetName=ENC_A2 Pin=U1-74
+Added Pin To Net: NetName=ENC_A1 Pin=U1-59
+Added Pin To Net: NetName=ENC_A0 Pin=U1-60
+Added Pin To Net: NetName=ENC_A3 Pin=U1-61
+Added Pin To Net: NetName=ENC_A2 Pin=U1-62
+Added Pin To Net: NetName=ENC_B2 Pin=U1-71
+Added Pin To Net: NetName=ENC_B3 Pin=U1-72
+Added Pin To Net: NetName=ENC_B0 Pin=U1-73
+Added Pin To Net: NetName=ENC_B1 Pin=U1-74

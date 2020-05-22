@@ -1,0 +1,203 @@
+DebugConfig/Target_1_STM32F407IETx.dbgconf
+DebugConfig/Target_1_STM32F407VETx.dbgconf
+DebugConfig/Target_1_STM32F407VGTx.dbgconf
+EventRecorderStub.scvd
+ExtDll.iex
+<<<<<<< HEAD
+Matlab_quest/Matlab/IMU_Quest.bat
+=======
+>>>>>>> LED_class
+Output/ExtDll.iex
+Output/cmd_handler.crf
+Output/cmd_handler.d
+Output/control.crf
+Output/control.d
+Output/control.o
+Output/driver_bit10.crf
+Output/driver_bit10.d
+Output/driver_bit10.o
+Output/gpio.crf
+Output/gpio.d
+Output/gpio.o
+Output/imu_quest.crf
+Output/imu_quest.d
+Output/imu_quest.o
+Output/imu_quest_data.crf
+Output/imu_quest_data.d
+Output/imu_quest_data.o
+Output/led.crf
+Output/led.d
+Output/led.o
+Output/main.crf
+Output/main.d
+Output/main.o
+Output/mayin.axf
+Output/mayin.build_log.htm
+Output/mayin.hex
+Output/mayin.htm
+Output/mayin.lnp
+Output/mayin.sct
+Output/mayin_sct.Bak
+Output/misc.crf
+Output/misc.d
+Output/misc.o
+Output/pid.crf
+Output/pid.d
+Output/pid.o
+Output/rt_atan2_snf.crf
+Output/rt_atan2_snf.d
+Output/rt_atan2_snf.o
+Output/rt_nonfinite.crf
+Output/rt_nonfinite.d
+Output/rt_nonfinite.o
+Output/rt_pow_snf.crf
+Output/rt_pow_snf.d
+Output/rt_pow_snf.o
+Output/rtgetinf.crf
+Output/rtgetinf.d
+Output/rtgetinf.o
+Output/rtgetnan.crf
+Output/rtgetnan.d
+Output/rtgetnan.o
+Output/startup_stm32f4xx.d
+Output/startup_stm32f4xx.o
+Output/stm32f4xx_dma.crf
+Output/stm32f4xx_dma.d
+Output/stm32f4xx_dma.o
+Output/stm32f4xx_exti.crf
+Output/stm32f4xx_exti.d
+Output/stm32f4xx_exti.o
+Output/stm32f4xx_fsmc.crf
+Output/stm32f4xx_fsmc.d
+Output/stm32f4xx_fsmc.o
+Output/stm32f4xx_gpio.crf
+Output/stm32f4xx_gpio.d
+Output/stm32f4xx_gpio.o
+Output/stm32f4xx_rcc.crf
+Output/stm32f4xx_rcc.d
+Output/stm32f4xx_rcc.o
+Output/stm32f4xx_spi.crf
+Output/stm32f4xx_spi.d
+Output/stm32f4xx_spi.o
+Output/stm32f4xx_syscfg.crf
+Output/stm32f4xx_syscfg.d
+Output/stm32f4xx_syscfg.o
+Output/stm32f4xx_tim.crf
+Output/stm32f4xx_tim.d
+Output/stm32f4xx_tim.o
+Output/stm32f4xx_usart.crf
+Output/stm32f4xx_usart.d
+Output/stm32f4xx_usart.o
+Output/system_stm32f4xx.crf
+Output/system_stm32f4xx.d
+Output/system_stm32f4xx.o
+Output/system_timetick.crf
+Output/system_timetick.d
+Output/system_timetick.o
+Output/testimu_Target 1.dep
+Output/uart.crf
+Output/uart.d
+Output/uart.o
+Output/utils.crf
+Output/utils.d
+Output/utils.o
+<<<<<<< HEAD
+STM32F4xx_StdPeriph_Driver/Release_Notes.html
+mayin.map
+=======
+RTE/RTE_Components.h
+RTE/_Target_1/RTE_Components.h
+STM32F4xx_StdPeriph_Driver/Release_Notes.html
+mayin.map
+startup_stm32f4xx.lst
+>>>>>>> LED_class
+testimu.build_log.htm
+testimu.htm
+testimu.lnp
+testimu.map
+<<<<<<< HEAD
+=======
+testimu.sct
+>>>>>>> LED_class
+testimu.uvgui.NGUYEN VINH HAO
+testimu.uvgui_NGUYEN VINH HAO.bak
+testimu.uvguix.BaoTap Chaly
+testimu.uvguix.Huan
+testimu.uvguix.Vinh
+testimu.uvguix.Vinh Nguyen
+<<<<<<< HEAD
+testimu_Target 1.dep
+testimu_sct.Bak
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+startup_stm32f4xx.lst
+testimu.uvproj.saved_uv4
+testimu_uvopt.bak
+testimu_uvproj.bak
+=======
+testimu.uvopt
+testimu.uvoptx
+testimu.uvproj.saved_uv4
+testimu_Target 1.dep
+testimu_sct.Bak
+testimu_uvopt.bak
+testimu_uvproj.bak
+*.crf
+*.d
+*.o
+>>>>>>> LED_class
+Src/control.h~RF6edc55f2.TMP
+Src/control.h~RF6edcc096.TMP
+Src/control.h~RF6eeceed7.TMP
+*.TMP

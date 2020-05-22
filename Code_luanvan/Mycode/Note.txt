@@ -1,0 +1,23 @@
+Motor 3:
+dir = 1 --> quay ngu?c chi?u kim
+
+Motor 2 :
+dir = 1 --> quay thuan kim dong ho , goc quay duong 
+
+Motor 4:
+
+1 vong == 1cm
+VCC-PULSE-DIR-GND
+
+============================================
+Chú ý dây encoder
+Ð?ng co 0: A --> A trên board
+Ð?ng co 1: A --> A trên board
+
+
+
+============================================
+Home:
+Motor 0 : 92.038 do --> +90 = 182.038 --> Goc tren phan mem: 1492.71
+Motor 1: 155.05
+

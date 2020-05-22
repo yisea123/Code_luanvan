@@ -1,0 +1,39 @@
+Removed Pin From Net: NetName=P18 Pin=U1-20
+Removed Pin From Net: NetName=P20 Pin=U1-21
+Removed Pin From Net: NetName=P21 Pin=U1-24
+Removed Pin From Net: NetName=P19 Pin=U1-25
+Removed Pin From Net: NetName=HOME 1 Pin=U1-54
+Removed Pin From Net: NetName=IN_5 Pin=U1-65
+Removed Pin From Net: NetName=IN_3 Pin=U1-66
+Removed Pin From Net: NetName=IN_2 Pin=U1-67
+Removed Pin From Net: NetName=IN_4 Pin=U1-68
+Removed Pin From Net: NetName=HOME 2 Pin=U1-79
+Removed Pin From Net: NetName=HOME 1 Pin=U8-20
+Removed Pin From Net: NetName=HOME 2 Pin=U8-21
+Added Pin To Net: NetName=IN_5 Pin=U1-20
+Added Pin To Net: NetName=IN_3 Pin=U1-21
+Added Pin To Net: NetName=IN_2 Pin=U1-24
+Added Pin To Net: NetName=IN_4 Pin=U1-25
+Added Pin To Net: NetName=HOME 2 Pin=U1-54
+Added Pin To Net: NetName=P18 Pin=U1-65
+Added Pin To Net: NetName=P20 Pin=U1-66
+Added Pin To Net: NetName=P21 Pin=U1-67
+Added Pin To Net: NetName=P19 Pin=U1-68
+Added Pin To Net: NetName=HOME 1 Pin=U1-79
+Added Pin To Net: NetName=DIR_0 Pin=U8-20
+Added Pin To Net: NetName=P16 Pin=U8-21
+Change Net Name : Old Net Name=HOME 1 New Net Name=PB13
+Change Net Name : Old Net Name=HOME 2 New Net Name=PB12
+Change Net Name : Old Net Name=HOME 3 New Net Name=PB14
+Change Net Name : Old Net Name=HOME 4 New Net Name=PB15
+Change Net Name : Old Net Name=HOME 5 New Net Name=PA2
+Change Net Name : Old Net Name=HOME 6 New Net Name=PA1
+Change Net Name : Old Net Name=HOME New Net Name=PA4
+Change Net Name : Old Net Name=IN_13 New Net Name=PA3
+Change Net Name : Old Net Name=IN_14 New Net Name=PA6
+Change Net Name : Old Net Name=IN_15 New Net Name=PA5
+Change Net Name : Old Net Name=P16 New Net Name=IN_7
+Change Net Name : Old Net Name=P18 New Net Name=P40
+Change Net Name : Old Net Name=P19 New Net Name=P38
+Change Net Name : Old Net Name=P20 New Net Name=P36
+Change Net Name : Old Net Name=P21 New Net Name=P35

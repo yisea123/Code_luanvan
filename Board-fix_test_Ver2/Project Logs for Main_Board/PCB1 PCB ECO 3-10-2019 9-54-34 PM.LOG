@@ -1,0 +1,112 @@
+Removed Pin From Net: NetName=IN_7 Pin=U1-19
+Removed Pin From Net: NetName=IN_5 Pin=U1-20
+Removed Pin From Net: NetName=IN_3 Pin=U1-21
+Removed Pin From Net: NetName=IN_1 Pin=U1-22
+Removed Pin From Net: NetName=IN_0 Pin=U1-23
+Removed Pin From Net: NetName=IN_2 Pin=U1-24
+Removed Pin From Net: NetName=IN_4 Pin=U1-25
+Removed Pin From Net: NetName=IN_6 Pin=U1-26
+Removed Pin From Net: NetName=DIR_0 Pin=U1-27
+Removed Pin From Net: NetName=DIR_1 Pin=U1-28
+Removed Pin From Net: NetName=DIR_2 Pin=U1-29
+Removed Pin From Net: NetName=DIR_3 Pin=U1-30
+Removed Pin From Net: NetName=5V Pin=U4-2
+Removed Pin From Net: NetName=O_IN_7 Pin=U4-3
+Removed Pin From Net: NetName=O_IN_6 Pin=U4-4
+Removed Pin From Net: NetName=O_IN_5 Pin=U4-5
+Removed Pin From Net: NetName=O_IN_4 Pin=U4-6
+Removed Pin From Net: NetName=O_IN_3 Pin=U4-7
+Removed Pin From Net: NetName=O_IN_2 Pin=U4-8
+Removed Pin From Net: NetName=O_IN_1 Pin=U4-9
+Removed Pin From Net: NetName=O_IN_0 Pin=U4-10
+Removed Pin From Net: NetName=IN_0 Pin=U4-14
+Removed Pin From Net: NetName=IN_1 Pin=U4-15
+Removed Pin From Net: NetName=IN_2 Pin=U4-16
+Removed Pin From Net: NetName=IN_3 Pin=U4-17
+Removed Pin From Net: NetName=IN_4 Pin=U4-18
+Removed Pin From Net: NetName=IN_5 Pin=U4-19
+Removed Pin From Net: NetName=IN_6 Pin=U4-20
+Removed Pin From Net: NetName=IN_7 Pin=U4-21
+Removed Pin From Net: NetName=GND Pin=U6-2
+Removed Pin From Net: NetName=H_DIR_3 Pin=U6-3
+Removed Pin From Net: NetName=H_PWM_3 Pin=U6-4
+Removed Pin From Net: NetName=H_DIR_2 Pin=U6-5
+Removed Pin From Net: NetName=H_PWM_2 Pin=U6-6
+Removed Pin From Net: NetName=H_DIR_1 Pin=U6-7
+Removed Pin From Net: NetName=H_PWM_1 Pin=U6-8
+Removed Pin From Net: NetName=H_DIR_0 Pin=U6-9
+Removed Pin From Net: NetName=H_PWM_0 Pin=U6-10
+Removed Pin From Net: NetName=DIR_0 Pin=U6-15
+Removed Pin From Net: NetName=DIR_1 Pin=U6-17
+Removed Pin From Net: NetName=DIR_2 Pin=U6-19
+Removed Pin From Net: NetName=DIR_3 Pin=U6-21
+Change Component Designator: OldDesignator=H4 NewDesignator=H?
+Change Component Designator: OldDesignator=H5 NewDesignator=H4
+Change Component Designator: OldDesignator=H6 NewDesignator=H?
+Change Component Designator: OldDesignator=H7 NewDesignator=H5
+Change Component Designator: OldDesignator=H8 NewDesignator=H?
+Change Component Designator: OldDesignator=H9 NewDesignator=H6
+Change Component Designator: OldDesignator=H10 NewDesignator=H?
+Change Component Designator: OldDesignator=H11 NewDesignator=H7
+Change Component Designator: OldDesignator=HD4 NewDesignator=HD5
+Change Component Designator: OldDesignator=HD5 NewDesignator=HD6
+Change Component Designator: OldDesignator=HD6 NewDesignator=HD10
+Change Component Designator: OldDesignator=HD7 NewDesignator=HD11
+Added Pin To Net: NetName=IN_6 Pin=U1-15
+Added Pin To Net: NetName=IN_4 Pin=U1-16
+Added Pin To Net: NetName=IN_2 Pin=U1-17
+Added Pin To Net: NetName=IN_0 Pin=U1-18
+Added Pin To Net: NetName=DIR_3 Pin=U1-19
+Added Pin To Net: NetName=DIR_2 Pin=U1-20
+Added Pin To Net: NetName=DIR_1 Pin=U1-21
+Added Pin To Net: NetName=DIR_0 Pin=U1-22
+Added Pin To Net: NetName=IN_1 Pin=U1-27
+Added Pin To Net: NetName=IN_3 Pin=U1-28
+Added Pin To Net: NetName=IN_5 Pin=U1-29
+Added Pin To Net: NetName=IN_7 Pin=U1-30
+Added Pin To Net: NetName=GND Pin=U4-2
+Added Pin To Net: NetName=H_DIR_3 Pin=U4-3
+Added Pin To Net: NetName=H_PWM_3 Pin=U4-4
+Added Pin To Net: NetName=H_DIR_2 Pin=U4-5
+Added Pin To Net: NetName=H_PWM_2 Pin=U4-6
+Added Pin To Net: NetName=H_DIR_1 Pin=U4-7
+Added Pin To Net: NetName=H_PWM_1 Pin=U4-8
+Added Pin To Net: NetName=H_DIR_0 Pin=U4-9
+Added Pin To Net: NetName=H_PWM_0 Pin=U4-10
+Added Pin To Net: NetName=DIR_0 Pin=U4-15
+Added Pin To Net: NetName=DIR_1 Pin=U4-17
+Added Pin To Net: NetName=DIR_2 Pin=U4-19
+Added Pin To Net: NetName=DIR_3 Pin=U4-21
+Added Pin To Net: NetName=5V Pin=U6-2
+Added Pin To Net: NetName=O_IN_7 Pin=U6-3
+Added Pin To Net: NetName=O_IN_6 Pin=U6-4
+Added Pin To Net: NetName=O_IN_5 Pin=U6-5
+Added Pin To Net: NetName=O_IN_4 Pin=U6-6
+Added Pin To Net: NetName=O_IN_3 Pin=U6-7
+Added Pin To Net: NetName=O_IN_2 Pin=U6-8
+Added Pin To Net: NetName=O_IN_1 Pin=U6-9
+Added Pin To Net: NetName=O_IN_0 Pin=U6-10
+Added Pin To Net: NetName=IN_0 Pin=U6-14
+Added Pin To Net: NetName=IN_1 Pin=U6-15
+Added Pin To Net: NetName=IN_2 Pin=U6-16
+Added Pin To Net: NetName=IN_3 Pin=U6-17
+Added Pin To Net: NetName=IN_4 Pin=U6-18
+Added Pin To Net: NetName=IN_5 Pin=U6-19
+Added Pin To Net: NetName=IN_6 Pin=U6-20
+Added Pin To Net: NetName=IN_7 Pin=U6-21
+Added Pin To Net: NetName=P17 Pin=RN1-3
+Added Pin To Net: NetName=P17 Pin=U1-26
+Added Pin To Net: NetName=P17 Pin=U4-20
+Added Net: Name=P17
+Added Pin To Net: NetName=P19 Pin=RN1-5
+Added Pin To Net: NetName=P19 Pin=U1-25
+Added Pin To Net: NetName=P19 Pin=U4-18
+Added Net: Name=P19
+Added Pin To Net: NetName=P21 Pin=RN1-7
+Added Pin To Net: NetName=P21 Pin=U1-24
+Added Pin To Net: NetName=P21 Pin=U4-16
+Added Net: Name=P21
+Added Pin To Net: NetName=P33 Pin=RN1-9
+Added Pin To Net: NetName=P33 Pin=U1-23
+Added Pin To Net: NetName=P33 Pin=U4-14
+Added Net: Name=P33

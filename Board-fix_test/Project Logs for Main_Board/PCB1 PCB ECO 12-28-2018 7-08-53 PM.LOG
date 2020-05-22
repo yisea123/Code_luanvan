@@ -1,0 +1,12 @@
+Change Component Designator: OldDesignator=U6 NewDesignator=U7
+Added Component: Designator=U?(SOIC24 - wide)
+Added Pin To Net: NetName=5V Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-12
+Added Pin To Net: NetName=GND Pin=U?-13
+Added Pin To Net: NetName=GND Pin=U?-22
+Added Pin To Net: NetName=3V3 Pin=U?-23
+Added Pin To Net: NetName=3V3 Pin=U?-24
+Added Member To Class: ClassName=Main_Board Member=Component H3 IN 3
+Added Member To Class: ClassName=Main_Board Member=Component H5 IN 5
+Added Member To Class: ClassName=Main_Board Member=Component U? 74LCV4245

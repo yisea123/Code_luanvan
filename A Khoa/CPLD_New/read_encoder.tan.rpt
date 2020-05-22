@@ -1,0 +1,1036 @@
+Classic Timing Analyzer report for read_encoder
+Sun Jan 13 19:45:33 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK_20M'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                                                                       ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                                                                                  ; To                                                                                                                   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.590 ns                         ; PULSE_WR1                                                                                                             ; dda_module:inst1|dda:inst34|dir                                                                                      ; --         ; CLK_20M  ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 20.764 ns                        ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; DATA[10]                                                                                                             ; CLK_20M    ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 16.641 ns                        ; NE1                                                                                                                   ; DATA[13]                                                                                                             ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 10.059 ns                        ; DATA[6]                                                                                                               ; dda_module:inst1|74373b:inst18|18                                                                                    ; --         ; NADV     ; 0            ;
+; Clock Setup: 'CLK_20M'       ; N/A   ; None          ; 60.32 MHz ( period = 16.578 ns ) ; enc_module:inst|encoder_filter:inst8|inst3                                                                            ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8] ; CLK_20M    ; CLK_20M  ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                                                                       ;                                                                                                                      ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM570T100C5       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; On                 ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK_20M         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; PULSE_WR1       ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NADV            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NE1             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; NWE             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK_20M'                                                                                                                                                                                                                                                                                                                                                            ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                         ; To                                                                                                                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 60.32 MHz ( period = 16.578 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.580 ns                ;
+; N/A                                     ; 60.32 MHz ( period = 16.578 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.580 ns                ;
+; N/A                                     ; 60.32 MHz ( period = 16.578 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.580 ns                ;
+; N/A                                     ; 60.32 MHz ( period = 16.578 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.580 ns                ;
+; N/A                                     ; 60.32 MHz ( period = 16.578 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.580 ns                ;
+; N/A                                     ; 60.42 MHz ( period = 16.552 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.567 ns                ;
+; N/A                                     ; 60.42 MHz ( period = 16.552 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.567 ns                ;
+; N/A                                     ; 60.42 MHz ( period = 16.552 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 7.567 ns                ;
+; N/A                                     ; 65.49 MHz ( period = 15.270 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.926 ns                ;
+; N/A                                     ; 65.49 MHz ( period = 15.270 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.926 ns                ;
+; N/A                                     ; 65.49 MHz ( period = 15.270 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.926 ns                ;
+; N/A                                     ; 65.49 MHz ( period = 15.270 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.926 ns                ;
+; N/A                                     ; 65.49 MHz ( period = 15.270 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.926 ns                ;
+; N/A                                     ; 69.75 MHz ( period = 14.336 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.459 ns                ;
+; N/A                                     ; 69.99 MHz ( period = 14.288 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.435 ns                ;
+; N/A                                     ; 69.99 MHz ( period = 14.288 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.435 ns                ;
+; N/A                                     ; 69.99 MHz ( period = 14.288 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.435 ns                ;
+; N/A                                     ; 69.99 MHz ( period = 14.288 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.435 ns                ;
+; N/A                                     ; 69.99 MHz ( period = 14.288 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.435 ns                ;
+; N/A                                     ; 70.12 MHz ( period = 14.262 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.422 ns                ;
+; N/A                                     ; 70.12 MHz ( period = 14.262 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.422 ns                ;
+; N/A                                     ; 70.12 MHz ( period = 14.262 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.422 ns                ;
+; N/A                                     ; 70.97 MHz ( period = 14.090 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.336 ns                ;
+; N/A                                     ; 71.04 MHz ( period = 14.076 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.329 ns                ;
+; N/A                                     ; 71.04 MHz ( period = 14.076 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.329 ns                ;
+; N/A                                     ; 71.04 MHz ( period = 14.076 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.329 ns                ;
+; N/A                                     ; 71.04 MHz ( period = 14.076 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.329 ns                ;
+; N/A                                     ; 71.04 MHz ( period = 14.076 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.329 ns                ;
+; N/A                                     ; 71.17 MHz ( period = 14.050 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.316 ns                ;
+; N/A                                     ; 71.17 MHz ( period = 14.050 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.316 ns                ;
+; N/A                                     ; 71.17 MHz ( period = 14.050 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.316 ns                ;
+; N/A                                     ; 71.82 MHz ( period = 13.924 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.253 ns                ;
+; N/A                                     ; 71.82 MHz ( period = 13.924 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.253 ns                ;
+; N/A                                     ; 71.82 MHz ( period = 13.924 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.253 ns                ;
+; N/A                                     ; 71.82 MHz ( period = 13.924 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.253 ns                ;
+; N/A                                     ; 71.82 MHz ( period = 13.924 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.253 ns                ;
+; N/A                                     ; 71.95 MHz ( period = 13.898 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.240 ns                ;
+; N/A                                     ; 71.95 MHz ( period = 13.898 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.240 ns                ;
+; N/A                                     ; 71.95 MHz ( period = 13.898 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.240 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 73.01 MHz ( period = 13.696 ns )                    ; enc_module:inst|encoder_filter:inst7|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 6.139 ns                ;
+; N/A                                     ; 74.90 MHz ( period = 13.352 ns )                    ; enc_module:inst|encoder_filter:inst8|inst3   ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.967 ns                ;
+; N/A                                     ; 78.00 MHz ( period = 12.820 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|pulse                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 12.111 ns               ;
+; N/A                                     ; 78.31 MHz ( period = 12.770 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 78.31 MHz ( period = 12.770 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 78.31 MHz ( period = 12.770 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 78.31 MHz ( period = 12.770 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 78.31 MHz ( period = 12.770 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.676 ns                ;
+; N/A                                     ; 78.44 MHz ( period = 12.749 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|pulse                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 12.040 ns               ;
+; N/A                                     ; 78.53 MHz ( period = 12.734 ns )                    ; dda_module:inst1|dda:inst6|acc[3]            ; dda_module:inst1|dda:inst6|pulse                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 12.025 ns               ;
+; N/A                                     ; 79.20 MHz ( period = 12.626 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.604 ns                ;
+; N/A                                     ; 79.20 MHz ( period = 12.626 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.604 ns                ;
+; N/A                                     ; 79.20 MHz ( period = 12.626 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.604 ns                ;
+; N/A                                     ; 79.20 MHz ( period = 12.626 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.604 ns                ;
+; N/A                                     ; 79.20 MHz ( period = 12.626 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.604 ns                ;
+; N/A                                     ; 79.56 MHz ( period = 12.569 ns )                    ; dda_module:inst1|dda:inst34|acc[1]           ; dda_module:inst1|dda:inst34|acc[6]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.860 ns               ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 81.58 MHz ( period = 12.258 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.420 ns                ;
+; N/A                                     ; 82.60 MHz ( period = 12.106 ns )                    ; dda_module:inst1|dda:inst34|acc[1]           ; dda_module:inst1|dda:inst34|acc[7]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.397 ns               ;
+; N/A                                     ; 83.17 MHz ( period = 12.024 ns )                    ; dda_module:inst1|dda:inst34|acc[1]           ; dda_module:inst1|dda:inst34|pulse                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.315 ns               ;
+; N/A                                     ; 83.81 MHz ( period = 11.932 ns )                    ; dda_module:inst1|dda:inst|acc[0]             ; dda_module:inst1|dda:inst|acc[5]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.223 ns               ;
+; N/A                                     ; 84.49 MHz ( period = 11.836 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.209 ns                ;
+; N/A                                     ; 84.52 MHz ( period = 11.831 ns )                    ; dda_module:inst1|dda:inst|acc[0]             ; dda_module:inst1|dda:inst|acc[7]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.122 ns               ;
+; N/A                                     ; 84.58 MHz ( period = 11.823 ns )                    ; dda_module:inst1|dda:inst|acc[1]             ; dda_module:inst1|dda:inst|acc[5]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.114 ns               ;
+; N/A                                     ; 84.62 MHz ( period = 11.817 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|acc[2]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.108 ns               ;
+; N/A                                     ; 84.71 MHz ( period = 11.805 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|acc[7]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.096 ns               ;
+; N/A                                     ; 84.75 MHz ( period = 11.799 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|acc[5]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.090 ns               ;
+; N/A                                     ; 84.80 MHz ( period = 11.792 ns )                    ; dda_module:inst1|dda:inst|acc[0]             ; dda_module:inst1|dda:inst|pulse                                                                                        ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.083 ns               ;
+; N/A                                     ; 84.82 MHz ( period = 11.789 ns )                    ; dda_module:inst1|dda:inst34|acc[1]           ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.080 ns               ;
+; N/A                                     ; 85.11 MHz ( period = 11.749 ns )                    ; dda_module:inst1|dda:inst|acc[0]             ; dda_module:inst1|dda:inst|acc[3]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.040 ns               ;
+; N/A                                     ; 85.14 MHz ( period = 11.746 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|acc[2]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.037 ns               ;
+; N/A                                     ; 85.14 MHz ( period = 11.746 ns )                    ; dda_module:inst1|dda:inst34|acc[3]           ; dda_module:inst1|dda:inst34|acc[6]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.037 ns               ;
+; N/A                                     ; 85.22 MHz ( period = 11.734 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|acc[7]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.025 ns               ;
+; N/A                                     ; 85.22 MHz ( period = 11.734 ns )                    ; dda_module:inst1|dda:inst34|acc[1]           ; dda_module:inst1|dda:inst34|acc[2]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.025 ns               ;
+; N/A                                     ; 85.26 MHz ( period = 11.729 ns )                    ; dda_module:inst1|dda:inst6|acc[4]            ; dda_module:inst1|dda:inst6|pulse                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.020 ns               ;
+; N/A                                     ; 85.27 MHz ( period = 11.728 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|acc[5]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.019 ns               ;
+; N/A                                     ; 85.33 MHz ( period = 11.719 ns )                    ; dda_module:inst1|dda:inst6|acc[3]            ; dda_module:inst1|dda:inst6|acc[7]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.010 ns               ;
+; N/A                                     ; 85.38 MHz ( period = 11.713 ns )                    ; dda_module:inst1|dda:inst6|acc[3]            ; dda_module:inst1|dda:inst6|acc[5]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 11.004 ns               ;
+; N/A                                     ; 85.51 MHz ( period = 11.695 ns )                    ; dda_module:inst1|dda:inst6|acc[3]            ; dda_module:inst1|dda:inst6|acc[2]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.986 ns               ;
+; N/A                                     ; 85.53 MHz ( period = 11.692 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 85.91 MHz ( period = 11.640 ns )                    ; dda_module:inst1|dda:inst|acc[1]             ; dda_module:inst1|dda:inst|acc[3]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.931 ns               ;
+; N/A                                     ; 86.13 MHz ( period = 11.610 ns )                    ; dda_module:inst1|dda:inst34|acc[1]           ; dda_module:inst1|dda:inst34|acc[4]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.901 ns               ;
+; N/A                                     ; 86.28 MHz ( period = 11.590 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.086 ns                ;
+; N/A                                     ; 86.42 MHz ( period = 11.572 ns )                    ; dda_module:inst1|dda:inst|acc[1]             ; dda_module:inst1|dda:inst|acc[7]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.863 ns               ;
+; N/A                                     ; 86.54 MHz ( period = 11.555 ns )                    ; dda_module:inst1|dda:inst|acc[3]             ; dda_module:inst1|dda:inst|acc[5]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.846 ns               ;
+; N/A                                     ; 86.67 MHz ( period = 11.538 ns )                    ; dda_module:inst1|dda:inst|acc[0]             ; dda_module:inst1|dda:inst|acc[6]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.829 ns               ;
+; N/A                                     ; 86.71 MHz ( period = 11.533 ns )                    ; dda_module:inst1|dda:inst|acc[1]             ; dda_module:inst1|dda:inst|pulse                                                                                        ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.824 ns               ;
+; N/A                                     ; 86.83 MHz ( period = 11.517 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|acc[6]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.808 ns               ;
+; N/A                                     ; 87.28 MHz ( period = 11.458 ns )                    ; dda_module:inst1|dda:inst6|acc[4]            ; dda_module:inst1|dda:inst6|acc[2]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.749 ns               ;
+; N/A                                     ; 87.37 MHz ( period = 11.446 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|acc[6]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.737 ns               ;
+; N/A                                     ; 87.37 MHz ( period = 11.446 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 5.014 ns                ;
+; N/A                                     ; 87.48 MHz ( period = 11.431 ns )                    ; dda_module:inst1|dda:inst6|acc[3]            ; dda_module:inst1|dda:inst6|acc[6]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.722 ns               ;
+; N/A                                     ; 87.73 MHz ( period = 11.398 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|acc[4]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.689 ns               ;
+; N/A                                     ; 88.28 MHz ( period = 11.327 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|acc[4]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.618 ns               ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[5]       ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.591 ns               ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[5]       ; dda_module:inst1|dda:inst34|acc[3]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.591 ns               ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[5]       ; dda_module:inst1|dda:inst34|acc[1]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.591 ns               ;
+; N/A                                     ; 88.63 MHz ( period = 11.283 ns )                    ; dda_module:inst1|dda:inst34|acc[3]           ; dda_module:inst1|dda:inst34|acc[7]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.574 ns               ;
+; N/A                                     ; 88.66 MHz ( period = 11.279 ns )                    ; dda_module:inst1|dda:inst|acc[1]             ; dda_module:inst1|dda:inst|acc[6]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.570 ns               ;
+; N/A                                     ; 89.10 MHz ( period = 11.223 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[4]       ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.514 ns               ;
+; N/A                                     ; 89.10 MHz ( period = 11.223 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[4]       ; dda_module:inst1|dda:inst34|acc[3]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.514 ns               ;
+; N/A                                     ; 89.10 MHz ( period = 11.223 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[4]       ; dda_module:inst1|dda:inst34|acc[1]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.514 ns               ;
+; N/A                                     ; 89.28 MHz ( period = 11.201 ns )                    ; dda_module:inst1|dda:inst34|acc[3]           ; dda_module:inst1|dda:inst34|pulse                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.492 ns               ;
+; N/A                                     ; 89.95 MHz ( period = 11.117 ns )                    ; dda_module:inst1|dda:inst|acc[0]             ; dda_module:inst1|dda:inst|acc[4]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.408 ns               ;
+; N/A                                     ; 90.21 MHz ( period = 11.085 ns )                    ; dda_module:inst1|dda:inst6|acc[0]            ; dda_module:inst1|dda:inst6|acc[3]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.376 ns               ;
+; N/A                                     ; 90.27 MHz ( period = 11.078 ns )                    ; dda_module:inst1|dda:inst|acc[3]             ; dda_module:inst1|dda:inst|acc[7]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.369 ns               ;
+; N/A                                     ; 90.53 MHz ( period = 11.046 ns )                    ; dda_module:inst1|dda:inst33|acc[1]           ; dda_module:inst1|dda:inst33|pulse                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.337 ns               ;
+; N/A                                     ; 90.59 MHz ( period = 11.039 ns )                    ; dda_module:inst1|dda:inst|acc[3]             ; dda_module:inst1|dda:inst|pulse                                                                                        ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.330 ns               ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.60 MHz ( period = 11.038 ns )                    ; enc_module:inst|encoder_filter:inst8|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.810 ns                ;
+; N/A                                     ; 90.79 MHz ( period = 11.014 ns )                    ; dda_module:inst1|dda:inst34|acc[0]           ; dda_module:inst1|dda:inst34|acc[6]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.305 ns               ;
+; N/A                                     ; 90.84 MHz ( period = 11.008 ns )                    ; dda_module:inst1|dda:inst|acc[1]             ; dda_module:inst1|dda:inst|acc[4]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.299 ns               ;
+; N/A                                     ; 90.93 MHz ( period = 10.998 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst3  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.790 ns                ;
+; N/A                                     ; 91.15 MHz ( period = 10.971 ns )                    ; dda_module:inst1|dda:inst34|acc[2]           ; dda_module:inst1|dda:inst34|acc[6]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.262 ns               ;
+; N/A                                     ; 91.22 MHz ( period = 10.962 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[3]       ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.253 ns               ;
+; N/A                                     ; 91.22 MHz ( period = 10.962 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[3]       ; dda_module:inst1|dda:inst34|acc[3]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.253 ns               ;
+; N/A                                     ; 91.22 MHz ( period = 10.962 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[3]       ; dda_module:inst1|dda:inst34|acc[1]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.253 ns               ;
+; N/A                                     ; 91.56 MHz ( period = 10.922 ns )                    ; dda_module:inst1|dda:inst6|acc[2]            ; dda_module:inst1|dda:inst6|pulse                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.213 ns               ;
+; N/A                                     ; 91.73 MHz ( period = 10.901 ns )                    ; dda_module:inst1|dda:inst6|acc[3]            ; dda_module:inst1|dda:inst6|acc[4]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.192 ns               ;
+; N/A                                     ; 92.00 MHz ( period = 10.870 ns )                    ; dda_module:inst1|dda:inst33|acc[4]           ; dda_module:inst1|dda:inst33|pulse                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.161 ns               ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst7|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.37 MHz ( period = 10.826 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.39 MHz ( period = 10.824 ns )                    ; enc_module:inst7|encoder_filter:inst8|inst18 ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.703 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.40 MHz ( period = 10.822 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 92.50 MHz ( period = 10.811 ns )                    ; dda_module:inst1|dda:inst33|acc[3]           ; dda_module:inst1|dda:inst33|pulse                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.102 ns               ;
+; N/A                                     ; 92.64 MHz ( period = 10.794 ns )                    ; dda_module:inst1|dda:inst34|acc[3]           ; dda_module:inst1|dda:inst34|acc[2]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.085 ns               ;
+; N/A                                     ; 92.72 MHz ( period = 10.785 ns )                    ; dda_module:inst1|dda:inst|acc[3]             ; dda_module:inst1|dda:inst|acc[6]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.076 ns               ;
+; N/A                                     ; 92.74 MHz ( period = 10.783 ns )                    ; dda_module:inst1|dda:inst6|acc[1]            ; dda_module:inst1|dda:inst6|acc[3]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.074 ns               ;
+; N/A                                     ; 92.99 MHz ( period = 10.754 ns )                    ; dda_module:inst1|dda:inst|acc[4]             ; dda_module:inst1|dda:inst|acc[5]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.045 ns               ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]   ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.02 MHz ( period = 10.750 ns )                    ; enc_module:inst|encoder_filter:inst7|inst18  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]    ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 4.666 ns                ;
+; N/A                                     ; 93.09 MHz ( period = 10.742 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[6]       ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.033 ns               ;
+; N/A                                     ; 93.09 MHz ( period = 10.742 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[6]       ; dda_module:inst1|dda:inst34|acc[3]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.033 ns               ;
+; N/A                                     ; 93.09 MHz ( period = 10.742 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[6]       ; dda_module:inst1|dda:inst34|acc[1]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.033 ns               ;
+; N/A                                     ; 93.11 MHz ( period = 10.740 ns )                    ; dda_module:inst1|dda:inst|acc[3]             ; dda_module:inst1|dda:inst|acc[4]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.031 ns               ;
+; N/A                                     ; 93.13 MHz ( period = 10.738 ns )                    ; dda_module:inst1|dda:inst34|clk5u_cnt[3]     ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.029 ns               ;
+; N/A                                     ; 93.13 MHz ( period = 10.738 ns )                    ; dda_module:inst1|dda:inst34|clk5u_cnt[3]     ; dda_module:inst1|dda:inst34|acc[3]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.029 ns               ;
+; N/A                                     ; 93.13 MHz ( period = 10.738 ns )                    ; dda_module:inst1|dda:inst34|clk5u_cnt[3]     ; dda_module:inst1|dda:inst34|acc[1]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.029 ns               ;
+; N/A                                     ; 93.32 MHz ( period = 10.716 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[5]       ; dda_module:inst1|dda:inst6|acc[6]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.007 ns               ;
+; N/A                                     ; 93.32 MHz ( period = 10.716 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[5]       ; dda_module:inst1|dda:inst6|acc[5]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.007 ns               ;
+; N/A                                     ; 93.32 MHz ( period = 10.716 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[5]       ; dda_module:inst1|dda:inst6|acc[7]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.007 ns               ;
+; N/A                                     ; 93.34 MHz ( period = 10.714 ns )                    ; dda_module:inst1|dda:inst6|acc[4]            ; dda_module:inst1|dda:inst6|acc[7]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 10.005 ns               ;
+; N/A                                     ; 93.39 MHz ( period = 10.708 ns )                    ; dda_module:inst1|dda:inst6|acc[4]            ; dda_module:inst1|dda:inst6|acc[5]                                                                                      ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 9.999 ns                ;
+; N/A                                     ; 93.40 MHz ( period = 10.707 ns )                    ; dda_module:inst1|dda:inst|acc[4]             ; dda_module:inst1|dda:inst|acc[4]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 9.998 ns                ;
+; N/A                                     ; 93.53 MHz ( period = 10.692 ns )                    ; dda_module:inst1|dda:inst|acc[2]             ; dda_module:inst1|dda:inst|acc[5]                                                                                       ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 9.983 ns                ;
+; N/A                                     ; 93.60 MHz ( period = 10.684 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[2]       ; dda_module:inst1|dda:inst34|acc[5]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 9.975 ns                ;
+; N/A                                     ; 93.60 MHz ( period = 10.684 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[2]       ; dda_module:inst1|dda:inst34|acc[3]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 9.975 ns                ;
+; N/A                                     ; 93.60 MHz ( period = 10.684 ns )                    ; dda_module:inst1|dda:inst34|clk_cnt[2]       ; dda_module:inst1|dda:inst34|acc[1]                                                                                     ; CLK_20M    ; CLK_20M  ; None                        ; None                      ; 9.975 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                              ;                                                                                                                        ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                    ;
++-------+--------------+------------+-----------+---------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                                          ; To Clock ;
++-------+--------------+------------+-----------+---------------------------------------------+----------+
+; N/A   ; None         ; 3.590 ns   ; PULSE_WR1 ; dda_module:inst1|dda:inst|dir               ; CLK_20M  ;
+; N/A   ; None         ; 3.590 ns   ; PULSE_WR1 ; dda_module:inst1|dda:inst6|dir              ; CLK_20M  ;
+; N/A   ; None         ; 3.590 ns   ; PULSE_WR1 ; dda_module:inst1|dda:inst33|dir             ; CLK_20M  ;
+; N/A   ; None         ; 3.590 ns   ; PULSE_WR1 ; dda_module:inst1|dda:inst34|dir             ; CLK_20M  ;
+; N/A   ; None         ; 2.776 ns   ; DATA[0]   ; 74373b:inst2|12                             ; NADV     ;
+; N/A   ; None         ; 2.025 ns   ; DATA[1]   ; 74373b:inst2|13                             ; NADV     ;
+; N/A   ; None         ; 1.842 ns   ; DATA[4]   ; 74373b:inst2|16                             ; NADV     ;
+; N/A   ; None         ; 1.480 ns   ; DATA[5]   ; 74373b:inst2|17                             ; NADV     ;
+; N/A   ; None         ; 1.424 ns   ; DATA[2]   ; 74373b:inst2|14                             ; NADV     ;
+; N/A   ; None         ; 1.282 ns   ; DATA[6]   ; 74373b:inst2|18                             ; NADV     ;
+; N/A   ; None         ; 0.929 ns   ; DATA[7]   ; 74373b:inst2|19                             ; NADV     ;
+; N/A   ; None         ; 0.477 ns   ; DATA[3]   ; 74373b:inst2|15                             ; NADV     ;
+; N/A   ; None         ; -0.872 ns  ; ENC_1A    ; enc_module:inst|encoder_filter:inst7|inst   ; CLK_20M  ;
+; N/A   ; None         ; -1.087 ns  ; ENC_1B    ; enc_module:inst|encoder_filter:inst7|inst6  ; CLK_20M  ;
+; N/A   ; None         ; -1.096 ns  ; ENC_2B    ; enc_module:inst|encoder_filter:inst8|inst6  ; CLK_20M  ;
+; N/A   ; None         ; -1.199 ns  ; ENC_2A    ; enc_module:inst|encoder_filter:inst8|inst   ; CLK_20M  ;
+; N/A   ; None         ; -1.632 ns  ; ENC_4B    ; enc_module:inst7|encoder_filter:inst8|inst6 ; CLK_20M  ;
+; N/A   ; None         ; -2.264 ns  ; ENC_3A    ; enc_module:inst7|encoder_filter:inst7|inst  ; CLK_20M  ;
+; N/A   ; None         ; -2.270 ns  ; ENC_3B    ; enc_module:inst7|encoder_filter:inst7|inst6 ; CLK_20M  ;
+; N/A   ; None         ; -2.476 ns  ; ENC_4A    ; enc_module:inst7|encoder_filter:inst8|inst  ; CLK_20M  ;
+; N/A   ; None         ; -2.584 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst20|13           ; NWE      ;
+; N/A   ; None         ; -2.767 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst7|12            ; NWE      ;
+; N/A   ; None         ; -2.910 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst20|12           ; NWE      ;
+; N/A   ; None         ; -2.952 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst2|12            ; NWE      ;
+; N/A   ; None         ; -3.179 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst20|14           ; NWE      ;
+; N/A   ; None         ; -3.471 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst20|19           ; NWE      ;
+; N/A   ; None         ; -3.494 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst7|12            ; NADV     ;
+; N/A   ; None         ; -3.533 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst20|15           ; NWE      ;
+; N/A   ; None         ; -3.575 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst20|17           ; NWE      ;
+; N/A   ; None         ; -3.679 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst2|12            ; NADV     ;
+; N/A   ; None         ; -3.736 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst20|13           ; NADV     ;
+; N/A   ; None         ; -3.813 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst18|13           ; NWE      ;
+; N/A   ; None         ; -3.901 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst18|12           ; NWE      ;
+; N/A   ; None         ; -3.912 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst7|19            ; NWE      ;
+; N/A   ; None         ; -3.920 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst18|15           ; NWE      ;
+; N/A   ; None         ; -3.967 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst7|13            ; NWE      ;
+; N/A   ; None         ; -4.039 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst7|15            ; NWE      ;
+; N/A   ; None         ; -4.041 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst2|13            ; NWE      ;
+; N/A   ; None         ; -4.062 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst20|12           ; NADV     ;
+; N/A   ; None         ; -4.073 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst2|15            ; NWE      ;
+; N/A   ; None         ; -4.083 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst20|18           ; NWE      ;
+; N/A   ; None         ; -4.091 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst20|13           ; NE1      ;
+; N/A   ; None         ; -4.098 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst7|16            ; NWE      ;
+; N/A   ; None         ; -4.123 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst7|14            ; NWE      ;
+; N/A   ; None         ; -4.129 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst18|16           ; NWE      ;
+; N/A   ; None         ; -4.205 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst2|16            ; NWE      ;
+; N/A   ; None         ; -4.216 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst20|16           ; NWE      ;
+; N/A   ; None         ; -4.274 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst7|12            ; NE1      ;
+; N/A   ; None         ; -4.310 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst2|19            ; NWE      ;
+; N/A   ; None         ; -4.331 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst20|14           ; NADV     ;
+; N/A   ; None         ; -4.361 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst2|14            ; NWE      ;
+; N/A   ; None         ; -4.417 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst20|12           ; NE1      ;
+; N/A   ; None         ; -4.459 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst2|12            ; NE1      ;
+; N/A   ; None         ; -4.535 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst18|13           ; NADV     ;
+; N/A   ; None         ; -4.553 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst2|18            ; NWE      ;
+; N/A   ; None         ; -4.623 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst20|19           ; NADV     ;
+; N/A   ; None         ; -4.623 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst18|12           ; NADV     ;
+; N/A   ; None         ; -4.639 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst7|19            ; NADV     ;
+; N/A   ; None         ; -4.642 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst18|15           ; NADV     ;
+; N/A   ; None         ; -4.685 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst20|15           ; NADV     ;
+; N/A   ; None         ; -4.686 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst20|14           ; NE1      ;
+; N/A   ; None         ; -4.694 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst7|13            ; NADV     ;
+; N/A   ; None         ; -4.727 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst20|17           ; NADV     ;
+; N/A   ; None         ; -4.766 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst7|15            ; NADV     ;
+; N/A   ; None         ; -4.768 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst2|13            ; NADV     ;
+; N/A   ; None         ; -4.778 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst2|17            ; NWE      ;
+; N/A   ; None         ; -4.800 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst2|15            ; NADV     ;
+; N/A   ; None         ; -4.825 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst7|16            ; NADV     ;
+; N/A   ; None         ; -4.850 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst7|14            ; NADV     ;
+; N/A   ; None         ; -4.851 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst18|16           ; NADV     ;
+; N/A   ; None         ; -4.907 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst18|14           ; NWE      ;
+; N/A   ; None         ; -4.932 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst2|16            ; NADV     ;
+; N/A   ; None         ; -4.978 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst20|19           ; NE1      ;
+; N/A   ; None         ; -5.006 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst18|17           ; NWE      ;
+; N/A   ; None         ; -5.037 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst2|19            ; NADV     ;
+; N/A   ; None         ; -5.040 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst20|15           ; NE1      ;
+; N/A   ; None         ; -5.045 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst18|18           ; NWE      ;
+; N/A   ; None         ; -5.064 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst7|17            ; NWE      ;
+; N/A   ; None         ; -5.082 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst20|17           ; NE1      ;
+; N/A   ; None         ; -5.088 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst2|14            ; NADV     ;
+; N/A   ; None         ; -5.142 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst18|19           ; NWE      ;
+; N/A   ; None         ; -5.150 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst7|18            ; NWE      ;
+; N/A   ; None         ; -5.235 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst20|18           ; NADV     ;
+; N/A   ; None         ; -5.280 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst2|18            ; NADV     ;
+; N/A   ; None         ; -5.320 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst18|13           ; NE1      ;
+; N/A   ; None         ; -5.368 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst20|16           ; NADV     ;
+; N/A   ; None         ; -5.408 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst18|12           ; NE1      ;
+; N/A   ; None         ; -5.419 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst7|19            ; NE1      ;
+; N/A   ; None         ; -5.427 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst18|15           ; NE1      ;
+; N/A   ; None         ; -5.474 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst7|13            ; NE1      ;
+; N/A   ; None         ; -5.505 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst2|17            ; NADV     ;
+; N/A   ; None         ; -5.546 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst7|15            ; NE1      ;
+; N/A   ; None         ; -5.548 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst2|13            ; NE1      ;
+; N/A   ; None         ; -5.580 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst2|15            ; NE1      ;
+; N/A   ; None         ; -5.590 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst20|18           ; NE1      ;
+; N/A   ; None         ; -5.605 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst7|16            ; NE1      ;
+; N/A   ; None         ; -5.629 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst18|14           ; NADV     ;
+; N/A   ; None         ; -5.630 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst7|14            ; NE1      ;
+; N/A   ; None         ; -5.636 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst18|16           ; NE1      ;
+; N/A   ; None         ; -5.712 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst2|16            ; NE1      ;
+; N/A   ; None         ; -5.723 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst20|16           ; NE1      ;
+; N/A   ; None         ; -5.728 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst18|17           ; NADV     ;
+; N/A   ; None         ; -5.767 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst18|18           ; NADV     ;
+; N/A   ; None         ; -5.791 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst7|17            ; NADV     ;
+; N/A   ; None         ; -5.817 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst2|19            ; NE1      ;
+; N/A   ; None         ; -5.864 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst18|19           ; NADV     ;
+; N/A   ; None         ; -5.868 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst2|14            ; NE1      ;
+; N/A   ; None         ; -5.877 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst7|18            ; NADV     ;
+; N/A   ; None         ; -6.060 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst2|18            ; NE1      ;
+; N/A   ; None         ; -6.285 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst2|17            ; NE1      ;
+; N/A   ; None         ; -6.414 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst18|14           ; NE1      ;
+; N/A   ; None         ; -6.513 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst18|17           ; NE1      ;
+; N/A   ; None         ; -6.552 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst18|18           ; NE1      ;
+; N/A   ; None         ; -6.571 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst7|17            ; NE1      ;
+; N/A   ; None         ; -6.649 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst18|19           ; NE1      ;
+; N/A   ; None         ; -6.657 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst7|18            ; NE1      ;
++-------+--------------+------------+-----------+---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                                                                                                         ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------+----------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                                                                                                                   ; To       ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------+----------+------------+
+; N/A                                     ; None                                                ; 20.764 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]  ; DATA[10] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 19.810 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]   ; DATA[5]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 19.078 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]   ; DATA[6]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 19.072 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]  ; DATA[11] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.858 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]  ; DATA[7]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.762 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]   ; DATA[13] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.616 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]  ; DATA[13] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.571 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11] ; DATA[11] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.483 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]   ; DATA[7]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.351 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]  ; DATA[15] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.185 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13]  ; DATA[13] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.117 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]  ; DATA[15] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.107 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]  ; DATA[4]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 18.081 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]  ; DATA[11] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.974 ns  ; 74373b:inst2|15                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 17.971 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[13] ; DATA[13] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.949 ns  ; 74373b:inst2|17                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 17.844 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15]   ; DATA[15] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.785 ns  ; 74373b:inst2|15                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 17.776 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]  ; DATA[2]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.763 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12] ; DATA[12] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.760 ns  ; 74373b:inst2|17                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 17.729 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[11]   ; DATA[11] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.728 ns  ; 74373b:inst2|18                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 17.600 ns  ; 74373b:inst2|16                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 17.590 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]   ; DATA[14] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.582 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10] ; DATA[10] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.539 ns  ; 74373b:inst2|18                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 17.516 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]   ; DATA[6]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.515 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]  ; DATA[5]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.513 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[15] ; DATA[15] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.497 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]  ; DATA[1]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.455 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]   ; DATA[3]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.453 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]  ; DATA[10] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.418 ns  ; 74373b:inst2|15                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.411 ns  ; 74373b:inst2|16                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 17.393 ns  ; 74373b:inst2|17                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.365 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]  ; DATA[0]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.358 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]   ; DATA[9]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.334 ns  ; 74373b:inst2|15                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 17.309 ns  ; 74373b:inst2|17                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 17.309 ns  ; 74373b:inst2|15                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.284 ns  ; 74373b:inst2|17                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.271 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]   ; DATA[9]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.232 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]   ; DATA[4]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.226 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]    ; DATA[9]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.215 ns  ; 74373b:inst2|15                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.203 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]    ; DATA[0]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.199 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]   ; DATA[3]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.190 ns  ; 74373b:inst2|17                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.172 ns  ; 74373b:inst2|18                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.156 ns  ; 74373b:inst2|15                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.131 ns  ; 74373b:inst2|17                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.088 ns  ; 74373b:inst2|18                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 17.087 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]  ; DATA[8]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.063 ns  ; 74373b:inst2|18                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.044 ns  ; 74373b:inst2|16                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 17.030 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]   ; DATA[0]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.024 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]   ; DATA[8]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 17.016 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]  ; DATA[12] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.969 ns  ; 74373b:inst2|18                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.967 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]  ; DATA[14] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.960 ns  ; 74373b:inst2|16                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 16.960 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]    ; DATA[1]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.957 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14] ; DATA[14] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.935 ns  ; 74373b:inst2|16                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.910 ns  ; 74373b:inst2|18                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.855 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]   ; DATA[2]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.848 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[0]   ; DATA[0]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.841 ns  ; 74373b:inst2|16                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.819 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]   ; DATA[5]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.784 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]  ; DATA[3]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.782 ns  ; 74373b:inst2|16                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.725 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]  ; DATA[12] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.702 ns  ; 74373b:inst2|19                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 16.665 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]   ; DATA[4]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.637 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]    ; DATA[6]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.617 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[6]  ; DATA[6]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.587 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[3]    ; DATA[3]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.573 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[4]    ; DATA[4]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.566 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]   ; DATA[8]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.513 ns  ; 74373b:inst2|19                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 16.480 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]   ; DATA[10] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.417 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]   ; DATA[1]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.414 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]   ; DATA[12] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.401 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[1]   ; DATA[1]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.364 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]   ; DATA[7]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.345 ns  ; 74373b:inst2|15                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.320 ns  ; 74373b:inst2|17                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.262 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[7]    ; DATA[7]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.206 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[14]  ; DATA[14] ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.146 ns  ; 74373b:inst2|19                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.126 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[5]    ; DATA[5]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.099 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[8]    ; DATA[8]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.099 ns  ; 74373b:inst2|18                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 16.062 ns  ; 74373b:inst2|19                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 16.043 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]   ; DATA[2]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 16.037 ns  ; 74373b:inst2|19                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.994 ns  ; 74373b:inst2|14                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 15.971 ns  ; 74373b:inst2|16                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.943 ns  ; 74373b:inst2|19                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.884 ns  ; 74373b:inst2|19                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.878 ns  ; 74373b:inst2|15                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.853 ns  ; 74373b:inst2|17                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.836 ns  ; 74373b:inst2|15                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.811 ns  ; 74373b:inst2|17                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.805 ns  ; 74373b:inst2|14                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 15.789 ns  ; 74373b:inst2|15                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.764 ns  ; 74373b:inst2|17                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.645 ns  ; enc_module:inst7|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[9]  ; DATA[9]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 15.632 ns  ; 74373b:inst2|18                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.626 ns  ; 74373b:inst2|15                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 15.601 ns  ; 74373b:inst2|17                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 15.596 ns  ; enc_module:inst|encoder:inst1|lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[2]    ; DATA[2]  ; CLK_20M    ;
+; N/A                                     ; None                                                ; 15.590 ns  ; 74373b:inst2|18                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.555 ns  ; 74373b:inst2|15                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.543 ns  ; 74373b:inst2|18                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.541 ns  ; 74373b:inst2|15                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.530 ns  ; 74373b:inst2|17                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.516 ns  ; 74373b:inst2|17                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.504 ns  ; 74373b:inst2|16                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.487 ns  ; 74373b:inst2|12                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 15.466 ns  ; 74373b:inst2|12                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 15.462 ns  ; 74373b:inst2|16                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.438 ns  ; 74373b:inst2|14                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.415 ns  ; 74373b:inst2|16                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.380 ns  ; 74373b:inst2|18                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 15.354 ns  ; 74373b:inst2|14                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 15.329 ns  ; 74373b:inst2|14                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.309 ns  ; 74373b:inst2|18                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.295 ns  ; 74373b:inst2|18                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.252 ns  ; 74373b:inst2|16                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 15.235 ns  ; 74373b:inst2|14                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.181 ns  ; 74373b:inst2|16                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.176 ns  ; 74373b:inst2|14                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.167 ns  ; 74373b:inst2|16                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.155 ns  ; 74373b:inst2|13                                                                                                        ; DATA[13] ; NADV       ;
+; N/A                                     ; None                                                ; 15.105 ns  ; 74373b:inst2|15                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 15.080 ns  ; 74373b:inst2|17                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 15.073 ns  ; 74373b:inst2|19                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 15.019 ns  ; 74373b:inst2|12                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 14.961 ns  ; 74373b:inst2|13                                                                                                        ; DATA[11] ; NADV       ;
+; N/A                                     ; None                                                ; 14.860 ns  ; 74373b:inst2|12                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 14.859 ns  ; 74373b:inst2|18                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 14.834 ns  ; 74373b:inst2|13                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.737 ns  ; 74373b:inst2|15                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 14.731 ns  ; 74373b:inst2|16                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 14.712 ns  ; 74373b:inst2|12                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.712 ns  ; 74373b:inst2|17                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 14.606 ns  ; 74373b:inst2|19                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.566 ns  ; 74373b:inst2|13                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.564 ns  ; 74373b:inst2|19                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.524 ns  ; 74373b:inst2|13                                                                                                        ; DATA[15] ; NADV       ;
+; N/A                                     ; None                                                ; 14.517 ns  ; 74373b:inst2|19                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.512 ns  ; 74373b:inst2|13                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 14.508 ns  ; 74373b:inst2|12                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.495 ns  ; 74373b:inst2|12                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.491 ns  ; 74373b:inst2|18                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 14.462 ns  ; 74373b:inst2|13                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.422 ns  ; 74373b:inst2|13                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.395 ns  ; 74373b:inst2|13                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.376 ns  ; 74373b:inst2|13                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.365 ns  ; 74373b:inst2|14                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.363 ns  ; 74373b:inst2|16                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 14.357 ns  ; 74373b:inst2|13                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.354 ns  ; 74373b:inst2|19                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 14.331 ns  ; 74373b:inst2|12                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.283 ns  ; 74373b:inst2|19                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.270 ns  ; 74373b:inst2|13                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.269 ns  ; 74373b:inst2|19                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.261 ns  ; 74373b:inst2|13                                                                                                        ; DATA[9]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.184 ns  ; 74373b:inst2|13                                                                                                        ; DATA[3]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.095 ns  ; 74373b:inst2|13                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 14.094 ns  ; 74373b:inst2|12                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 14.046 ns  ; 74373b:inst2|12                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.977 ns  ; 74373b:inst2|13                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 13.898 ns  ; 74373b:inst2|14                                                                                                        ; DATA[8]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.856 ns  ; 74373b:inst2|14                                                                                                        ; DATA[2]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.833 ns  ; 74373b:inst2|19                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 13.809 ns  ; 74373b:inst2|14                                                                                                        ; DATA[1]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.646 ns  ; 74373b:inst2|14                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 13.575 ns  ; 74373b:inst2|14                                                                                                        ; DATA[4]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.561 ns  ; 74373b:inst2|14                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.465 ns  ; 74373b:inst2|19                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 13.267 ns  ; 74373b:inst2|12                                                                                                        ; DATA[6]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.157 ns  ; 74373b:inst2|12                                                                                                        ; DATA[7]  ; NADV       ;
+; N/A                                     ; None                                                ; 13.125 ns  ; 74373b:inst2|14                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 13.055 ns  ; 74373b:inst2|12                                                                                                        ; DATA[5]  ; NADV       ;
+; N/A                                     ; None                                                ; 12.757 ns  ; 74373b:inst2|14                                                                                                        ; DATA[14] ; NADV       ;
+; N/A                                     ; None                                                ; 11.554 ns  ; 74373b:inst2|12                                                                                                        ; DATA[10] ; NADV       ;
+; N/A                                     ; None                                                ; 11.473 ns  ; 74373b:inst2|12                                                                                                        ; DATA[0]  ; NADV       ;
+; N/A                                     ; None                                                ; 11.001 ns  ; 74373b:inst2|12                                                                                                        ; DATA[12] ; NADV       ;
+; N/A                                     ; None                                                ; 10.426 ns  ; dda_module:inst1|dda:inst33|pulse                                                                                      ; PULSE3   ; CLK_20M    ;
+; N/A                                     ; None                                                ; 10.339 ns  ; dda_module:inst1|dda:inst|pulse                                                                                        ; PULSE1   ; CLK_20M    ;
+; N/A                                     ; None                                                ; 9.870 ns   ; dda_module:inst1|dda:inst34|busy                                                                                       ; BUSY     ; CLK_20M    ;
+; N/A                                     ; None                                                ; 9.843 ns   ; dda_module:inst1|dda:inst6|pulse                                                                                       ; PULSE2   ; CLK_20M    ;
+; N/A                                     ; None                                                ; 9.201 ns   ; dda_module:inst1|dda:inst34|pulse                                                                                      ; PULSE4   ; CLK_20M    ;
+; N/A                                     ; None                                                ; 9.097 ns   ; dda_module:inst1|dda:inst34|dir                                                                                        ; DIR4     ; CLK_20M    ;
+; N/A                                     ; None                                                ; 9.034 ns   ; dda_module:inst1|dda:inst33|dir                                                                                        ; DIR3     ; CLK_20M    ;
+; N/A                                     ; None                                                ; 8.349 ns   ; dda_module:inst1|dda:inst6|dir                                                                                         ; DIR2     ; CLK_20M    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                                                                                                                        ;          ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------+----------+------------+
+
+
++------------------------------------------------------------------+
+; tpd                                                              ;
++-------+-------------------+-----------------+---------+----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From    ; To       ;
++-------+-------------------+-----------------+---------+----------+
+; N/A   ; None              ; 16.641 ns       ; NE1     ; DATA[13] ;
+; N/A   ; None              ; 16.452 ns       ; NE1     ; DATA[11] ;
+; N/A   ; None              ; 16.085 ns       ; NE1     ; DATA[6]  ;
+; N/A   ; None              ; 16.001 ns       ; NE1     ; DATA[15] ;
+; N/A   ; None              ; 15.976 ns       ; NE1     ; DATA[7]  ;
+; N/A   ; None              ; 15.882 ns       ; NE1     ; DATA[5]  ;
+; N/A   ; None              ; 15.823 ns       ; NE1     ; DATA[3]  ;
+; N/A   ; None              ; 15.473 ns       ; NOE     ; DATA[13] ;
+; N/A   ; None              ; 15.284 ns       ; NOE     ; DATA[11] ;
+; N/A   ; None              ; 15.012 ns       ; NE1     ; DATA[9]  ;
+; N/A   ; None              ; 14.917 ns       ; NOE     ; DATA[6]  ;
+; N/A   ; None              ; 14.833 ns       ; NOE     ; DATA[15] ;
+; N/A   ; None              ; 14.808 ns       ; NOE     ; DATA[7]  ;
+; N/A   ; None              ; 14.714 ns       ; NOE     ; DATA[5]  ;
+; N/A   ; None              ; 14.655 ns       ; NOE     ; DATA[3]  ;
+; N/A   ; None              ; 14.545 ns       ; NE1     ; DATA[8]  ;
+; N/A   ; None              ; 14.503 ns       ; NE1     ; DATA[2]  ;
+; N/A   ; None              ; 14.456 ns       ; NE1     ; DATA[1]  ;
+; N/A   ; None              ; 14.293 ns       ; NE1     ; DATA[10] ;
+; N/A   ; None              ; 14.222 ns       ; NE1     ; DATA[4]  ;
+; N/A   ; None              ; 14.208 ns       ; NE1     ; DATA[0]  ;
+; N/A   ; None              ; 13.844 ns       ; NOE     ; DATA[9]  ;
+; N/A   ; None              ; 13.772 ns       ; NE1     ; DATA[12] ;
+; N/A   ; None              ; 13.404 ns       ; NE1     ; DATA[14] ;
+; N/A   ; None              ; 13.377 ns       ; NOE     ; DATA[8]  ;
+; N/A   ; None              ; 13.335 ns       ; NOE     ; DATA[2]  ;
+; N/A   ; None              ; 13.288 ns       ; NOE     ; DATA[1]  ;
+; N/A   ; None              ; 13.125 ns       ; NOE     ; DATA[10] ;
+; N/A   ; None              ; 13.054 ns       ; NOE     ; DATA[4]  ;
+; N/A   ; None              ; 13.040 ns       ; NOE     ; DATA[0]  ;
+; N/A   ; None              ; 12.604 ns       ; NOE     ; DATA[12] ;
+; N/A   ; None              ; 12.236 ns       ; NOE     ; DATA[14] ;
+; N/A   ; None              ; 10.826 ns       ; LIMIT_2 ; PULSE1   ;
+; N/A   ; None              ; 10.778 ns       ; LIMIT_2 ; PULSE2   ;
+; N/A   ; None              ; 10.606 ns       ; LIMIT_4 ; PULSE1   ;
+; N/A   ; None              ; 10.558 ns       ; LIMIT_4 ; PULSE2   ;
+; N/A   ; None              ; 10.480 ns       ; LIMIT_3 ; PULSE1   ;
+; N/A   ; None              ; 10.432 ns       ; LIMIT_3 ; PULSE2   ;
+; N/A   ; None              ; 10.274 ns       ; LIMIT_2 ; PULSE3   ;
+; N/A   ; None              ; 10.138 ns       ; LIMIT_2 ; PULSE4   ;
+; N/A   ; None              ; 10.098 ns       ; LIMIT_1 ; PULSE1   ;
+; N/A   ; None              ; 10.054 ns       ; LIMIT_4 ; PULSE3   ;
+; N/A   ; None              ; 10.050 ns       ; LIMIT_1 ; PULSE2   ;
+; N/A   ; None              ; 9.928 ns        ; LIMIT_3 ; PULSE3   ;
+; N/A   ; None              ; 9.918 ns        ; LIMIT_4 ; PULSE4   ;
+; N/A   ; None              ; 9.792 ns        ; LIMIT_3 ; PULSE4   ;
+; N/A   ; None              ; 9.653 ns        ; LIMIT_5 ; PULSE3   ;
+; N/A   ; None              ; 9.553 ns        ; LIMIT_6 ; PULSE2   ;
+; N/A   ; None              ; 9.546 ns        ; LIMIT_1 ; PULSE3   ;
+; N/A   ; None              ; 9.519 ns        ; LIMIT_6 ; PULSE1   ;
+; N/A   ; None              ; 9.410 ns        ; LIMIT_1 ; PULSE4   ;
+; N/A   ; None              ; 9.334 ns        ; LIMIT_5 ; PULSE2   ;
+; N/A   ; None              ; 9.273 ns        ; LIMIT_6 ; PULSE3   ;
+; N/A   ; None              ; 9.233 ns        ; LIMIT_5 ; PULSE1   ;
+; N/A   ; None              ; 9.222 ns        ; LIMIT_6 ; PULSE4   ;
+; N/A   ; None              ; 8.964 ns        ; LIMIT_5 ; PULSE4   ;
++-------+-------------------+-----------------+---------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; th                                                                                                           ;
++---------------+-------------+-----------+-----------+---------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                                          ; To Clock ;
++---------------+-------------+-----------+-----------+---------------------------------------------+----------+
+; N/A           ; None        ; 10.059 ns ; DATA[6]   ; dda_module:inst1|74373b:inst18|18           ; NADV     ;
+; N/A           ; None        ; 9.910 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst18|14           ; NADV     ;
+; N/A           ; None        ; 9.855 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst18|17           ; NADV     ;
+; N/A           ; None        ; 9.630 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst7|18            ; NADV     ;
+; N/A           ; None        ; 9.606 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst18|19           ; NADV     ;
+; N/A           ; None        ; 9.435 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst2|17            ; NADV     ;
+; N/A           ; None        ; 9.391 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst2|18            ; NADV     ;
+; N/A           ; None        ; 9.362 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst7|17            ; NADV     ;
+; N/A           ; None        ; 9.210 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst2|14            ; NADV     ;
+; N/A           ; None        ; 9.086 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst20|18           ; NADV     ;
+; N/A           ; None        ; 9.084 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst7|15            ; NADV     ;
+; N/A           ; None        ; 9.045 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst2|16            ; NADV     ;
+; N/A           ; None        ; 8.998 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst18|13           ; NADV     ;
+; N/A           ; None        ; 8.969 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst18|15           ; NADV     ;
+; N/A           ; None        ; 8.969 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst18|16           ; NADV     ;
+; N/A           ; None        ; 8.954 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst7|14            ; NADV     ;
+; N/A           ; None        ; 8.943 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst7|19            ; NADV     ;
+; N/A           ; None        ; 8.937 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst7|16            ; NADV     ;
+; N/A           ; None        ; 8.890 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst2|13            ; NADV     ;
+; N/A           ; None        ; 8.751 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst18|18           ; NE1      ;
+; N/A           ; None        ; 8.687 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst20|16           ; NADV     ;
+; N/A           ; None        ; 8.683 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst7|13            ; NADV     ;
+; N/A           ; None        ; 8.621 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst20|17           ; NADV     ;
+; N/A           ; None        ; 8.602 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst18|14           ; NE1      ;
+; N/A           ; None        ; 8.563 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst2|19            ; NADV     ;
+; N/A           ; None        ; 8.557 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst18|12           ; NADV     ;
+; N/A           ; None        ; 8.547 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst18|17           ; NE1      ;
+; N/A           ; None        ; 8.484 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst20|19           ; NADV     ;
+; N/A           ; None        ; 8.362 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst2|15            ; NADV     ;
+; N/A           ; None        ; 8.322 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst7|18            ; NE1      ;
+; N/A           ; None        ; 8.298 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst18|19           ; NE1      ;
+; N/A           ; None        ; 8.209 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst20|15           ; NADV     ;
+; N/A           ; None        ; 8.183 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst20|14           ; NADV     ;
+; N/A           ; None        ; 8.127 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst2|17            ; NE1      ;
+; N/A           ; None        ; 8.083 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst2|18            ; NE1      ;
+; N/A           ; None        ; 8.054 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst7|17            ; NE1      ;
+; N/A           ; None        ; 7.902 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst2|14            ; NE1      ;
+; N/A           ; None        ; 7.778 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst20|18           ; NE1      ;
+; N/A           ; None        ; 7.776 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst7|15            ; NE1      ;
+; N/A           ; None        ; 7.748 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst20|12           ; NADV     ;
+; N/A           ; None        ; 7.737 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst2|16            ; NE1      ;
+; N/A           ; None        ; 7.715 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst7|12            ; NADV     ;
+; N/A           ; None        ; 7.690 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst18|13           ; NE1      ;
+; N/A           ; None        ; 7.661 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst18|15           ; NE1      ;
+; N/A           ; None        ; 7.661 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst18|16           ; NE1      ;
+; N/A           ; None        ; 7.646 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst7|14            ; NE1      ;
+; N/A           ; None        ; 7.635 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst7|19            ; NE1      ;
+; N/A           ; None        ; 7.629 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst7|16            ; NE1      ;
+; N/A           ; None        ; 7.598 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst20|13           ; NADV     ;
+; N/A           ; None        ; 7.582 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst2|13            ; NE1      ;
+; N/A           ; None        ; 7.416 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst2|12            ; NADV     ;
+; N/A           ; None        ; 7.379 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst20|16           ; NE1      ;
+; N/A           ; None        ; 7.375 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst7|13            ; NE1      ;
+; N/A           ; None        ; 7.313 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst20|17           ; NE1      ;
+; N/A           ; None        ; 7.255 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst2|19            ; NE1      ;
+; N/A           ; None        ; 7.249 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst18|12           ; NE1      ;
+; N/A           ; None        ; 7.244 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst18|18           ; NWE      ;
+; N/A           ; None        ; 7.176 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst20|19           ; NE1      ;
+; N/A           ; None        ; 7.095 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst18|14           ; NWE      ;
+; N/A           ; None        ; 7.054 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst2|15            ; NE1      ;
+; N/A           ; None        ; 7.040 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst18|17           ; NWE      ;
+; N/A           ; None        ; 6.901 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst20|15           ; NE1      ;
+; N/A           ; None        ; 6.875 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst20|14           ; NE1      ;
+; N/A           ; None        ; 6.815 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst7|18            ; NWE      ;
+; N/A           ; None        ; 6.791 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst18|19           ; NWE      ;
+; N/A           ; None        ; 6.620 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst2|17            ; NWE      ;
+; N/A           ; None        ; 6.576 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst2|18            ; NWE      ;
+; N/A           ; None        ; 6.547 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst7|17            ; NWE      ;
+; N/A           ; None        ; 6.440 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst20|12           ; NE1      ;
+; N/A           ; None        ; 6.407 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst7|12            ; NE1      ;
+; N/A           ; None        ; 6.395 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst2|14            ; NWE      ;
+; N/A           ; None        ; 6.290 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst20|13           ; NE1      ;
+; N/A           ; None        ; 6.271 ns  ; DATA[6]   ; dda_module:inst1|74373b:inst20|18           ; NWE      ;
+; N/A           ; None        ; 6.269 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst7|15            ; NWE      ;
+; N/A           ; None        ; 6.230 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst2|16            ; NWE      ;
+; N/A           ; None        ; 6.183 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst18|13           ; NWE      ;
+; N/A           ; None        ; 6.154 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst18|15           ; NWE      ;
+; N/A           ; None        ; 6.154 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst18|16           ; NWE      ;
+; N/A           ; None        ; 6.139 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst7|14            ; NWE      ;
+; N/A           ; None        ; 6.128 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst7|19            ; NWE      ;
+; N/A           ; None        ; 6.122 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst7|16            ; NWE      ;
+; N/A           ; None        ; 6.108 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst2|12            ; NE1      ;
+; N/A           ; None        ; 6.075 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst2|13            ; NWE      ;
+; N/A           ; None        ; 5.872 ns  ; DATA[4]   ; dda_module:inst1|74373b:inst20|16           ; NWE      ;
+; N/A           ; None        ; 5.868 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst7|13            ; NWE      ;
+; N/A           ; None        ; 5.806 ns  ; DATA[5]   ; dda_module:inst1|74373b:inst20|17           ; NWE      ;
+; N/A           ; None        ; 5.748 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst2|19            ; NWE      ;
+; N/A           ; None        ; 5.742 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst18|12           ; NWE      ;
+; N/A           ; None        ; 5.669 ns  ; DATA[7]   ; dda_module:inst1|74373b:inst20|19           ; NWE      ;
+; N/A           ; None        ; 5.547 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst2|15            ; NWE      ;
+; N/A           ; None        ; 5.394 ns  ; DATA[3]   ; dda_module:inst1|74373b:inst20|15           ; NWE      ;
+; N/A           ; None        ; 5.368 ns  ; DATA[2]   ; dda_module:inst1|74373b:inst20|14           ; NWE      ;
+; N/A           ; None        ; 4.933 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst20|12           ; NWE      ;
+; N/A           ; None        ; 4.900 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst7|12            ; NWE      ;
+; N/A           ; None        ; 4.783 ns  ; DATA[1]   ; dda_module:inst1|74373b:inst20|13           ; NWE      ;
+; N/A           ; None        ; 4.601 ns  ; DATA[0]   ; dda_module:inst1|74373b:inst2|12            ; NWE      ;
+; N/A           ; None        ; 3.030 ns  ; ENC_4A    ; enc_module:inst7|encoder_filter:inst8|inst  ; CLK_20M  ;
+; N/A           ; None        ; 2.824 ns  ; ENC_3B    ; enc_module:inst7|encoder_filter:inst7|inst6 ; CLK_20M  ;
+; N/A           ; None        ; 2.818 ns  ; ENC_3A    ; enc_module:inst7|encoder_filter:inst7|inst  ; CLK_20M  ;
+; N/A           ; None        ; 2.186 ns  ; ENC_4B    ; enc_module:inst7|encoder_filter:inst8|inst6 ; CLK_20M  ;
+; N/A           ; None        ; 1.753 ns  ; ENC_2A    ; enc_module:inst|encoder_filter:inst8|inst   ; CLK_20M  ;
+; N/A           ; None        ; 1.650 ns  ; ENC_2B    ; enc_module:inst|encoder_filter:inst8|inst6  ; CLK_20M  ;
+; N/A           ; None        ; 1.641 ns  ; ENC_1B    ; enc_module:inst|encoder_filter:inst7|inst6  ; CLK_20M  ;
+; N/A           ; None        ; 1.426 ns  ; ENC_1A    ; enc_module:inst|encoder_filter:inst7|inst   ; CLK_20M  ;
+; N/A           ; None        ; 1.190 ns  ; DATA[3]   ; 74373b:inst2|15                             ; NADV     ;
+; N/A           ; None        ; 0.726 ns  ; DATA[7]   ; 74373b:inst2|19                             ; NADV     ;
+; N/A           ; None        ; 0.401 ns  ; DATA[6]   ; 74373b:inst2|18                             ; NADV     ;
+; N/A           ; None        ; 0.399 ns  ; DATA[2]   ; 74373b:inst2|14                             ; NADV     ;
+; N/A           ; None        ; 0.194 ns  ; DATA[5]   ; 74373b:inst2|17                             ; NADV     ;
+; N/A           ; None        ; -0.009 ns ; DATA[4]   ; 74373b:inst2|16                             ; NADV     ;
+; N/A           ; None        ; -0.540 ns ; DATA[1]   ; 74373b:inst2|13                             ; NADV     ;
+; N/A           ; None        ; -1.023 ns ; DATA[0]   ; 74373b:inst2|12                             ; NADV     ;
+; N/A           ; None        ; -3.036 ns ; PULSE_WR1 ; dda_module:inst1|dda:inst|dir               ; CLK_20M  ;
+; N/A           ; None        ; -3.036 ns ; PULSE_WR1 ; dda_module:inst1|dda:inst6|dir              ; CLK_20M  ;
+; N/A           ; None        ; -3.036 ns ; PULSE_WR1 ; dda_module:inst1|dda:inst33|dir             ; CLK_20M  ;
+; N/A           ; None        ; -3.036 ns ; PULSE_WR1 ; dda_module:inst1|dda:inst34|dir             ; CLK_20M  ;
++---------------+-------------+-----------+-----------+---------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Jan 13 19:45:33 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off read_encoder -c read_encoder
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[6]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[5]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[4]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|18" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|17" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|16" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[3]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|15" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[1]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[2]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|14" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|13" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|Ntemp[0]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|12" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[6]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[5]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[4]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|18" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|17" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|16" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[3]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[1]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|15" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[2]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|14" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|13" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|Ntemp[0]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|12" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[6]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|18" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[5]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[4]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|17" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|16" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[3]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|15" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[1]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[2]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|14" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|13" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|Ntemp[0]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|12" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[6]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[5]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[4]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|18" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|17" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|16" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[3]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|15" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[2]" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[1]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|14" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|13" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|Ntemp[0]" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|12" is a latch
+    Warning: Node "74373b:inst2|12" is a latch
+    Warning: Node "74373b:inst2|18" is a latch
+    Warning: Node "74373b:inst2|17" is a latch
+    Warning: Node "74373b:inst2|19" is a latch
+    Warning: Node "74373b:inst2|16" is a latch
+    Warning: Node "74373b:inst2|15" is a latch
+    Warning: Node "74373b:inst2|14" is a latch
+    Warning: Node "74373b:inst2|13" is a latch
+    Warning: Node "dda_module:inst1|dda:inst|dirtemp" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst2|19" is a latch
+    Warning: Node "dda_module:inst1|dda:inst6|dirtemp" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst7|19" is a latch
+    Warning: Node "dda_module:inst1|dda:inst33|dirtemp" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst18|19" is a latch
+    Warning: Node "dda_module:inst1|dda:inst34|dirtemp" is a latch
+    Warning: Node "dda_module:inst1|74373b:inst20|19" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK_20M" is an undefined clock
+    Info: Assuming node "PULSE_WR1" is a latch enable. Will not compute fmax for this pin.
+    Info: Assuming node "NADV" is a latch enable. Will not compute fmax for this pin.
+    Info: Assuming node "NE1" is a latch enable. Will not compute fmax for this pin.
+    Info: Assuming node "NWE" is a latch enable. Will not compute fmax for this pin.
+Warning: Found 15 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "74373b:inst2|13" as buffer
+    Info: Detected ripple clock "74373b:inst2|14" as buffer
+    Info: Detected ripple clock "74373b:inst2|16" as buffer
+    Info: Detected ripple clock "74373b:inst2|19" as buffer
+    Info: Detected ripple clock "74373b:inst2|17" as buffer
+    Info: Detected ripple clock "74373b:inst2|18" as buffer
+    Info: Detected ripple clock "74373b:inst2|12" as buffer
+    Info: Detected gated clock "dda_module:inst1|inst22" as buffer
+    Info: Detected gated clock "dda_module:inst1|inst21" as buffer
+    Info: Detected gated clock "dda_module:inst1|inst10" as buffer
+    Info: Detected gated clock "dda_module:inst1|inst8" as buffer
+    Info: Detected gated clock "dda_module:inst1|inst8~0" as buffer
+    Info: Detected gated clock "enc_module:inst7|inst11~0" as buffer
+    Info: Detected ripple clock "enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]" as buffer
+    Info: Detected ripple clock "enc_module:inst7|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]" as buffer
+Info: Clock "CLK_20M" has Internal fmax of 60.32 MHz between source register "enc_module:inst|encoder_filter:inst8|inst3" and destination register "enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]" (period= 16.578 ns)
+    Info: + Longest register to register delay is 7.580 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X11_Y7_N2; Fanout = 4; REG Node = 'enc_module:inst|encoder_filter:inst8|inst3'
+        Info: 2: + IC(0.960 ns) + CELL(0.200 ns) = 1.160 ns; Loc. = LC_X11_Y7_N4; Fanout = 27; COMB Node = 'enc_module:inst|encoder:inst1|inst10~0'
+        Info: 3: + IC(3.279 ns) + CELL(0.747 ns) = 5.186 ns; Loc. = LC_X5_Y5_N5; Fanout = 2; COMB Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|counter_cella3~COUT'
+        Info: 4: + IC(0.000 ns) + CELL(0.123 ns) = 5.309 ns; Loc. = LC_X5_Y5_N6; Fanout = 2; COMB Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|counter_cella4~COUT'
+        Info: 5: + IC(0.000 ns) + CELL(0.123 ns) = 5.432 ns; Loc. = LC_X5_Y5_N7; Fanout = 2; COMB Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|counter_cella5~COUT'
+        Info: 6: + IC(0.000 ns) + CELL(0.123 ns) = 5.555 ns; Loc. = LC_X5_Y5_N8; Fanout = 2; COMB Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|counter_cella6~COUT'
+        Info: 7: + IC(0.000 ns) + CELL(0.399 ns) = 5.954 ns; Loc. = LC_X5_Y5_N9; Fanout = 6; COMB Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|counter_cella7~COUT'
+        Info: 8: + IC(0.000 ns) + CELL(1.626 ns) = 7.580 ns; Loc. = LC_X6_Y5_N4; Fanout = 3; REG Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]'
+        Info: Total cell delay = 3.341 ns ( 44.08 % )
+        Info: Total interconnect delay = 4.239 ns ( 55.92 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLK_20M" to destination register is 7.847 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 61; CLK Node = 'CLK_20M'
+            Info: 2: + IC(1.600 ns) + CELL(1.294 ns) = 4.057 ns; Loc. = LC_X10_Y3_N8; Fanout = 53; REG Node = 'enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]'
+            Info: 3: + IC(2.872 ns) + CELL(0.918 ns) = 7.847 ns; Loc. = LC_X6_Y5_N4; Fanout = 3; REG Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[12]'
+            Info: Total cell delay = 3.375 ns ( 43.01 % )
+            Info: Total interconnect delay = 4.472 ns ( 56.99 % )
+        Info: - Longest clock path from clock "CLK_20M" to source register is 7.847 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 61; CLK Node = 'CLK_20M'
+            Info: 2: + IC(1.600 ns) + CELL(1.294 ns) = 4.057 ns; Loc. = LC_X10_Y3_N8; Fanout = 53; REG Node = 'enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]'
+            Info: 3: + IC(2.872 ns) + CELL(0.918 ns) = 7.847 ns; Loc. = LC_X11_Y7_N2; Fanout = 4; REG Node = 'enc_module:inst|encoder_filter:inst8|inst3'
+            Info: Total cell delay = 3.375 ns ( 43.01 % )
+            Info: Total interconnect delay = 4.472 ns ( 56.99 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "dda_module:inst1|dda:inst|dir" (data pin = "PULSE_WR1", clock pin = "CLK_20M") is 3.590 ns
+    Info: + Longest pin to register delay is 6.938 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_76; Fanout = 86; CLK Node = 'PULSE_WR1'
+        Info: 2: + IC(3.370 ns) + CELL(0.511 ns) = 5.013 ns; Loc. = LC_X4_Y7_N1; Fanout = 4; COMB Node = 'dda_module:inst1|dda:inst|dir~0'
+        Info: 3: + IC(0.682 ns) + CELL(1.243 ns) = 6.938 ns; Loc. = LC_X4_Y7_N7; Fanout = 1; REG Node = 'dda_module:inst1|dda:inst|dir'
+        Info: Total cell delay = 2.886 ns ( 41.60 % )
+        Info: Total interconnect delay = 4.052 ns ( 58.40 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "CLK_20M" to destination register is 3.681 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 61; CLK Node = 'CLK_20M'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N7; Fanout = 1; REG Node = 'dda_module:inst1|dda:inst|dir'
+        Info: Total cell delay = 2.081 ns ( 56.53 % )
+        Info: Total interconnect delay = 1.600 ns ( 43.47 % )
+Info: tco from clock "CLK_20M" to destination pin "DATA[10]" through register "enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]" is 20.764 ns
+    Info: + Longest clock path from clock "CLK_20M" to source register is 7.847 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 61; CLK Node = 'CLK_20M'
+        Info: 2: + IC(1.600 ns) + CELL(1.294 ns) = 4.057 ns; Loc. = LC_X10_Y3_N8; Fanout = 53; REG Node = 'enc_module:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[1]'
+        Info: 3: + IC(2.872 ns) + CELL(0.918 ns) = 7.847 ns; Loc. = LC_X6_Y5_N2; Fanout = 4; REG Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]'
+        Info: Total cell delay = 3.375 ns ( 43.01 % )
+        Info: Total interconnect delay = 4.472 ns ( 56.99 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 12.541 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y5_N2; Fanout = 4; REG Node = 'enc_module:inst|encoder:inst1|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated|safe_q[10]'
+        Info: 2: + IC(5.629 ns) + CELL(0.914 ns) = 6.543 ns; Loc. = LC_X10_Y6_N6; Fanout = 1; COMB Node = 'enc_module:inst|lpm_bustri0:inst16|lpm_bustri:lpm_bustri_component|dout[10]~26'
+        Info: 3: + IC(0.765 ns) + CELL(0.511 ns) = 7.819 ns; Loc. = LC_X10_Y6_N7; Fanout = 1; COMB Node = 'enc_module:inst|lpm_bustri0:inst16|lpm_bustri:lpm_bustri_component|dout[10]~27'
+        Info: 4: + IC(2.400 ns) + CELL(2.322 ns) = 12.541 ns; Loc. = PIN_84; Fanout = 0; PIN Node = 'DATA[10]'
+        Info: Total cell delay = 3.747 ns ( 29.88 % )
+        Info: Total interconnect delay = 8.794 ns ( 70.12 % )
+Info: Longest tpd from source pin "NE1" to destination pin "DATA[13]" is 16.641 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_58; Fanout = 1; CLK Node = 'NE1'
+    Info: 2: + IC(3.020 ns) + CELL(0.914 ns) = 5.066 ns; Loc. = LC_X8_Y6_N1; Fanout = 2; COMB Node = 'enc_module:inst7|inst11~0'
+    Info: 3: + IC(1.155 ns) + CELL(0.740 ns) = 6.961 ns; Loc. = LC_X8_Y6_N6; Fanout = 32; COMB Node = 'enc_module:inst7|inst11~2'
+    Info: 4: + IC(3.251 ns) + CELL(0.740 ns) = 10.952 ns; Loc. = LC_X12_Y1_N3; Fanout = 1; COMB Node = 'enc_module:inst|lpm_bustri0:inst16|lpm_bustri:lpm_bustri_component|dout[13]~21'
+    Info: 5: + IC(3.367 ns) + CELL(2.322 ns) = 16.641 ns; Loc. = PIN_81; Fanout = 0; PIN Node = 'DATA[13]'
+    Info: Total cell delay = 5.848 ns ( 35.14 % )
+    Info: Total interconnect delay = 10.793 ns ( 64.86 % )
+Info: th for register "dda_module:inst1|74373b:inst18|18" (data pin = "DATA[6]", clock pin = "NADV") is 10.059 ns
+    Info: + Longest clock path from clock "NADV" to destination register is 13.665 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_57; Fanout = 8; CLK Node = 'NADV'
+        Info: 2: + IC(3.345 ns) + CELL(0.200 ns) = 4.677 ns; Loc. = LC_X8_Y6_N9; Fanout = 1; REG Node = '74373b:inst2|17'
+        Info: 3: + IC(1.186 ns) + CELL(0.511 ns) = 6.374 ns; Loc. = LC_X8_Y6_N1; Fanout = 2; COMB Node = 'enc_module:inst7|inst11~0'
+        Info: 4: + IC(0.744 ns) + CELL(0.200 ns) = 7.318 ns; Loc. = LC_X8_Y6_N7; Fanout = 4; COMB Node = 'dda_module:inst1|inst8~0'
+        Info: 5: + IC(1.976 ns) + CELL(0.914 ns) = 10.208 ns; Loc. = LC_X7_Y4_N9; Fanout = 8; COMB Node = 'dda_module:inst1|inst21'
+        Info: 6: + IC(2.543 ns) + CELL(0.914 ns) = 13.665 ns; Loc. = LC_X6_Y4_N4; Fanout = 1; REG Node = 'dda_module:inst1|74373b:inst18|18'
+        Info: Total cell delay = 3.871 ns ( 28.33 % )
+        Info: Total interconnect delay = 9.794 ns ( 71.67 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: - Shortest pin to register delay is 3.606 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_89; Fanout = 1; PIN Node = 'DATA[6]'
+        Info: 2: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = IOC_X7_Y8_N1; Fanout = 5; COMB Node = 'DATA~9'
+        Info: 3: + IC(2.274 ns) + CELL(0.200 ns) = 3.606 ns; Loc. = LC_X6_Y4_N4; Fanout = 1; REG Node = 'dda_module:inst1|74373b:inst18|18'
+        Info: Total cell delay = 1.332 ns ( 36.94 % )
+        Info: Total interconnect delay = 2.274 ns ( 63.06 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 190 megabytes
+    Info: Processing ended: Sun Jan 13 19:45:34 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

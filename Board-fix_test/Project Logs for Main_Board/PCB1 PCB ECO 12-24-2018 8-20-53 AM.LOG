@@ -1,0 +1,61 @@
+Removed Pin From Net: NetName=H_IN+_0 Pin=H1-2
+Removed Pin From Net: NetName=VDRIVE Pin=H1-3
+Removed Pin From Net: NetName=H_IN+_1 Pin=H2-2
+Removed Pin From Net: NetName=VDRIVE Pin=H2-3
+Removed Pin From Net: NetName=H_IN+_2 Pin=H3-2
+Removed Pin From Net: NetName=VDRIVE Pin=H3-3
+Removed Pin From Net: NetName=H_IN+_3 Pin=H4-2
+Removed Pin From Net: NetName=VDRIVE Pin=H4-3
+Removed Pin From Net: NetName=H_IN+_4 Pin=H5-2
+Removed Pin From Net: NetName=VDRIVE Pin=H5-3
+Removed Pin From Net: NetName=H_IN+_5 Pin=H6-2
+Removed Pin From Net: NetName=VDRIVE Pin=H6-3
+Change Component Designator: OldDesignator=1k NewDesignator=R5
+Change Component Designator: OldDesignator=1k NewDesignator=R6
+Change Component Designator: OldDesignator=1k NewDesignator=R19
+Change Component Designator: OldDesignator=1k NewDesignator=R21
+Change Component Designator: OldDesignator=1k NewDesignator=R32
+Change Component Designator: OldDesignator=1k NewDesignator=R34
+Change Component Designator: OldDesignator=1k NewDesignator=R45
+Change Component Designator: OldDesignator=1k NewDesignator=R46
+Change Component Designator: OldDesignator=4.7k NewDesignator=R4
+Change Component Designator: OldDesignator=4.7k NewDesignator=R7
+Change Component Designator: OldDesignator=4.7k NewDesignator=R18
+Change Component Designator: OldDesignator=4.7k NewDesignator=R22
+Change Component Designator: OldDesignator=4.7k NewDesignator=R30
+Change Component Designator: OldDesignator=4.7k NewDesignator=R36
+Change Component Designator: OldDesignator=4.7k NewDesignator=R44
+Change Component Designator: OldDesignator=4.7k NewDesignator=R49
+Change Component Designator: OldDesignator=104 NewDesignator=C1
+Change Component Designator: OldDesignator=104 NewDesignator=C22
+Change Component Designator: OldDesignator=104 NewDesignator=C34
+Change Component Designator: OldDesignator=104 NewDesignator=C50
+Added Pin To Net: NetName=5V Pin=H1-2
+Added Pin To Net: NetName=H_IN+_0 Pin=H1-3
+Added Pin To Net: NetName=VDRIVE Pin=H2-2
+Added Pin To Net: NetName=H_IN+_1 Pin=H2-3
+Added Pin To Net: NetName=5V Pin=H3-2
+Added Pin To Net: NetName=H_IN+_2 Pin=H3-3
+Added Pin To Net: NetName=5V Pin=H4-2
+Added Pin To Net: NetName=H_IN+_3 Pin=H4-3
+Added Pin To Net: NetName=5V Pin=H5-2
+Added Pin To Net: NetName=H_IN+_4 Pin=H5-3
+Added Pin To Net: NetName=5V Pin=H6-2
+Added Pin To Net: NetName=H_IN+_5 Pin=H6-3
+Added Member To Class: ClassName=Main_Board Member=Component C22 104
+Added Member To Class: ClassName=Main_Board Member=Component C34 104
+Added Member To Class: ClassName=Main_Board Member=Component C50 104
+Added Member To Class: ClassName=Main_Board Member=Component R6 1k
+Added Member To Class: ClassName=Main_Board Member=Component R7 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R18 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R19 1k
+Added Member To Class: ClassName=Main_Board Member=Component R21 1k
+Added Member To Class: ClassName=Main_Board Member=Component R22 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R30 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R32 1k
+Added Member To Class: ClassName=Main_Board Member=Component R34 1k
+Added Member To Class: ClassName=Main_Board Member=Component R36 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R44 4.7k
+Added Member To Class: ClassName=Main_Board Member=Component R45 1k
+Added Member To Class: ClassName=Main_Board Member=Component R46 1k
+Added Member To Class: ClassName=Main_Board Member=Component R49 4.7k

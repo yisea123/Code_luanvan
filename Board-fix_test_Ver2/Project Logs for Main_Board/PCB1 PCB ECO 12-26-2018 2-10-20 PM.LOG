@@ -1,0 +1,56 @@
+Removed Pin From Net: NetName=O_PWM_0 Pin=R5-1
+Removed Pin From Net: NetName=O_DIR_0 Pin=R6-1
+Removed Pin From Net: NetName=O_PWM_1 Pin=R19-1
+Removed Pin From Net: NetName=O_DIR_1 Pin=R21-1
+Removed Pin From Net: NetName=O_PWM_2 Pin=R32-1
+Removed Pin From Net: NetName=O_DIR_2 Pin=R34-1
+Removed Pin From Net: NetName=O_PWM_3 Pin=R45-1
+Removed Pin From Net: NetName=O_DIR_3 Pin=R46-1
+Change Component Designator: OldDesignator=102 NewDesignator=C100
+Change Component Designator: OldDesignator=102 NewDesignator=C101
+Change Component Designator: OldDesignator=102 NewDesignator=C102
+Change Component Designator: OldDesignator=102 NewDesignator=C103
+Change Component Designator: OldDesignator=102 NewDesignator=C104
+Change Component Designator: OldDesignator=102 NewDesignator=C105
+Change Component Designator: OldDesignator=102 NewDesignator=C106
+Change Component Designator: OldDesignator=102 NewDesignator=C107
+Change Component Designator: OldDesignator=102 NewDesignator=C108
+Change Component Designator: OldDesignator=102 NewDesignator=C109
+Change Component Designator: OldDesignator=102 NewDesignator=C110
+Change Component Designator: OldDesignator=102 NewDesignator=C111
+Change Component Designator: OldDesignator=102 NewDesignator=C112
+Change Component Designator: OldDesignator=102 NewDesignator=C113
+Change Component Designator: OldDesignator=102 NewDesignator=C114
+Change Component Designator: OldDesignator=102 NewDesignator=C115
+Added Pin To Net: NetName=O_DIR_0 Pin=R5-1
+Added Pin To Net: NetName=O_PWM_0 Pin=R6-1
+Added Pin To Net: NetName=O_DIR_1 Pin=R19-1
+Added Pin To Net: NetName=O_PWM_1 Pin=R21-1
+Added Pin To Net: NetName=O_DIR_2 Pin=R32-1
+Added Pin To Net: NetName=O_PWM_2 Pin=R34-1
+Added Pin To Net: NetName=O_DIR_3 Pin=R45-1
+Added Pin To Net: NetName=O_PWM_3 Pin=R46-1
+Change Net Name : Old Net Name=H_DIR_0 New Net Name=H_PWM_0
+Change Net Name : Old Net Name=H_DIR_1 New Net Name=H_PWM_1
+Change Net Name : Old Net Name=H_DIR_2 New Net Name=H_PWM_2
+Change Net Name : Old Net Name=H_DIR_3 New Net Name=H_PWM_3
+Change Net Name : Old Net Name=H_PWM_0 New Net Name=H_DIR_0
+Change Net Name : Old Net Name=H_PWM_1 New Net Name=H_DIR_1
+Change Net Name : Old Net Name=H_PWM_2 New Net Name=H_DIR_2
+Change Net Name : Old Net Name=H_PWM_3 New Net Name=H_DIR_3
+Added Member To Class: ClassName=Main_Board Member=Component C101 102
+Added Member To Class: ClassName=Main_Board Member=Component C102 102
+Added Member To Class: ClassName=Main_Board Member=Component C103 102
+Added Member To Class: ClassName=Main_Board Member=Component C104 102
+Added Member To Class: ClassName=Main_Board Member=Component C105 102
+Added Member To Class: ClassName=Main_Board Member=Component C106 102
+Added Member To Class: ClassName=Main_Board Member=Component C107 102
+Added Member To Class: ClassName=Main_Board Member=Component C108 102
+Added Member To Class: ClassName=Main_Board Member=Component C109 102
+Added Member To Class: ClassName=Main_Board Member=Component C110 102
+Added Member To Class: ClassName=Main_Board Member=Component C111 102
+Added Member To Class: ClassName=Main_Board Member=Component C112 102
+Added Member To Class: ClassName=Main_Board Member=Component C113 102
+Added Member To Class: ClassName=Main_Board Member=Component C114 102
+Added Member To Class: ClassName=Main_Board Member=Component C115 102
+Added Room: Name=Main_Board

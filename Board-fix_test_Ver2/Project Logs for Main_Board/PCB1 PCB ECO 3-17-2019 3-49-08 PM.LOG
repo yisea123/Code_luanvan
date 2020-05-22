@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=O_IN_4 Pin=H8-3
+Change Component Comment : Designator=H8 Old Comment=IN 5 New Comment=PWM
+Change Component Designator: OldDesignator=H1 NewDesignator=H2
+Change Component Designator: OldDesignator=H2 NewDesignator=H3
+Change Component Designator: OldDesignator=H3 NewDesignator=H4
+Change Component Designator: OldDesignator=H4 NewDesignator=H5
+Change Component Designator: OldDesignator=H5 NewDesignator=H6
+Change Component Designator: OldDesignator=H6 NewDesignator=H7
+Change Component Designator: OldDesignator=H9 NewDesignator=H10
+Change Component Designator: OldDesignator=H10 NewDesignator=H11
+Change Component Designator: OldDesignator=H11 NewDesignator=H12
+Change Component Designator: OldDesignator=H12 NewDesignator=H13
+Added Component: Designator=H9(Header White 3)
+Added Pin To Net: NetName=PA2 Pin=H8-3
+Added Pin To Net: NetName=GND Pin=H8-1
+Added Pin To Net: NetName=5V Pin=H8-2
+Added Pin To Net: NetName=O_IN_4 Pin=H8-3

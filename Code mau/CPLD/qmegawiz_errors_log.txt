@@ -1,0 +1,6 @@
+
+
+D:/hoc hanh/electronic/project/gimbal/cpld/ADIS16480_Mainboard_Viettel1/lpm_xor0.tdf
+
+Oct 17 02PM:42:14>: Megafunction LPM_XOR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

@@ -1,0 +1,72 @@
+module dda(N, WR, clk, pulse, dir, busy);
+
+input [9:0] N;
+input WR;
+input clk;
+
+
+output pulse;
+output dir; 
+output busy;
+
+
+
+parameter Nmax = 500;	// chu ky dieu khien 2.5ms, xung 5us -> Nmax = 500 
+parameter Nmax2 = 1000;	 
+
+//parameter Nmax = 10;	// chu ky dieu khien 2.5ms, xung 5us -> Nmax = 500 
+//parameter Nmax2 = 20;	
+
+reg [8:0] Ntemp = 250;
+
+
+reg [4:0] acc = 0;
+
+reg [5:0] clk_cnt = 0;
+reg [9:0] clk5u_cnt = 0;
+reg clk5u = 0;
+
+reg pulse = 0;
+reg dir = 0;
+reg busy = 0;
+
+always @(posedge clk or posedge WR)  begin
+  	if (WR) begin				// neu co xung WR nap gia tri moi
+		//{dir,Ntemp} = N;
+		acc = Nmax;
+		clk_cnt = 0;
+		clk5u_cnt = 0;
+		clk5u = 0;		
+		busy = 1;
+	end
+	
+	else begin
+	   if (clk_cnt < 49)
+		  clk_cnt = clk_cnt + 1;
+	   else begin  
+		  clk_cnt = 0;
+		  if (clk5u_cnt < (Nmax2-2)) begin
+			clk5u_cnt = clk5u_cnt + 1;
+	
+			clk5u = !clk5u;
+			if (clk5u) begin
+				acc = acc + 250;
+				if (acc > Nmax) begin
+					acc = acc - Nmax;
+					pulse = 1;
+				end	
+				else begin
+					
+					pulse = 0;
+				end
+		    end
+		    else 
+				pulse = 0;
+		  end
+		  else 
+		    busy = 0;		
+	   end
+	end			
+end	
+
+endmodule

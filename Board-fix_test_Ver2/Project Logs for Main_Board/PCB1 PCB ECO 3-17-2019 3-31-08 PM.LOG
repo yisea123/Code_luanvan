@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=D10-2
+Removed Pin From Net: NetName=O_IN_7 Pin=HD7-1
+Removed Pin From Net: NetName=5V Pin=HD7-2
+Removed Pin From Net: NetName=O_IN_7 Pin=R21-2
+Removed Pin From Net: NetName=IN_7 Pin=U6-21

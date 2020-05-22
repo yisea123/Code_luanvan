@@ -1,0 +1,129 @@
+# Copyright (C) 1991-2008 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		read_encoder_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM570T100C5
+set_global_assignment -name TOP_LEVEL_ENTITY read_encoder
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:51:13  OCTOBER 29, 2012"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Design Compiler"
+set_global_assignment -name EDA_INPUT_VCC_NAME VDD -section_id eda_design_synthesis
+set_global_assignment -name EDA_LMF_FILE altsyn.lmf -section_id eda_design_synthesis
+set_global_assignment -name EDA_INPUT_DATA_FORMAT EDIF -section_id eda_design_synthesis
+set_global_assignment -name EDA_SIMULATION_TOOL "Active-HDL (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VERILOG -section_id eda_simulation
+set_global_assignment -name EDA_TIMING_ANALYSIS_TOOL "PrimeTime (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VERILOG -section_id eda_timing_analysis
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name ENABLE_CLOCK_LATENCY ON
+set_global_assignment -name MISC_FILE "E:/work/read_encoder/read_encoder hardware/read_encoder.dpf"
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_77 -to DATA[15]
+set_location_assignment PIN_78 -to DATA[14]
+set_location_assignment PIN_81 -to DATA[13]
+set_location_assignment PIN_82 -to DATA[12]
+set_location_assignment PIN_83 -to DATA[11]
+set_location_assignment PIN_84 -to DATA[10]
+set_location_assignment PIN_85 -to DATA[9]
+set_location_assignment PIN_86 -to DATA[8]
+set_location_assignment PIN_87 -to DATA[7]
+set_location_assignment PIN_89 -to DATA[6]
+set_location_assignment PIN_91 -to DATA[5]
+set_location_assignment PIN_92 -to DATA[4]
+set_location_assignment PIN_70 -to DATA[3]
+set_location_assignment PIN_71 -to DATA[2]
+set_location_assignment PIN_72 -to DATA[1]
+set_location_assignment PIN_73 -to DATA[0]
+set_location_assignment PIN_66 -to NWE
+set_location_assignment PIN_67 -to NOE
+set_location_assignment PIN_58 -to NE1
+set_location_assignment PIN_57 -to NADV
+set_location_assignment PIN_12 -to CLK_20M
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/ADIS16480_Mainboard/read_encoder.dpf"
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/ADIS16480_Mainboard_Viettel/read_encoder.dpf"
+set_location_assignment PIN_76 -to ENC_RST
+set_location_assignment PIN_55 -to PULSE1
+set_location_assignment PIN_51 -to PULSE2
+set_location_assignment PIN_53 -to DIR1
+set_location_assignment PIN_49 -to DIR2
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/ADIS16480_Mainboard_Viettel1/read_encoder.dpf"
+set_global_assignment -name VERILOG_FILE DDA.V
+set_global_assignment -name BDF_FILE read_encoder.bdf
+set_global_assignment -name BDF_FILE enc_module.bdf
+set_global_assignment -name BDF_FILE encoder.bdf
+set_global_assignment -name BDF_FILE encoder_filter.bdf
+set_global_assignment -name QIP_FILE lpm_dff0.qip
+set_global_assignment -name QIP_FILE lpm_bustri0.qip
+set_global_assignment -name QIP_FILE lpm_dff1.qip
+set_global_assignment -name QIP_FILE lpm_dff2.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE read_encoder.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE read_encoder1.vwf
+set_global_assignment -name QIP_FILE lpm_counter2.qip
+set_global_assignment -name BDF_FILE dda_module.bdf
+set_global_assignment -name QIP_FILE lpm_counter3.qip
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/F4MAX2_Mayin/read_encoder.dpf"
+set_global_assignment -name QIP_FILE lpm_dff3.qip
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/F4MAX2_CNC4truc/read_encoder.dpf"
+set_location_assignment PIN_2 -to ENC1[1]
+set_location_assignment PIN_3 -to ENC1[2]
+set_location_assignment PIN_4 -to ENC2[1]
+set_location_assignment PIN_5 -to ENC2[2]
+set_location_assignment PIN_6 -to ENC3[1]
+set_location_assignment PIN_7 -to ENC3[2]
+set_location_assignment PIN_8 -to ENC4[1]
+set_location_assignment PIN_15 -to ENC4[2]
+set_location_assignment PIN_41 -to DIR3
+set_location_assignment PIN_54 -to DIR4
+set_location_assignment PIN_47 -to PULSE3
+set_location_assignment PIN_56 -to PULSE4
+set_global_assignment -name BSF_FILE dda1.bsf
+set_global_assignment -name BSF_FILE dda.bsf
+set_location_assignment PIN_52 -to PULSE5
+set_location_assignment PIN_50 -to DIR5
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/F4MAX2_CNC5truc/read_encoder.dpf"
+set_location_assignment PIN_42 -to DIR6
+set_location_assignment PIN_48 -to PULSE6
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/F4MAX2_CNC6truc/read_encoder.dpf"
+set_global_assignment -name MISC_FILE "D:/altera/91sp2/EXAMPLES/F7MAX2_CNC6truc/read_encoder.dpf"
+set_location_assignment PIN_75 -to P_WRITE
+set_location_assignment PIN_74 -to P_BUSY
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS OUTPUT DRIVING AN UNSPECIFIED SIGNAL"
+set_global_assignment -name MISC_FILE "D:/AutoLab/SCARA/F7MAX2_CNC4truc_20us/read_encoder.dpf"
+set_location_assignment PIN_17 -to LSW1
+set_location_assignment PIN_18 -to LSW2
+set_location_assignment PIN_20 -to LSW3
+set_location_assignment PIN_69 -to HALF
+set_global_assignment -name MISC_FILE "C:/Users/Welcome/Desktop/Code thay hao/F7MAX2_CNC4truc_20us/read_encoder.dpf"

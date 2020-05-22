@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=U100 NewDesignator=U100 - 74HC14
+Change Component Designator: OldDesignator=U101 NewDesignator=U101 - 74HC14
+Change Net Name : Old Net Name=NetHD100_1 New Net Name=H_ENC_B0
+Change Net Name : Old Net Name=NetHD101_1 New Net Name=H_ENC_B1
+Change Net Name : Old Net Name=NetHD102_1 New Net Name=H_ENC_B2
+Change Net Name : Old Net Name=NetHD103_1 New Net Name=H_ENC_B3

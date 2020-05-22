@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=P05 Pin=RN1-3
+Removed Pin From Net: NetName=P07 Pin=RN1-5
+Removed Pin From Net: NetName=P15 Pin=RN1-7
+Removed Pin From Net: NetName=P17 Pin=RN1-9
+Removed Pin From Net: NetName=DIR_3 Pin=U1-16
+Removed Pin From Net: NetName=DIR_2 Pin=U1-17
+Removed Pin From Net: NetName=DIR_1 Pin=U1-18
+Removed Pin From Net: NetName=DIR_0 Pin=U1-19
+Removed Pin From Net: NetName=P17 Pin=U1-26
+Removed Pin From Net: NetName=P15 Pin=U1-27
+Removed Pin From Net: NetName=P07 Pin=U1-28
+Removed Pin From Net: NetName=P05 Pin=U1-29
+Removed Pin From Net: NetName=P17 Pin=U3-2
+Removed Pin From Net: NetName=P15 Pin=U3-4
+Removed Pin From Net: NetName=P07 Pin=U3-6
+Removed Pin From Net: NetName=P05 Pin=U3-8
+Added Pin To Net: NetName=P17 Pin=RN1-3
+Added Pin To Net: NetName=P15 Pin=RN1-5
+Added Pin To Net: NetName=P07 Pin=RN1-7
+Added Pin To Net: NetName=P05 Pin=RN1-9
+Added Pin To Net: NetName=P17 Pin=U1-16
+Added Pin To Net: NetName=P15 Pin=U1-17
+Added Pin To Net: NetName=P07 Pin=U1-18
+Added Pin To Net: NetName=P05 Pin=U1-19
+Added Pin To Net: NetName=DIR_0 Pin=U1-26
+Added Pin To Net: NetName=DIR_1 Pin=U1-27
+Added Pin To Net: NetName=DIR_2 Pin=U1-28
+Added Pin To Net: NetName=DIR_3 Pin=U1-29
+Added Pin To Net: NetName=P05 Pin=U3-2
+Added Pin To Net: NetName=P07 Pin=U3-4
+Added Pin To Net: NetName=P15 Pin=U3-6
+Added Pin To Net: NetName=P17 Pin=U3-8
+Change Net Name : Old Net Name=P05 New Net Name=P16
+Change Net Name : Old Net Name=P07 New Net Name=P08
+Change Net Name : Old Net Name=P15 New Net Name=P06
+Change Net Name : Old Net Name=P17 New Net Name=P04

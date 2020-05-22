@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=P16 Pin=RN1-3
+Removed Pin From Net: NetName=P04 Pin=RN1-9
+Removed Pin From Net: NetName=P04 Pin=U1-16
+Removed Pin From Net: NetName=P06 Pin=U1-17
+Removed Pin From Net: NetName=P08 Pin=U1-18
+Removed Pin From Net: NetName=DIR_3 Pin=U1-26
+Removed Pin From Net: NetName=DIR_2 Pin=U1-27
+Removed Pin From Net: NetName=DIR_1 Pin=U1-28
+Removed Pin From Net: NetName=P04 Pin=U3-2
+Removed Pin From Net: NetName=P16 Pin=U3-8
+Change Component Comment : Designator=R32 Old Comment=4.7k New Comment=1k
+Change Component Comment : Designator=R34 Old Comment=4.7k New Comment=1k
+Change Component Comment : Designator=R45 Old Comment=4.7k New Comment=1k
+Change Component Comment : Designator=R46 Old Comment=4.7k New Comment=1k
+Added Pin To Net: NetName=DIR_0 Pin=RN1-3
+Added Pin To Net: NetName=P16 Pin=RN1-9
+Added Pin To Net: NetName=DIR_3 Pin=U1-16
+Added Pin To Net: NetName=DIR_2 Pin=U1-17
+Added Pin To Net: NetName=DIR_1 Pin=U1-18
+Added Pin To Net: NetName=P04 Pin=U1-26
+Added Pin To Net: NetName=P06 Pin=U1-27
+Added Pin To Net: NetName=P08 Pin=U1-28
+Added Pin To Net: NetName=P16 Pin=U3-2
+Added Pin To Net: NetName=DIR_0 Pin=U3-8
+Change Net Name : Old Net Name=P04 New Net Name=P17
+Change Net Name : Old Net Name=P06 New Net Name=P15
+Change Net Name : Old Net Name=P08 New Net Name=P07

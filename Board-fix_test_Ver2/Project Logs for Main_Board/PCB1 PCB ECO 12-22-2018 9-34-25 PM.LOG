@@ -1,0 +1,76 @@
+Removed Pin From Net: NetName=PB10 Pin=H3-1
+Removed Pin From Net: NetName=PB11 Pin=H3-2
+Removed Pin From Net: NetName=GND Pin=H3-3
+Removed Pin From Net: NetName=H_IN+_0 Pin=HD2-2
+Removed Pin From Net: NetName=H_IN+_1 Pin=HD7-2
+Removed Pin From Net: NetName=H_IN+_2 Pin=HD9-2
+Removed Pin From Net: NetName=H_IN+_3 Pin=HD13-2
+Removed Pin From Net: NetName=H_IN+_4 Pin=HD15-2
+Removed Pin From Net: NetName=H_IN+_5 Pin=HD19-2
+Removed Pin From Net: NetName=H_IN+_6 Pin=HD22-2
+Removed Pin From Net: NetName=H_IN+_7 Pin=HD26-2
+Removed Member From Class: ClassName=Main_Board Member=HD2
+Removed Member From Class: ClassName=Main_Board Member=HD7
+Removed Member From Class: ClassName=Main_Board Member=HD9
+Removed Member From Class: ClassName=Main_Board Member=HD13
+Removed Member From Class: ClassName=Main_Board Member=HD15
+Removed Member From Class: ClassName=Main_Board Member=HD19
+Removed Member From Class: ClassName=Main_Board Member=HD22
+Change Component Comment : Designator=HD26 Old Comment=IN 8 New Comment=IN 7
+Change Component Comment : Designator=H3 Old Comment=PC New Comment=IN 3
+Added Component: Designator=H0(Header White 3)
+Added Component: Designator=H1(Header White 3)
+Added Component: Designator=H2(Header White 3)
+Added Component: Designator=H4(Header White 3)
+Added Component: Designator=H5(Header White 3)
+Added Component: Designator=H6(Header White 3)
+Added Component: Designator=HD28(Domino 2)
+Added Pin To Net: NetName=G_DRIVE Pin=D2-2
+Added Pin To Net: NetName=G_DRIVE Pin=D5-2
+Added Pin To Net: NetName=G_DRIVE Pin=D10-2
+Added Pin To Net: NetName=G_DRIVE Pin=D12-2
+Added Pin To Net: NetName=G_DRIVE Pin=D14-2
+Added Pin To Net: NetName=G_DRIVE Pin=D16-2
+Added Pin To Net: NetName=G_DRIVE Pin=D18-2
+Added Pin To Net: NetName=G_DRIVE Pin=D20-2
+Added Pin To Net: NetName=PB10 Pin=H0-1
+Added Pin To Net: NetName=PB11 Pin=H0-2
+Added Pin To Net: NetName=GND Pin=H0-3
+Added Pin To Net: NetName=G_DRIVE Pin=H1-1
+Added Pin To Net: NetName=H_IN+_0 Pin=H1-2
+Added Pin To Net: NetName=VDRIVE Pin=H1-3
+Added Pin To Net: NetName=G_DRIVE Pin=H2-1
+Added Pin To Net: NetName=H_IN+_1 Pin=H2-2
+Added Pin To Net: NetName=VDRIVE Pin=H2-3
+Added Pin To Net: NetName=G_DRIVE Pin=H3-1
+Added Pin To Net: NetName=H_IN+_2 Pin=H3-2
+Added Pin To Net: NetName=VDRIVE Pin=H3-3
+Added Pin To Net: NetName=G_DRIVE Pin=H4-1
+Added Pin To Net: NetName=H_IN+_3 Pin=H4-2
+Added Pin To Net: NetName=VDRIVE Pin=H4-3
+Added Pin To Net: NetName=G_DRIVE Pin=H5-1
+Added Pin To Net: NetName=H_IN+_4 Pin=H5-2
+Added Pin To Net: NetName=VDRIVE Pin=H5-3
+Added Pin To Net: NetName=G_DRIVE Pin=H6-1
+Added Pin To Net: NetName=H_IN+_5 Pin=H6-2
+Added Pin To Net: NetName=VDRIVE Pin=H6-3
+Added Pin To Net: NetName=H_IN+_6 Pin=HD26-1
+Added Pin To Net: NetName=VDRIVE Pin=HD26-2
+Added Pin To Net: NetName=H_IN+_7 Pin=HD28-1
+Added Pin To Net: NetName=VDRIVE Pin=HD28-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP1-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP4-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP6-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP9-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP11-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP14-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP16-2
+Added Pin To Net: NetName=G_DRIVE Pin=OP19-2
+Change Net Name : Old Net Name=G_DRIVE New Net Name=H_IN-_0
+Added Member To Class: ClassName=Main_Board Member=Component H0 PC
+Added Member To Class: ClassName=Main_Board Member=Component H1 IN 1
+Added Member To Class: ClassName=Main_Board Member=Component H2 IN 2
+Added Member To Class: ClassName=Main_Board Member=Component H4 IN 4
+Added Member To Class: ClassName=Main_Board Member=Component H5 IN 5
+Added Member To Class: ClassName=Main_Board Member=Component H6 IN 6
+Added Member To Class: ClassName=Main_Board Member=Component HD28 IN 8

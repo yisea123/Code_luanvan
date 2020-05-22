@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=5V Pin=HD4-1
+Removed Pin From Net: NetName=H_DIR_0 Pin=HD4-2
+Removed Pin From Net: NetName=H_PWM_0 Pin=HD4-3
+Removed Pin From Net: NetName=GND Pin=HD4-4
+Removed Pin From Net: NetName=5V Pin=HD7-1
+Removed Pin From Net: NetName=H_DIR_1 Pin=HD7-2
+Removed Pin From Net: NetName=H_PWM_1 Pin=HD7-3
+Removed Pin From Net: NetName=GND Pin=HD7-4
+Removed Pin From Net: NetName=5V Pin=HD8-1
+Removed Pin From Net: NetName=H_DIR_2 Pin=HD8-2
+Removed Pin From Net: NetName=H_PWM_2 Pin=HD8-3
+Removed Pin From Net: NetName=GND Pin=HD8-4
+Removed Pin From Net: NetName=5V Pin=HD9-1
+Removed Pin From Net: NetName=H_DIR_3 Pin=HD9-2
+Removed Pin From Net: NetName=H_PWM_3 Pin=HD9-3
+Removed Pin From Net: NetName=GND Pin=HD9-4
+Removed Pin From Net: NetName=IN_4 Pin=U1-37
+Added Component: Designator=H?(Header White 4)
+Added Component: Designator=H?(Header White 4)
+Added Component: Designator=H?(Header White 4)
+Added Component: Designator=H?(Header White 4)
+Added Pin To Net: NetName=5V Pin=H?-1
+Added Pin To Net: NetName=5V Pin=H?-1
+Added Pin To Net: NetName=5V Pin=H?-1
+Added Pin To Net: NetName=5V Pin=H?-1
+Added Pin To Net: NetName=H_DIR_0 Pin=H?-2
+Added Pin To Net: NetName=H_DIR_1 Pin=H?-2
+Added Pin To Net: NetName=H_DIR_2 Pin=H?-2
+Added Pin To Net: NetName=H_DIR_3 Pin=H?-2
+Added Pin To Net: NetName=H_PWM_0 Pin=H?-3
+Added Pin To Net: NetName=H_PWM_1 Pin=H?-3
+Added Pin To Net: NetName=H_PWM_2 Pin=H?-3
+Added Pin To Net: NetName=H_PWM_3 Pin=H?-3
+Added Pin To Net: NetName=GND Pin=H?-4
+Added Pin To Net: NetName=GND Pin=H?-4
+Added Pin To Net: NetName=GND Pin=H?-4
+Added Pin To Net: NetName=GND Pin=H?-4
+Added Pin To Net: NetName=IN_4 Pin=U1-25
+Added Pin To Net: NetName=PA2 Pin=U1-37
+Added Net: Name=PA2

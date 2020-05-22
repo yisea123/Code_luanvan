@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=H_PWM_0 Pin=HD4-2
+Removed Pin From Net: NetName=H_DIR_0 Pin=HD4-3
+Removed Pin From Net: NetName=H_PWM_1 Pin=HD7-2
+Removed Pin From Net: NetName=H_DIR_1 Pin=HD7-3
+Removed Pin From Net: NetName=H_PWM_2 Pin=HD8-2
+Removed Pin From Net: NetName=H_DIR_2 Pin=HD8-3
+Removed Pin From Net: NetName=H_PWM_3 Pin=HD9-2
+Removed Pin From Net: NetName=H_DIR_3 Pin=HD9-3
+Added Pin To Net: NetName=H_DIR_0 Pin=HD4-2
+Added Pin To Net: NetName=H_PWM_0 Pin=HD4-3
+Added Pin To Net: NetName=H_DIR_1 Pin=HD7-2
+Added Pin To Net: NetName=H_PWM_1 Pin=HD7-3
+Added Pin To Net: NetName=H_DIR_2 Pin=HD8-2
+Added Pin To Net: NetName=H_PWM_2 Pin=HD8-3
+Added Pin To Net: NetName=H_DIR_3 Pin=HD9-2
+Added Pin To Net: NetName=H_PWM_3 Pin=HD9-3
